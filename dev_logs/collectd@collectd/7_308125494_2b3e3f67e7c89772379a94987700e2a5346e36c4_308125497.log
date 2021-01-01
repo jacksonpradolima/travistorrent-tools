@@ -1,0 +1,3320 @@
+travis_fold:start:worker_info[0K[33;1mWorker information[0m
+hostname: a95ccf0c-203a-4262-8cff-d869ba875eb2@1.production-1-worker-org-a-3-gce
+version: v3.3.1 https://github.com/travis-ci/worker/tree/1153e5010ef9863bf96264b75fba506109633460
+instance: travis-job-533673b3-a27b-4fe7-be7a-f8da2bbef36d travis-ci-garnet-trusty-1503972833 (via amqp)
+startup: 21.194573479s
+travis_fold:end:worker_info[0Ktravis_fold:start:system_info[0K[33;1mBuild system information[0m
+Build language: c
+Build group: stable
+Build dist: trusty
+Build id: 308125494
+Job id: 308125497
+Runtime kernel version: 4.4.0-93-generic
+travis-build version: 97c4a12f8
+[34m[1mBuild image provisioning date and time[0m
+Tue Aug 29 02:48:34 UTC 2017
+[34m[1mOperating System Details[0m
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+[34m[1mCookbooks Version[0m
+4642454 https://github.com/travis-ci/travis-cookbooks/tree/4642454
+[34m[1mgit version[0m
+git version 2.14.1
+[34m[1mbash version[0m
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+[34m[1mgcc version[0m
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+[34m[1mdocker version[0m
+Client:
+ Version:      17.03.1-ce
+ API version:  1.27
+ Go version:   go1.7.5
+ Git commit:   c6d412e
+ Built:        Mon Mar 27 17:10:36 2017
+ OS/Arch:      linux/amd64
+
+Server:
+ Version:      17.03.1-ce
+ API version:  1.27 (minimum version 1.12)
+ Go version:   go1.7.5
+ Git commit:   c6d412e
+ Built:        Mon Mar 27 17:10:36 2017
+ OS/Arch:      linux/amd64
+ Experimental: false
+[34m[1mclang version[0m
+clang version 3.9.0 (tags/RELEASE_390/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /usr/local/clang-3.9.0/bin
+[34m[1mjq version[0m
+jq-1.5
+[34m[1mbats version[0m
+Bats 0.4.0
+[34m[1mshellcheck version[0m
+0.4.6
+[34m[1mshfmt version[0m
+v1.3.1
+[34m[1mccache version[0m
+ccache version 3.1.9
+
+Copyright (C) 2002-2007 Andrew Tridgell
+Copyright (C) 2009-2011 Joel Rosdahl
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; either version 3 of the License, or (at your option) any later
+version.
+[34m[1mcmake version[0m
+cmake version 3.2.2
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+[34m[1mheroku version[0m
+heroku-cli/6.13.19-6cd27b3 (linux-x64) node-v8.3.0
+[34m[1mimagemagick version[0m
+Version: ImageMagick 6.7.7-10 2017-07-31 Q16 http://www.imagemagick.org
+[34m[1mmd5deep version[0m
+4.2
+[34m[1mmercurial version[0m
+Mercurial Distributed SCM (version 4.2.2)
+(see https://mercurial-scm.org for more information)
+
+Copyright (C) 2005-2017 Matt Mackall and others
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[34m[1mmysql version[0m
+mysql  Ver 14.14 Distrib 5.6.33, for debian-linux-gnu (x86_64) using  EditLine wrapper
+[34m[1mopenssl version[0m
+OpenSSL 1.0.1f 6 Jan 2014
+[34m[1mpacker version[0m
+Packer v1.0.2
+
+Your version of Packer is out of date! The latest version
+is 1.0.4. You can update by downloading from www.packer.io
+[34m[1mpostgresql client version[0m
+psql (PostgreSQL) 9.6.4
+[34m[1mragel version[0m
+Ragel State Machine Compiler version 6.8 Feb 2013
+Copyright (c) 2001-2009 by Adrian Thurston
+[34m[1msubversion version[0m
+svn, version 1.8.8 (r1568071)
+   compiled Aug 10 2017, 17:20:39 on x86_64-pc-linux-gnu
+
+Copyright (C) 2013 The Apache Software Foundation.
+This software consists of contributions made by many people;
+see the NOTICE file for more information.
+Subversion is open source software, see http://subversion.apache.org/
+
+The following repository access (RA) modules are available:
+
+* ra_svn : Module for accessing a repository using the svn network protocol.
+  - with Cyrus SASL authentication
+  - handles 'svn' scheme
+* ra_local : Module for accessing a repository on local disk.
+  - handles 'file' scheme
+* ra_serf : Module for accessing a repository via WebDAV protocol using serf.
+  - using serf 1.3.3
+  - handles 'http' scheme
+  - handles 'https' scheme
+
+[34m[1msudo version[0m
+Sudo version 1.8.9p5
+Configure options: --prefix=/usr -v --with-all-insults --with-pam --with-fqdn --with-logging=syslog --with-logfac=authpriv --with-env-editor --with-editor=/usr/bin/editor --with-timeout=15 --with-password-timeout=0 --with-passprompt=[sudo] password for %p:  --without-lecture --with-tty-tickets --disable-root-mailer --enable-admin-flag --with-sendmail=/usr/sbin/sendmail --with-timedir=/var/lib/sudo --mandir=/usr/share/man --libexecdir=/usr/lib/sudo --with-sssd --with-sssd-lib=/usr/lib/x86_64-linux-gnu --with-selinux
+Sudoers policy plugin version 1.8.9p5
+Sudoers file grammar version 43
+
+Sudoers path: /etc/sudoers
+Authentication methods: 'pam'
+Syslog facility if syslog is being used for logging: authpriv
+Syslog priority to use when user authenticates successfully: notice
+Syslog priority to use when user authenticates unsuccessfully: alert
+Send mail if the user is not in sudoers
+Use a separate timestamp for each user/tty combo
+Lecture user the first time they run sudo
+Root may run sudo
+Allow some information gathering to give useful error messages
+Require fully-qualified hostnames in the sudoers file
+Visudo will honor the EDITOR environment variable
+Set the LOGNAME and USER environment variables
+Length at which to wrap log file lines (0 for no wrap): 80
+Authentication timestamp timeout: 15.0 minutes
+Password prompt timeout: 0.0 minutes
+Number of tries to enter a password: 3
+Umask to use or 0777 to use user's: 022
+Path to mail program: /usr/sbin/sendmail
+Flags for mail program: -t
+Address to send mail to: root
+Subject line for mail messages: *** SECURITY information for %h ***
+Incorrect password message: Sorry, try again.
+Path to authentication timestamp dir: /var/lib/sudo
+Default password prompt: [sudo] password for %p: 
+Default user to run commands as: root
+Value to override user's $PATH with: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Path to the editor for use by visudo: /usr/bin/editor
+When to require a password for 'list' pseudocommand: any
+When to require a password for 'verify' pseudocommand: all
+File descriptors >= 3 will be closed before executing a command
+Environment variables to check for sanity:
+	TZ
+	TERM
+	LINGUAS
+	LC_*
+	LANGUAGE
+	LANG
+	COLORTERM
+Environment variables to remove:
+	RUBYOPT
+	RUBYLIB
+	PYTHONUSERBASE
+	PYTHONINSPECT
+	PYTHONPATH
+	PYTHONHOME
+	TMPPREFIX
+	ZDOTDIR
+	READNULLCMD
+	NULLCMD
+	FPATH
+	PERL5DB
+	PERL5OPT
+	PERL5LIB
+	PERLLIB
+	PERLIO_DEBUG 
+	JAVA_TOOL_OPTIONS
+	SHELLOPTS
+	GLOBIGNORE
+	PS4
+	BASH_ENV
+	ENV
+	TERMCAP
+	TERMPATH
+	TERMINFO_DIRS
+	TERMINFO
+	_RLD*
+	LD_*
+	PATH_LOCALE
+	NLSPATH
+	HOSTALIASES
+	RES_OPTIONS
+	LOCALDOMAIN
+	CDPATH
+	IFS
+Environment variables to preserve:
+	JAVA_HOME
+	TRAVIS
+	CI
+	DEBIAN_FRONTEND
+	XAUTHORIZATION
+	XAUTHORITY
+	PS2
+	PS1
+	PATH
+	LS_COLORS
+	KRB5CCNAME
+	HOSTNAME
+	HOME
+	DISPLAY
+	COLORS
+Locale to use while parsing sudoers: C
+Directory in which to store input/output logs: /var/log/sudo-io
+File in which to store the input/output log: %{seq}
+Add an entry to the utmp/utmpx file when allocating a pty
+PAM service name to use
+PAM service name to use for login shells
+Create a new PAM session for the command to run in
+Maximum I/O log sequence number: 0
+
+Local IP address and netmask pairs:
+	10.240.0.10/255.255.255.255
+	172.17.0.1/255.255.0.0
+
+Sudoers I/O plugin version 1.8.9p5
+[34m[1mgzip version[0m
+gzip 1.6
+Copyright (C) 2007, 2010, 2011 Free Software Foundation, Inc.
+Copyright (C) 1993 Jean-loup Gailly.
+This is free software.  You may redistribute copies of it under the terms of
+the GNU General Public License <http://www.gnu.org/licenses/gpl.html>.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Jean-loup Gailly.
+[34m[1mzip version[0m
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+Currently maintained by E. Gordon.  Please send bug reports to
+the authors using the web page at www.info-zip.org; see README for details.
+
+Latest sources and executables are at ftp://ftp.info-zip.org/pub/infozip,
+as of above date; see http://www.info-zip.org/ for other sites.
+
+Compiled with gcc 4.8.2 for Unix (Linux ELF) on Oct 21 2013.
+
+Zip special compilation options:
+	USE_EF_UT_TIME       (store Universal Time)
+	BZIP2_SUPPORT        (bzip2 library version 1.0.6, 6-Sept-2010)
+	    bzip2 code and library copyright (c) Julian R Seward
+	    (See the bzip2 license for terms of use)
+	SYMLINK_SUPPORT      (symbolic links supported)
+	LARGE_FILE_SUPPORT   (can read and write large files on file system)
+	ZIP64_SUPPORT        (use Zip64 to store large files in archives)
+	UNICODE_SUPPORT      (store and read UTF-8 Unicode paths)
+	STORE_UNIX_UIDs_GIDs (store UID/GID sizes/values using new extra field)
+	UIDGID_NOT_16BIT     (old Unix 16-bit UID/GID extra field not used)
+	[encryption, version 2.91 of 05 Jan 2007] (modified for Zip 3)
+
+Encryption notice:
+	The encryption code of this program is not copyrighted and is
+	put in the public domain.  It was originally written in Europe
+	and, to the best of our knowledge, can be freely distributed
+	in both source and object forms from any country, including
+	the USA under License Exception TSU of the U.S. Export
+	Administration Regulations (section 740.13(e)) of 6 June 2002.
+
+Zip environment options:
+             ZIP:  [none]
+          ZIPOPT:  [none]
+[34m[1mvim version[0m
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Nov 24 2016 16:43:18)
+Included patches: 1-52
+Extra patches: 8.0.0056
+Modified by pkg-vim-maintainers@lists.alioth.debian.org
+Compiled by buildd@
+Huge version without GUI.  Features included (+) or not (-):
++acl             +farsi           +mouse_netterm   +syntax
++arabic          +file_in_path    +mouse_sgr       +tag_binary
++autocmd         +find_in_path    -mouse_sysmouse  +tag_old_static
+-balloon_eval    +float           +mouse_urxvt     -tag_any_white
+-browse          +folding         +mouse_xterm     -tcl
+++builtin_terms  -footer          +multi_byte      +terminfo
++byte_offset     +fork()          +multi_lang      +termresponse
++cindent         +gettext         -mzscheme        +textobjects
+-clientserver    -hangul_input    +netbeans_intg   +title
+-clipboard       +iconv           +path_extra      -toolbar
++cmdline_compl   +insert_expand   -perl            +user_commands
++cmdline_hist    +jumplist        +persistent_undo +vertsplit
++cmdline_info    +keymap          +postscript      +virtualedit
++comments        +langmap         +printer         +visual
++conceal         +libcall         +profile         +visualextra
++cryptv          +linebreak       +python          +viminfo
++cscope          +lispindent      -python3         +vreplace
++cursorbind      +listcmds        +quickfix        +wildignore
++cursorshape     +localmap        +reltime         +wildmenu
++dialog_con      -lua             +rightleft       +windows
++diff            +menu            -ruby            +writebackup
++digraphs        +mksession       +scrollbind      -X11
+-dnd             +modify_fname    +signs           -xfontset
+-ebcdic          +mouse           +smartindent     -xim
++emacs_tags      -mouseshape      -sniff           -xsmp
++eval            +mouse_dec       +startuptime     -xterm_clipboard
++ex_extra        +mouse_gpm       +statusline      -xterm_save
++extra_search    -mouse_jsbterm   -sun_workshop    -xpm
+   system vimrc file: "$VIM/vimrc"
+     user vimrc file: "$HOME/.vimrc"
+ 2nd user vimrc file: "~/.vim/vimrc"
+      user exrc file: "$HOME/.exrc"
+  fall-back for $VIM: "/usr/share/vim"
+Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1      
+Linking: gcc   -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,--as-needed -o vim        -lm -ltinfo -lnsl  -lselinux  -lacl -lattr -lgpm -ldl    -L/usr/lib/python2.7/config-x86_64-linux-gnu -lpython2.7 -lpthread -ldl -lutil -lm -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions      
+[34m[1miptables version[0m
+iptables v1.4.21
+[34m[1mcurl version[0m
+curl 7.35.0 (x86_64-pc-linux-gnu) libcurl/7.35.0 OpenSSL/1.0.1f zlib/1.2.8 libidn/1.28 librtmp/2.3
+[34m[1mwget version[0m
+GNU Wget 1.15 built on linux-gnu.
+[34m[1mrsync version[0m
+rsync  version 3.1.0  protocol version 31
+[34m[1mgimme version[0m
+v1.2.0
+[34m[1mnvm version[0m
+0.33.2
+[34m[1mperlbrew version[0m
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.80
+[34m[1mphpenv version[0m
+rbenv 1.1.1-4-g4ebd1bd
+[34m[1mrvm version[0m
+rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+[34m[1mdefault ruby version[0m
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+[34m[1mCouchDB version[0m
+couchdb 1.6.1
+[34m[1mElasticSearch version[0m
+5.5.0
+[34m[1mInstalled Firefox version[0m
+firefox 55.0.2
+[34m[1mMongoDB version[0m
+MongoDB 3.2.16
+[34m[1mPre-installed PostgreSQL versions[0m
+9.2.22
+9.3.18
+9.4.13
+9.5.8
+9.6.4
+[34m[1mRabbitMQ Version[0m
+3.6.11
+[34m[1mRedis version[0m
+redis-server 4.0.1
+[34m[1mriak version[0m
+2.2.3
+[34m[1mPre-installed Go versions[0m
+1.7.4
+[34m[1mant version[0m
+Apache Ant(TM) version 1.9.3 compiled on April 8 2014
+[34m[1mmvn version[0m
+Apache Maven 3.5.0 (ff8f5e7444045639af65f6095c62210b5713f426; 2017-04-03T19:39:06Z)
+Maven home: /usr/local/maven-3.5.0
+Java version: 1.8.0_144, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.4.0-81-generic", arch: "amd64", family: "unix"
+[34m[1mgradle version[0m
+
+------------------------------------------------------------
+Gradle 4.0.1
+------------------------------------------------------------
+
+Build time:   2017-07-07 14:02:41 UTC
+Revision:     38e5dc0f772daecca1d2681885d3d85414eb6826
+
+Groovy:       2.4.11
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_144 (Oracle Corporation 25.144-b01)
+OS:           Linux 4.4.0-81-generic amd64
+
+[34m[1mlein version[0m
+WARNING: You're currently running as root; probably by accident.
+Press control-C to abort or Enter to continue as root.
+Set LEIN_ROOT to disable this warning.
+Leiningen 2.7.1 on Java 1.8.0_144 Java HotSpot(TM) 64-Bit Server VM
+[34m[1mPre-installed Node.js versions[0m
+v4.8.4
+v6.11.2
+v6.9.4
+v7.4.0
+v8.4
+[34m[1mphpenv versions[0m
+  system
+  5.6
+* 5.6.31 (set by /home/travis/.phpenv/version)
+  7.0
+  7.0.22
+  hhvm
+  hhvm-stable
+[34m[1mcomposer --version[0m
+Composer version 1.4.2 2017-05-17 08:17:52
+[34m[1mPre-installed Ruby versions[0m
+ruby-2.2.7
+ruby-2.3.4
+ruby-2.4.1
+travis_fold:end:system_info[0K
+removed ‘/etc/apt/sources.list.d/basho_riak.list’
+Executing: /tmp/tmp.B0KQCLZV0Q/gpg.1.sh --keyserver
+hkp://keyserver.ubuntu.com:80
+--recv
+EA312927
+gpg: requesting key EA312927 from hkp server keyserver.ubuntu.com
+gpg: key EA312927: "MongoDB 3.2 Release Signing Key <packaging@mongodb.com>" 1 new signature
+gpg: Total number processed: 1
+gpg:         new signatures: 1
+W: https://dl.hhvm.com/ubuntu/dists/trusty/InRelease: Signature by key 36AEF64D0207E7EEE352D4875A16E7281BE7A449 uses weak digest algorithm (SHA1)
+W: The repository 'http://ppa.launchpad.net/couchdb/stable/ubuntu trusty Release' does not have a Release file.
+W: Failed to fetch http://ppa.launchpad.net/openjdk-r/ppa/ubuntu/dists/trusty/InRelease  Could not connect to ppa.launchpad.net:80 (91.189.95.83), connection timed out
+W: Failed to fetch http://ppa.launchpad.net/pollinate/ppa/ubuntu/dists/trusty/InRelease  Unable to connect to ppa.launchpad.net:http:
+W: Failed to fetch http://ppa.launchpad.net/webupd8team/java/ubuntu/dists/trusty/InRelease  Unable to connect to ppa.launchpad.net:http:
+W: Failed to fetch http://ppa.launchpad.net/chris-lea/redis-server/ubuntu/dists/trusty/main/binary-amd64/Packages  Unable to connect to ppa.launchpad.net:http:
+W: Failed to fetch http://ppa.launchpad.net/chris-lea/redis-server/ubuntu/dists/trusty/main/binary-i386/Packages  Unable to connect to ppa.launchpad.net:http:
+W: Failed to fetch http://ppa.launchpad.net/chris-lea/redis-server/ubuntu/dists/trusty/main/i18n/Translation-en  Unable to connect to ppa.launchpad.net:http:
+W: Failed to fetch http://ppa.launchpad.net/george-edison55/cmake-3.x/ubuntu/dists/trusty/main/binary-amd64/Packages  Unable to connect to ppa.launchpad.net:http:
+W: Failed to fetch http://ppa.launchpad.net/george-edison55/cmake-3.x/ubuntu/dists/trusty/main/binary-i386/Packages  Unable to connect to ppa.launchpad.net:http:
+W: Failed to fetch http://ppa.launchpad.net/george-edison55/cmake-3.x/ubuntu/dists/trusty/main/i18n/Translation-en  Unable to connect to ppa.launchpad.net:http:
+W: Failed to fetch http://ppa.launchpad.net/git-core/ppa/ubuntu/dists/trusty/main/binary-amd64/Packages  Unable to connect to ppa.launchpad.net:http:
+W: Failed to fetch http://ppa.launchpad.net/git-core/ppa/ubuntu/dists/trusty/main/binary-i386/Packages  Unable to connect to ppa.launchpad.net:http:
+W: Failed to fetch http://ppa.launchpad.net/git-core/ppa/ubuntu/dists/trusty/main/i18n/Translation-en  Unable to connect to ppa.launchpad.net:http:
+W: Failed to fetch http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/trusty/main/binary-amd64/Packages  Unable to connect to ppa.launchpad.net:http:
+W: Failed to fetch http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/trusty/main/binary-i386/Packages  Unable to connect to ppa.launchpad.net:http:
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+
+127.0.0.1 localhost nettuno travis vagrant
+127.0.1.1 travis-job-533673b3-a27b-4fe7-be7a-f8da2bbef36d travis-job-533673b3-a27b-4fe7-be7a-f8da2bbef36d ip4-loopback trusty64
+
+depth=3 C = US, O = "Entrust, Inc.", OU = www.entrust.net/CPS is incorporated by reference, OU = "(c) 2006 Entrust, Inc.", CN = Entrust Root Certification Authority
+verify error:num=19:self signed certificate in certificate chain
+verify return:0
+DONE
+travis_fold:start:git.checkout[0Ktravis_time:start:0060a6c0[0K$ git clone --depth=50 --branch=coverity_scan https://github.com/collectd/collectd.git collectd/collectd
+Cloning into 'collectd/collectd'...
+
+travis_time:end:0060a6c0:start=1511819266986850219,finish=1511819269104763212,duration=2117912993[0K$ cd collectd/collectd
+$ git checkout -qf 2b3e3f67e7c89772379a94987700e2a5346e36c4
+travis_fold:end:git.checkout[0K
+[33;1mSetting environment variables from .travis.yml[0m
+$ export COVERITY_SCAN_TOKEN=[secure]
+
+$ export CC=gcc
+$ gcc --version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+travis_fold:start:before_install.1[0Ktravis_time:start:0edb49cc[0K$ openssl s_client -connect scan.coverity.com:443 </dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-certificates.crt
+depth=3 C = US, O = "Entrust, Inc.", OU = www.entrust.net/CPS is incorporated by reference, OU = "(c) 2006 Entrust, Inc.", CN = Entrust Root Certification Authority
+verify error:num=19:self signed certificate in certificate chain
+verify return:0
+DONE
+-----BEGIN CERTIFICATE-----
+MIIFNDCCBBygAwIBAgIQSqWMsU/QNioAAAAAUNgfazANBgkqhkiG9w0BAQsFADCB
+ujELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUVudHJ1c3QsIEluYy4xKDAmBgNVBAsT
+H1NlZSB3d3cuZW50cnVzdC5uZXQvbGVnYWwtdGVybXMxOTA3BgNVBAsTMChjKSAy
+MDEyIEVudHJ1c3QsIEluYy4gLSBmb3IgYXV0aG9yaXplZCB1c2Ugb25seTEuMCwG
+A1UEAxMlRW50cnVzdCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eSAtIEwxSzAeFw0x
+NjA1MTIxNzAyNTNaFw0xODA1MTIxNzMyNTJaMG8xCzAJBgNVBAYTAlVTMRMwEQYD
+VQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRcwFQYDVQQK
+Ew5TeW5vcHN5cywgSW5jLjEaMBgGA1UEAxMRc2Nhbi5jb3Zlcml0eS5jb20wggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDOkdFG40Fe3jFI+fehQk1RklLn
+XMgmZ4unBT3OjIwmjY550pVqx8A/9rSaj8yR1P0ds3AaOD4H/n6Nx8r24aEdQIjn
+LrQYVA7oa8+vW7GHcZkGhD64FD/bE+lPC+CVXHuKMK7CRjvO1ue5H30qbkplch3g
+ORtduWzalixvTCauRHAl1GZMocM0au41f0NdgLOFvOAhCb1ca6Mbif7SGCqPsrf3
+8sAHok5eVkyo7rTx/wvX75BbiH0bJIsT41YKQhBtBtUXxAfuTux8OYXIZKj0ZJEs
+hVu1QfHOsRqNRCrw+upFrbvHLpJSDciNOrpoa3rLuaLQ/GbLBH3KUBL8+ucLAgMB
+AAGjggF+MIIBejAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUHAwEw
+MwYDVR0fBCwwKjAooCagJIYiaHR0cDovL2NybC5lbnRydXN0Lm5ldC9sZXZlbDFr
+LmNybDBLBgNVHSAERDBCMDYGCmCGSAGG+mwKAQUwKDAmBggrBgEFBQcCARYaaHR0
+cDovL3d3dy5lbnRydXN0Lm5ldC9ycGEwCAYGZ4EMAQICMGgGCCsGAQUFBwEBBFww
+WjAjBggrBgEFBQcwAYYXaHR0cDovL29jc3AuZW50cnVzdC5uZXQwMwYIKwYBBQUH
+MAKGJ2h0dHA6Ly9haWEuZW50cnVzdC5uZXQvbDFrLWNoYWluMjU2LmNlcjAcBgNV
+HREEFTATghFzY2FuLmNvdmVyaXR5LmNvbTAfBgNVHSMEGDAWgBSConB03bxTP897
+1PfNf6dgxgpMvzAdBgNVHQ4EFgQUVpn9FLmmh0aRmeKLR15wKZnHqcQwCQYDVR0T
+BAIwADANBgkqhkiG9w0BAQsFAAOCAQEAR60orhrrGrL8+jRyXiN+UFz0Gkz9xn5I
+JZ9pgYUPJbHaBdFIubAnAkas3PDil9vuHiaSe8VGbaIiaK7BOZCFRs+xiH6Dk1u4
+MDzySjm52h2WoDhUuHtXEZTLJVL83pPVQzJz836vXMVJWpxnZn3Jpf901pbqJHc0
+P2koXgdSSYa4KHxXSpxSZxrA+lS3O7irqBfylXO8sam5Hz+lOZOTlIGJTNlqG8/T
+Xk1B+/7SCk4aWWGwbfgZxGzgat7Jp2bKoG7DoO35l+F1REnBUUZOvAPWdYZHgw0r
+26Pj6nr6VArFBTIV2FkBBhbHJq0uammirF0fX6STW20Aqv6kIHYzUg==
+-----END CERTIFICATE-----
+
+travis_time:end:0edb49cc:start=1511819269168240621,finish=1511819269350543201,duration=182302580[0Ktravis_fold:end:before_install.1[0Ktravis_fold:start:before_install.2[0Ktravis_time:start:1a8191d1[0K$ sudo apt-get update -qq
+W: https://dl.hhvm.com/ubuntu/dists/trusty/InRelease: Signature by key 36AEF64D0207E7EEE352D4875A16E7281BE7A449 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/trusty/Release.gpg: Signature by key 15866BAFD9BCC4F3C1E0DFC7D69548E1C17EAB57 uses weak digest algorithm (SHA1)
+
+travis_time:end:1a8191d1:start=1511819269359959056,finish=1511819279044461923,duration=9684502867[0Ktravis_fold:end:before_install.2[0Ktravis_fold:start:before_install.3[0Ktravis_time:start:1960f474[0K$ sudo apt-get install -qq --no-install-recommends autotools-dev iptables-dev libatasmart-dev libcap-dev libcurl4-gnutls-dev libdbi0-dev libesmtp-dev libganglia1-dev libgcrypt11-dev libglib2.0-dev libgps-dev libhiredis-dev libi2c-dev libldap2-dev libltdl-dev liblua50-dev liblua5.1-0-dev liblua5.2-dev liblvm2-dev libmemcached-dev libmicrohttpd-dev libmnl-dev libmodbus-dev libmosquitto0-dev libmysqlclient-dev libnotify-dev libopenipmi-dev liboping-dev libow-dev libpcap-dev libperl-dev libpq-dev libprotobuf-c0-dev librabbitmq-dev librdkafka-dev libriemann-client-dev librrd-dev libsensors4-dev libsigrok-dev libsnmp-dev libstatgrab-dev libtokyocabinet-dev libtokyotyrant-dev libudev-dev libupsclient-dev libvarnish-dev libvirt-dev libxen-dev libxml2-dev libyajl-dev linux-libc-dev perl protobuf-c-compiler python3-dev python-dev xfslibs-dev
+Extracting templates from packages: 25%Extracting templates from packages: 50%Extracting templates from packages: 75%Extracting templates from packages: 100%
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 92755 files and directories currently installed.)
+Preparing to unpack .../perl_5.18.2-2ubuntu1.3_amd64.deb ...
+Unpacking perl (5.18.2-2ubuntu1.3) over (5.18.2-2ubuntu1.1) ...
+Preparing to unpack .../perl-base_5.18.2-2ubuntu1.3_amd64.deb ...
+Unpacking perl-base (5.18.2-2ubuntu1.3) over (5.18.2-2ubuntu1.1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up perl-base (5.18.2-2ubuntu1.3) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 92755 files and directories currently installed.)
+Preparing to unpack .../perl-modules_5.18.2-2ubuntu1.3_all.deb ...
+Unpacking perl-modules (5.18.2-2ubuntu1.3) over (5.18.2-2ubuntu1.1) ...
+Preparing to unpack .../libcurl4-gnutls-dev_7.35.0-1ubuntu2.12_amd64.deb ...
+Unpacking libcurl4-gnutls-dev:amd64 (7.35.0-1ubuntu2.12) over (7.35.0-1ubuntu2.10) ...
+Preparing to unpack .../libcurl3-gnutls_7.35.0-1ubuntu2.12_amd64.deb ...
+Unpacking libcurl3-gnutls:amd64 (7.35.0-1ubuntu2.12) over (7.35.0-1ubuntu2.10) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libcurl3-gnutls:amd64 (7.35.0-1ubuntu2.12) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.13) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 92755 files and directories currently installed.)
+Preparing to unpack .../libxml2-dev_2.9.1+dfsg1-3ubuntu4.10_amd64.deb ...
+Unpacking libxml2-dev:amd64 (2.9.1+dfsg1-3ubuntu4.10) over (2.9.1+dfsg1-3ubuntu4.9) ...
+Preparing to unpack .../libxml2_2.9.1+dfsg1-3ubuntu4.10_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.1+dfsg1-3ubuntu4.10) over (2.9.1+dfsg1-3ubuntu4.9) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libxml2:amd64 (2.9.1+dfsg1-3ubuntu4.10) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.13) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 92755 files and directories currently installed.)
+Preparing to unpack .../udev_204-5ubuntu20.25_amd64.deb ...
+Adding 'diversion of /bin/udevadm to /bin/udevadm.upgrade by fake-udev'
+Unpacking udev (204-5ubuntu20.25) over (204-5ubuntu20.24) ...
+Preparing to unpack .../libudev1_204-5ubuntu20.25_amd64.deb ...
+Unpacking libudev1:amd64 (204-5ubuntu20.25) over (204-5ubuntu20.24) ...
+Selecting previously unselected package libatasmart4:amd64.
+Preparing to unpack .../libatasmart4_0.19-3_amd64.deb ...
+Unpacking libatasmart4:amd64 (0.19-3) ...
+Selecting previously unselected package libbluetooth3:amd64.
+Preparing to unpack .../libbluetooth3_4.101-0ubuntu13.3_amd64.deb ...
+Unpacking libbluetooth3:amd64 (4.101-0ubuntu13.3) ...
+Selecting previously unselected package libconfuse-common.
+Preparing to unpack .../libconfuse-common_2.7-4ubuntu1_all.deb ...
+Unpacking libconfuse-common (2.7-4ubuntu1) ...
+Selecting previously unselected package libconfuse0:amd64.
+Preparing to unpack .../libconfuse0_2.7-4ubuntu1_amd64.deb ...
+Unpacking libconfuse0:amd64 (2.7-4ubuntu1) ...
+Selecting previously unselected package libftdi1:amd64.
+Preparing to unpack .../libftdi1_0.20-1ubuntu1_amd64.deb ...
+Unpacking libftdi1:amd64 (0.20-1ubuntu1) ...
+Selecting previously unselected package libgps20:amd64.
+Preparing to unpack .../libgps20_3.9-3_amd64.deb ...
+Unpacking libgps20:amd64 (3.9-3) ...
+Selecting previously unselected package libharfbuzz-gobject0:amd64.
+Preparing to unpack .../libharfbuzz-gobject0_0.9.27-1ubuntu1.1_amd64.deb ...
+Unpacking libharfbuzz-gobject0:amd64 (0.9.27-1ubuntu1.1) ...
+Selecting previously unselected package libharfbuzz-icu0:amd64.
+Preparing to unpack .../libharfbuzz-icu0_0.9.27-1ubuntu1.1_amd64.deb ...
+Unpacking libharfbuzz-icu0:amd64 (0.9.27-1ubuntu1.1) ...
+Selecting previously unselected package libhiredis0.10:amd64.
+Preparing to unpack .../libhiredis0.10_0.11.0-3_amd64.deb ...
+Unpacking libhiredis0.10:amd64 (0.11.0-3) ...
+Selecting previously unselected package liblua5.1-0:amd64.
+Preparing to unpack .../liblua5.1-0_5.1.5-5ubuntu0.1_amd64.deb ...
+Unpacking liblua5.1-0:amd64 (5.1.5-5ubuntu0.1) ...
+Selecting previously unselected package liblua5.2-0:amd64.
+Preparing to unpack .../liblua5.2-0_5.2.3-1_amd64.deb ...
+Unpacking liblua5.2-0:amd64 (5.2.3-1) ...
+Selecting previously unselected package liblvm2app2.2:amd64.
+Preparing to unpack .../liblvm2app2.2_2.02.98-6ubuntu2_amd64.deb ...
+Unpacking liblvm2app2.2:amd64 (2.02.98-6ubuntu2) ...
+Selecting previously unselected package liblvm2cmd2.02:amd64.
+Preparing to unpack .../liblvm2cmd2.02_2.02.98-6ubuntu2_amd64.deb ...
+Unpacking liblvm2cmd2.02:amd64 (2.02.98-6ubuntu2) ...
+Selecting previously unselected package libmicrohttpd10.
+Preparing to unpack .../libmicrohttpd10_0.9.33-1_amd64.deb ...
+Unpacking libmicrohttpd10 (0.9.33-1) ...
+Preparing to unpack .../libmysqlclient-dev_5.5.58-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking libmysqlclient-dev (5.5.58-0ubuntu0.14.04.1) over (5.5.57-0ubuntu0.14.04.1) ...
+Preparing to unpack .../mysql-common_5.5.58-0ubuntu0.14.04.1_all.deb ...
+Unpacking mysql-common (5.5.58-0ubuntu0.14.04.1) over (5.5.57-0ubuntu0.14.04.1) ...
+Preparing to unpack .../libmysqlclient18_5.5.58-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking libmysqlclient18:amd64 (5.5.58-0ubuntu0.14.04.1) over (5.5.57-0ubuntu0.14.04.1) ...
+Selecting previously unselected package liboping0:amd64.
+Preparing to unpack .../liboping0_1.6.2-4_amd64.deb ...
+Unpacking liboping0:amd64 (1.6.2-4) ...
+Preparing to unpack .../libpq-dev_10.1-1.pgdg14.04+1_amd64.deb ...
+Unpacking libpq-dev (10.1-1.pgdg14.04+1) over (9.6.4-1.pgdg14.04+1) ...
+Preparing to unpack .../libpq5_10.1-1.pgdg14.04+1_amd64.deb ...
+Unpacking libpq5:amd64 (10.1-1.pgdg14.04+1) over (9.6.4-1.pgdg14.04+1) ...
+Selecting previously unselected package librabbitmq1.
+Preparing to unpack .../librabbitmq1_0.4.1-1_amd64.deb ...
+Unpacking librabbitmq1 (0.4.1-1) ...
+Selecting previously unselected package libperl5.18.
+Preparing to unpack .../libperl5.18_5.18.2-2ubuntu1.3_amd64.deb ...
+Unpacking libperl5.18 (5.18.2-2ubuntu1.3) ...
+Selecting previously unselected package libsnmp-base.
+Preparing to unpack .../libsnmp-base_5.7.2~dfsg-8.1ubuntu3.2_all.deb ...
+Unpacking libsnmp-base (5.7.2~dfsg-8.1ubuntu3.2) ...
+Selecting previously unselected package libsnmp30:amd64.
+Preparing to unpack .../libsnmp30_5.7.2~dfsg-8.1ubuntu3.2_amd64.deb ...
+Unpacking libsnmp30:amd64 (5.7.2~dfsg-8.1ubuntu3.2) ...
+Selecting previously unselected package libtokyocabinet9:amd64.
+Preparing to unpack .../libtokyocabinet9_1.4.48-2_amd64.deb ...
+Unpacking libtokyocabinet9:amd64 (1.4.48-2) ...
+Selecting previously unselected package libupsclient3:amd64.
+Preparing to unpack .../libupsclient3_2.7.1-1ubuntu1.2_amd64.deb ...
+Unpacking libupsclient3:amd64 (2.7.1-1ubuntu1.2) ...
+Selecting previously unselected package libvarnishapi1.
+Preparing to unpack .../libvarnishapi1_3.0.5-2ubuntu0.1_amd64.deb ...
+Unpacking libvarnishapi1 (3.0.5-2ubuntu0.1) ...
+Selecting previously unselected package libmnl0:amd64.
+Preparing to unpack .../libmnl0_1.0.3-3ubuntu1_amd64.deb ...
+Unpacking libmnl0:amd64 (1.0.3-3ubuntu1) ...
+Selecting previously unselected package libmodbus5:amd64.
+Preparing to unpack .../libmodbus5_3.0.5-1_amd64.deb ...
+Unpacking libmodbus5:amd64 (3.0.5-1) ...
+Selecting previously unselected package libow-2.8-15:amd64.
+Preparing to unpack .../libow-2.8-15_2.8p15-1ubuntu4_amd64.deb ...
+Unpacking libow-2.8-15:amd64 (2.8p15-1ubuntu4) ...
+Selecting previously unselected package libowcapi-2.8-15:amd64.
+Preparing to unpack .../libowcapi-2.8-15_2.8p15-1ubuntu4_amd64.deb ...
+Unpacking libowcapi-2.8-15:amd64 (2.8p15-1ubuntu4) ...
+Selecting previously unselected package libprotobuf-c0.
+Preparing to unpack .../libprotobuf-c0_0.15-1build1_amd64.deb ...
+Unpacking libprotobuf-c0 (0.15-1build1) ...
+Selecting previously unselected package libriemann-client0:amd64.
+Preparing to unpack .../libriemann-client0_1.1.1-1_amd64.deb ...
+Unpacking libriemann-client0:amd64 (1.1.1-1) ...
+Selecting previously unselected package libyajl2:amd64.
+Preparing to unpack .../libyajl2_2.0.4-4_amd64.deb ...
+Unpacking libyajl2:amd64 (2.0.4-4) ...
+Selecting previously unselected package gir1.2-notify-0.7.
+Preparing to unpack .../gir1.2-notify-0.7_0.7.6-1ubuntu3_amd64.deb ...
+Unpacking gir1.2-notify-0.7 (0.7.6-1ubuntu3) ...
+Selecting previously unselected package gir1.2-pango-1.0.
+Preparing to unpack .../gir1.2-pango-1.0_1.36.3-1ubuntu1.1_amd64.deb ...
+Unpacking gir1.2-pango-1.0 (1.36.3-1ubuntu1.1) ...
+Selecting previously unselected package iptables-dev.
+Preparing to unpack .../iptables-dev_1.4.21-1ubuntu1_amd64.deb ...
+Unpacking iptables-dev (1.4.21-1ubuntu1) ...
+Selecting previously unselected package libasound2-dev:amd64.
+Preparing to unpack .../libasound2-dev_1.0.27.2-3ubuntu7_amd64.deb ...
+Unpacking libasound2-dev:amd64 (1.0.27.2-3ubuntu7) ...
+Selecting previously unselected package libatasmart-dev.
+Preparing to unpack .../libatasmart-dev_0.19-3_amd64.deb ...
+Unpacking libatasmart-dev (0.19-3) ...
+Selecting previously unselected package libcap-dev:amd64.
+Preparing to unpack .../libcap-dev_1%3a2.24-0ubuntu2_amd64.deb ...
+Unpacking libcap-dev:amd64 (1:2.24-0ubuntu2) ...
+Selecting previously unselected package libdbi1:amd64.
+Preparing to unpack .../libdbi1_0.9.0-1_amd64.deb ...
+Unpacking libdbi1:amd64 (0.9.0-1) ...
+Selecting previously unselected package libdbi-dev.
+Preparing to unpack .../libdbi-dev_0.9.0-1_amd64.deb ...
+Unpacking libdbi-dev (0.9.0-1) ...
+Selecting previously unselected package libsepol1-dev.
+Preparing to unpack .../libsepol1-dev_2.2-1ubuntu0.1_amd64.deb ...
+Unpacking libsepol1-dev (2.2-1ubuntu0.1) ...
+Selecting previously unselected package libselinux1-dev:amd64.
+Preparing to unpack .../libselinux1-dev_2.2.2-1ubuntu0.1_amd64.deb ...
+Unpacking libselinux1-dev:amd64 (2.2.2-1ubuntu0.1) ...
+Selecting previously unselected package libudev-dev.
+Preparing to unpack .../libudev-dev_204-5ubuntu20.25_amd64.deb ...
+Unpacking libudev-dev (204-5ubuntu20.25) ...
+Selecting previously unselected package libdevmapper-dev:amd64.
+Preparing to unpack .../libdevmapper-dev_2%3a1.02.77-6ubuntu2_amd64.deb ...
+Unpacking libdevmapper-dev:amd64 (2:1.02.77-6ubuntu2) ...
+Selecting previously unselected package libesmtp6.
+Preparing to unpack .../libesmtp6_1.0.6-1ubuntu2_amd64.deb ...
+Unpacking libesmtp6 (1.0.6-1ubuntu2) ...
+Selecting previously unselected package libesmtp-dev.
+Preparing to unpack .../libesmtp-dev_1.0.6-1ubuntu2_amd64.deb ...
+Unpacking libesmtp-dev (1.0.6-1ubuntu2) ...
+Selecting previously unselected package libusb-dev.
+Preparing to unpack .../libusb-dev_2%3a0.1.12-23.3ubuntu1_amd64.deb ...
+Unpacking libusb-dev (2:0.1.12-23.3ubuntu1) ...
+Selecting previously unselected package libftdi-dev.
+Preparing to unpack .../libftdi-dev_0.20-1ubuntu1_amd64.deb ...
+Unpacking libftdi-dev (0.20-1ubuntu1) ...
+Selecting previously unselected package libganglia1.
+Preparing to unpack .../libganglia1_3.6.0-1ubuntu2_amd64.deb ...
+Unpacking libganglia1 (3.6.0-1ubuntu2) ...
+Selecting previously unselected package libganglia1-dev.
+Preparing to unpack .../libganglia1-dev_3.6.0-1ubuntu2_amd64.deb ...
+Unpacking libganglia1-dev (3.6.0-1ubuntu2) ...
+Selecting previously unselected package libgps-dev.
+Preparing to unpack .../libgps-dev_3.9-3_amd64.deb ...
+Unpacking libgps-dev (3.9-3) ...
+Selecting previously unselected package libharfbuzz-dev.
+Preparing to unpack .../libharfbuzz-dev_0.9.27-1ubuntu1.1_amd64.deb ...
+Unpacking libharfbuzz-dev (0.9.27-1ubuntu1.1) ...
+Selecting previously unselected package libhiredis-dev:amd64.
+Preparing to unpack .../libhiredis-dev_0.11.0-3_amd64.deb ...
+Unpacking libhiredis-dev:amd64 (0.11.0-3) ...
+Selecting previously unselected package liblua5.1-0-dev:amd64.
+Preparing to unpack .../liblua5.1-0-dev_5.1.5-5ubuntu0.1_amd64.deb ...
+Unpacking liblua5.1-0-dev:amd64 (5.1.5-5ubuntu0.1) ...
+Selecting previously unselected package liblua5.2-dev:amd64.
+Preparing to unpack .../liblua5.2-dev_5.2.3-1_amd64.deb ...
+Unpacking liblua5.2-dev:amd64 (5.2.3-1) ...
+Selecting previously unselected package liblua50.
+Preparing to unpack .../liblua50_5.0.3-7_amd64.deb ...
+Unpacking liblua50 (5.0.3-7) ...
+Selecting previously unselected package liblualib50.
+Preparing to unpack .../liblualib50_5.0.3-7_amd64.deb ...
+Unpacking liblualib50 (5.0.3-7) ...
+Selecting previously unselected package lua50.
+Preparing to unpack .../lua50_5.0.3-7_amd64.deb ...
+Unpacking lua50 (5.0.3-7) ...
+Selecting previously unselected package liblua50-dev.
+Preparing to unpack .../liblua50-dev_5.0.3-7_amd64.deb ...
+Unpacking liblua50-dev (5.0.3-7) ...
+Selecting previously unselected package liblvm2-dev.
+Preparing to unpack .../liblvm2-dev_2.02.98-6ubuntu2_amd64.deb ...
+Unpacking liblvm2-dev (2.02.98-6ubuntu2) ...
+Selecting previously unselected package libmicrohttpd-dev.
+Preparing to unpack .../libmicrohttpd-dev_0.9.33-1_amd64.deb ...
+Unpacking libmicrohttpd-dev (0.9.33-1) ...
+Selecting previously unselected package libmosquitto0.
+Preparing to unpack .../libmosquitto0_0.15-2ubuntu1.2_amd64.deb ...
+Unpacking libmosquitto0 (0.15-2ubuntu1.2) ...
+Selecting previously unselected package libmosquitto0-dev.
+Preparing to unpack .../libmosquitto0-dev_0.15-2ubuntu1.2_all.deb ...
+Unpacking libmosquitto0-dev (0.15-2ubuntu1.2) ...
+Selecting previously unselected package libnotify-dev.
+Preparing to unpack .../libnotify-dev_0.7.6-1ubuntu3_amd64.deb ...
+Unpacking libnotify-dev (0.7.6-1ubuntu3) ...
+Selecting previously unselected package libopenipmi0.
+Preparing to unpack .../libopenipmi0_2.0.18-0ubuntu7.2_amd64.deb ...
+Unpacking libopenipmi0 (2.0.18-0ubuntu7.2) ...
+Selecting previously unselected package libopenipmi-dev.
+Preparing to unpack .../libopenipmi-dev_2.0.18-0ubuntu7.2_amd64.deb ...
+Unpacking libopenipmi-dev (2.0.18-0ubuntu7.2) ...
+Selecting previously unselected package liboping-dev:amd64.
+Preparing to unpack .../liboping-dev_1.6.2-4_amd64.deb ...
+Unpacking liboping-dev:amd64 (1.6.2-4) ...
+Selecting previously unselected package libpango1.0-dev.
+Preparing to unpack .../libpango1.0-dev_1.36.3-1ubuntu1.1_amd64.deb ...
+Unpacking libpango1.0-dev (1.36.3-1ubuntu1.1) ...
+Selecting previously unselected package libpcap0.8-dev.
+Preparing to unpack .../libpcap0.8-dev_1.5.3-2_amd64.deb ...
+Unpacking libpcap0.8-dev (1.5.3-2) ...
+Selecting previously unselected package libpcap-dev.
+Preparing to unpack .../libpcap-dev_1.5.3-2_all.deb ...
+Unpacking libpcap-dev (1.5.3-2) ...
+Selecting previously unselected package libperl-dev.
+Preparing to unpack .../libperl-dev_5.18.2-2ubuntu1.3_amd64.deb ...
+Unpacking libperl-dev (5.18.2-2ubuntu1.3) ...
+Selecting previously unselected package libprotobuf-c0-dev.
+Preparing to unpack .../libprotobuf-c0-dev_0.15-1build1_amd64.deb ...
+Unpacking libprotobuf-c0-dev (0.15-1build1) ...
+Selecting previously unselected package libprotobuf8:amd64.
+Preparing to unpack .../libprotobuf8_2.5.0-9ubuntu1_amd64.deb ...
+Unpacking libprotobuf8:amd64 (2.5.0-9ubuntu1) ...
+Selecting previously unselected package libprotoc8:amd64.
+Preparing to unpack .../libprotoc8_2.5.0-9ubuntu1_amd64.deb ...
+Unpacking libprotoc8:amd64 (2.5.0-9ubuntu1) ...
+Selecting previously unselected package librabbitmq-dev.
+Preparing to unpack .../librabbitmq-dev_0.4.1-1_amd64.deb ...
+Unpacking librabbitmq-dev (0.4.1-1) ...
+Selecting previously unselected package librdkafka1.
+Preparing to unpack .../librdkafka1_0.8.3-1ubuntu2_amd64.deb ...
+Unpacking librdkafka1 (0.8.3-1ubuntu2) ...
+Selecting previously unselected package librdkafka-dev.
+Preparing to unpack .../librdkafka-dev_0.8.3-1ubuntu2_amd64.deb ...
+Unpacking librdkafka-dev (0.8.3-1ubuntu2) ...
+Selecting previously unselected package librrd4.
+Preparing to unpack .../librrd4_1.4.7-2ubuntu5_amd64.deb ...
+Unpacking librrd4 (1.4.7-2ubuntu5) ...
+Selecting previously unselected package librrd-dev.
+Preparing to unpack .../librrd-dev_1.4.7-2ubuntu5_amd64.deb ...
+Unpacking librrd-dev (1.4.7-2ubuntu5) ...
+Selecting previously unselected package libwrap0-dev:amd64.
+Preparing to unpack .../libwrap0-dev_7.6.q-25_amd64.deb ...
+Unpacking libwrap0-dev:amd64 (7.6.q-25) ...
+Selecting previously unselected package libsensors4-dev.
+Preparing to unpack .../libsensors4-dev_1%3a3.3.4-2ubuntu1_amd64.deb ...
+Unpacking libsensors4-dev (1:3.3.4-2ubuntu1) ...
+Selecting previously unselected package libsnmp-dev.
+Preparing to unpack .../libsnmp-dev_5.7.2~dfsg-8.1ubuntu3.2_amd64.deb ...
+Unpacking libsnmp-dev (5.7.2~dfsg-8.1ubuntu3.2) ...
+Selecting previously unselected package libstatgrab9.
+Preparing to unpack .../libstatgrab9_0.90-1.1ubuntu1_amd64.deb ...
+Unpacking libstatgrab9 (0.90-1.1ubuntu1) ...
+Selecting previously unselected package libstatgrab-dev.
+Preparing to unpack .../libstatgrab-dev_0.90-1.1ubuntu1_amd64.deb ...
+Unpacking libstatgrab-dev (0.90-1.1ubuntu1) ...
+Selecting previously unselected package libupsclient-dev.
+Preparing to unpack .../libupsclient-dev_2.7.1-1ubuntu1.2_amd64.deb ...
+Unpacking libupsclient-dev (2.7.1-1ubuntu1.2) ...
+Selecting previously unselected package libusb-1.0-0-dev:amd64.
+Preparing to unpack .../libusb-1.0-0-dev_2%3a1.0.17-1ubuntu2_amd64.deb ...
+Unpacking libusb-1.0-0-dev:amd64 (2:1.0.17-1ubuntu2) ...
+Selecting previously unselected package libvarnishapi-dev.
+Preparing to unpack .../libvarnishapi-dev_3.0.5-2ubuntu0.1_amd64.deb ...
+Unpacking libvarnishapi-dev (3.0.5-2ubuntu0.1) ...
+Selecting previously unselected package libvirt0.
+Preparing to unpack .../libvirt0_1.2.2-0ubuntu13.1.23_amd64.deb ...
+Unpacking libvirt0 (1.2.2-0ubuntu13.1.23) ...
+Selecting previously unselected package libxenstore3.0.
+Preparing to unpack .../libxenstore3.0_4.4.2-0ubuntu0.14.04.14_amd64.deb ...
+Unpacking libxenstore3.0 (4.4.2-0ubuntu0.14.04.14) ...
+Selecting previously unselected package libxen-4.4.
+Preparing to unpack .../libxen-4.4_4.4.2-0ubuntu0.14.04.14_amd64.deb ...
+Unpacking libxen-4.4 (4.4.2-0ubuntu0.14.04.14) ...
+Selecting previously unselected package libxen-dev.
+Preparing to unpack .../libxen-dev_4.4.2-0ubuntu0.14.04.14_amd64.deb ...
+Unpacking libxen-dev (4.4.2-0ubuntu0.14.04.14) ...
+Selecting previously unselected package libvirt-dev.
+Preparing to unpack .../libvirt-dev_1.2.2-0ubuntu13.1.23_amd64.deb ...
+Unpacking libvirt-dev (1.2.2-0ubuntu13.1.23) ...
+Selecting previously unselected package libzip2.
+Preparing to unpack .../libzip2_0.10.1-1.2_amd64.deb ...
+Unpacking libzip2 (0.10.1-1.2) ...
+Selecting previously unselected package libzip-dev.
+Preparing to unpack .../libzip-dev_0.10.1-1.2_amd64.deb ...
+Unpacking libzip-dev (0.10.1-1.2) ...
+Preparing to unpack .../linux-libc-dev_3.13.0-135.184_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (3.13.0-135.184) over (3.13.0-129.178) ...
+Selecting previously unselected package protobuf-c-compiler.
+Preparing to unpack .../protobuf-c-compiler_0.15-1build1_amd64.deb ...
+Unpacking protobuf-c-compiler (0.15-1build1) ...
+Selecting previously unselected package libi2c-dev.
+Preparing to unpack .../libi2c-dev_3.1.0-2_all.deb ...
+Adding 'diversion of /usr/include/linux/i2c-dev.h to /usr/include/linux/i2c-dev.h.kernel by libi2c-dev'
+Unpacking libi2c-dev (3.1.0-2) ...
+Selecting previously unselected package libmnl-dev.
+Preparing to unpack .../libmnl-dev_1.0.3-3ubuntu1_amd64.deb ...
+Unpacking libmnl-dev (1.0.3-3ubuntu1) ...
+Selecting previously unselected package libmodbus-dev.
+Preparing to unpack .../libmodbus-dev_3.0.5-1_amd64.deb ...
+Unpacking libmodbus-dev (3.0.5-1) ...
+Selecting previously unselected package libow-dev.
+Preparing to unpack .../libow-dev_2.8p15-1ubuntu4_amd64.deb ...
+Unpacking libow-dev (2.8p15-1ubuntu4) ...
+Selecting previously unselected package libriemann-client-dev.
+Preparing to unpack .../libriemann-client-dev_1.1.1-1_amd64.deb ...
+Unpacking libriemann-client-dev (1.1.1-1) ...
+Selecting previously unselected package libsigrok1.
+Preparing to unpack .../libsigrok1_0.2.0-2.1ubuntu1_amd64.deb ...
+Unpacking libsigrok1 (0.2.0-2.1ubuntu1) ...
+Selecting previously unselected package libsigrok-dev.
+Preparing to unpack .../libsigrok-dev_0.2.0-2.1ubuntu1_amd64.deb ...
+Unpacking libsigrok-dev (0.2.0-2.1ubuntu1) ...
+Selecting previously unselected package libtokyocabinet-dev.
+Preparing to unpack .../libtokyocabinet-dev_1.4.48-2_amd64.deb ...
+Unpacking libtokyocabinet-dev (1.4.48-2) ...
+Selecting previously unselected package libtokyotyrant3.
+Preparing to unpack .../libtokyotyrant3_1.1.40-4.2_amd64.deb ...
+Unpacking libtokyotyrant3 (1.1.40-4.2) ...
+Selecting previously unselected package libtokyotyrant-dev.
+Preparing to unpack .../libtokyotyrant-dev_1.1.40-4.2_amd64.deb ...
+Unpacking libtokyotyrant-dev (1.1.40-4.2) ...
+Selecting previously unselected package libyajl-dev.
+Preparing to unpack .../libyajl-dev_2.0.4-4_amd64.deb ...
+Unpacking libyajl-dev (2.0.4-4) ...
+Selecting previously unselected package uuid-dev.
+Preparing to unpack .../uuid-dev_2.20.1-5.1ubuntu20.9_amd64.deb ...
+Unpacking uuid-dev (2.20.1-5.1ubuntu20.9) ...
+Selecting previously unselected package xfslibs-dev.
+Preparing to unpack .../xfslibs-dev_3.1.9ubuntu2_amd64.deb ...
+Unpacking xfslibs-dev (3.1.9ubuntu2) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for install-info (5.2.0.dfsg.1-2) ...
+Setting up libcurl4-gnutls-dev:amd64 (7.35.0-1ubuntu2.12) ...
+Setting up libxml2-dev:amd64 (2.9.1+dfsg1-3ubuntu4.10) ...
+Setting up libudev1:amd64 (204-5ubuntu20.25) ...
+Setting up udev (204-5ubuntu20.25) ...
+udev stop/waiting
+udev start/running, process 12474
+Removing 'diversion of /bin/udevadm to /bin/udevadm.upgrade by fake-udev'
+update-initramfs: deferring update (trigger activated)
+Setting up libatasmart4:amd64 (0.19-3) ...
+Setting up libbluetooth3:amd64 (4.101-0ubuntu13.3) ...
+Setting up libconfuse-common (2.7-4ubuntu1) ...
+Setting up libconfuse0:amd64 (2.7-4ubuntu1) ...
+Setting up libftdi1:amd64 (0.20-1ubuntu1) ...
+Setting up libgps20:amd64 (3.9-3) ...
+Setting up libharfbuzz-gobject0:amd64 (0.9.27-1ubuntu1.1) ...
+Setting up libharfbuzz-icu0:amd64 (0.9.27-1ubuntu1.1) ...
+Setting up libhiredis0.10:amd64 (0.11.0-3) ...
+Setting up liblua5.1-0:amd64 (5.1.5-5ubuntu0.1) ...
+Setting up liblua5.2-0:amd64 (5.2.3-1) ...
+Setting up liblvm2app2.2:amd64 (2.02.98-6ubuntu2) ...
+Setting up liblvm2cmd2.02:amd64 (2.02.98-6ubuntu2) ...
+Setting up libmicrohttpd10 (0.9.33-1) ...
+Setting up mysql-common (5.5.58-0ubuntu0.14.04.1) ...
+Setting up libmysqlclient18:amd64 (5.5.58-0ubuntu0.14.04.1) ...
+Setting up libmysqlclient-dev (5.5.58-0ubuntu0.14.04.1) ...
+Setting up liboping0:amd64 (1.6.2-4) ...
+Setting up libpq5:amd64 (10.1-1.pgdg14.04+1) ...
+Setting up libpq-dev (10.1-1.pgdg14.04+1) ...
+Setting up librabbitmq1 (0.4.1-1) ...
+Setting up libperl5.18 (5.18.2-2ubuntu1.3) ...
+Setting up libsnmp-base (5.7.2~dfsg-8.1ubuntu3.2) ...
+Setting up libsnmp30:amd64 (5.7.2~dfsg-8.1ubuntu3.2) ...
+Setting up libtokyocabinet9:amd64 (1.4.48-2) ...
+Setting up libupsclient3:amd64 (2.7.1-1ubuntu1.2) ...
+Setting up libvarnishapi1 (3.0.5-2ubuntu0.1) ...
+Setting up libmnl0:amd64 (1.0.3-3ubuntu1) ...
+Setting up libmodbus5:amd64 (3.0.5-1) ...
+Setting up libow-2.8-15:amd64 (2.8p15-1ubuntu4) ...
+Setting up libowcapi-2.8-15:amd64 (2.8p15-1ubuntu4) ...
+Setting up libprotobuf-c0 (0.15-1build1) ...
+Setting up libriemann-client0:amd64 (1.1.1-1) ...
+Setting up libyajl2:amd64 (2.0.4-4) ...
+Setting up gir1.2-notify-0.7 (0.7.6-1ubuntu3) ...
+Setting up gir1.2-pango-1.0 (1.36.3-1ubuntu1.1) ...
+Setting up iptables-dev (1.4.21-1ubuntu1) ...
+Setting up libasound2-dev:amd64 (1.0.27.2-3ubuntu7) ...
+Setting up libatasmart-dev (0.19-3) ...
+Setting up libcap-dev:amd64 (1:2.24-0ubuntu2) ...
+Setting up libdbi1:amd64 (0.9.0-1) ...
+Setting up libdbi-dev (0.9.0-1) ...
+Setting up libsepol1-dev (2.2-1ubuntu0.1) ...
+Setting up libselinux1-dev:amd64 (2.2.2-1ubuntu0.1) ...
+Setting up libudev-dev (204-5ubuntu20.25) ...
+Setting up libdevmapper-dev:amd64 (2:1.02.77-6ubuntu2) ...
+Setting up libesmtp6 (1.0.6-1ubuntu2) ...
+Setting up libesmtp-dev (1.0.6-1ubuntu2) ...
+Setting up libusb-dev (2:0.1.12-23.3ubuntu1) ...
+Setting up libftdi-dev (0.20-1ubuntu1) ...
+Setting up libganglia1 (3.6.0-1ubuntu2) ...
+Setting up libganglia1-dev (3.6.0-1ubuntu2) ...
+Setting up libgps-dev (3.9-3) ...
+Setting up libharfbuzz-dev (0.9.27-1ubuntu1.1) ...
+Setting up libhiredis-dev:amd64 (0.11.0-3) ...
+Setting up liblua5.1-0-dev:amd64 (5.1.5-5ubuntu0.1) ...
+Setting up liblua5.2-dev:amd64 (5.2.3-1) ...
+Setting up liblua50 (5.0.3-7) ...
+Setting up liblualib50 (5.0.3-7) ...
+Setting up lua50 (5.0.3-7) ...
+update-alternatives: using /usr/bin/lua50 to provide /usr/bin/lua (lua-interpreter) in auto mode
+update-alternatives: using /usr/bin/luac50 to provide /usr/bin/luac (lua-compiler) in auto mode
+Setting up liblua50-dev (5.0.3-7) ...
+update-alternatives: using /usr/bin/lua-config50 to provide /usr/bin/lua-config (lua-configuration) in auto mode
+Setting up liblvm2-dev (2.02.98-6ubuntu2) ...
+Setting up libmicrohttpd-dev (0.9.33-1) ...
+Setting up libmosquitto0 (0.15-2ubuntu1.2) ...
+Setting up libmosquitto0-dev (0.15-2ubuntu1.2) ...
+Setting up libnotify-dev (0.7.6-1ubuntu3) ...
+Setting up libopenipmi0 (2.0.18-0ubuntu7.2) ...
+Setting up libopenipmi-dev (2.0.18-0ubuntu7.2) ...
+Setting up liboping-dev:amd64 (1.6.2-4) ...
+Setting up libpango1.0-dev (1.36.3-1ubuntu1.1) ...
+Setting up libpcap0.8-dev (1.5.3-2) ...
+Setting up libpcap-dev (1.5.3-2) ...
+Setting up libprotobuf-c0-dev (0.15-1build1) ...
+Setting up libprotobuf8:amd64 (2.5.0-9ubuntu1) ...
+Setting up libprotoc8:amd64 (2.5.0-9ubuntu1) ...
+Setting up librabbitmq-dev (0.4.1-1) ...
+Setting up librdkafka1 (0.8.3-1ubuntu2) ...
+Setting up librdkafka-dev (0.8.3-1ubuntu2) ...
+Setting up librrd4 (1.4.7-2ubuntu5) ...
+Setting up librrd-dev (1.4.7-2ubuntu5) ...
+Setting up libwrap0-dev:amd64 (7.6.q-25) ...
+Setting up libsensors4-dev (1:3.3.4-2ubuntu1) ...
+Setting up libsnmp-dev (5.7.2~dfsg-8.1ubuntu3.2) ...
+Setting up libstatgrab9 (0.90-1.1ubuntu1) ...
+Setting up libstatgrab-dev (0.90-1.1ubuntu1) ...
+Setting up libupsclient-dev (2.7.1-1ubuntu1.2) ...
+Setting up libusb-1.0-0-dev:amd64 (2:1.0.17-1ubuntu2) ...
+Setting up libvarnishapi-dev (3.0.5-2ubuntu0.1) ...
+Setting up libvirt0 (1.2.2-0ubuntu13.1.23) ...
+Setting up libxenstore3.0 (4.4.2-0ubuntu0.14.04.14) ...
+Setting up libxen-4.4 (4.4.2-0ubuntu0.14.04.14) ...
+Setting up libxen-dev (4.4.2-0ubuntu0.14.04.14) ...
+Setting up libvirt-dev (1.2.2-0ubuntu13.1.23) ...
+Setting up libzip2 (0.10.1-1.2) ...
+Setting up libzip-dev (0.10.1-1.2) ...
+Setting up linux-libc-dev:amd64 (3.13.0-135.184) ...
+Setting up protobuf-c-compiler (0.15-1build1) ...
+Setting up libi2c-dev (3.1.0-2) ...
+Setting up libmnl-dev (1.0.3-3ubuntu1) ...
+Setting up libmodbus-dev (3.0.5-1) ...
+Setting up libow-dev (2.8p15-1ubuntu4) ...
+Setting up libriemann-client-dev (1.1.1-1) ...
+Setting up libsigrok1 (0.2.0-2.1ubuntu1) ...
+Setting up libsigrok-dev (0.2.0-2.1ubuntu1) ...
+Setting up libtokyocabinet-dev (1.4.48-2) ...
+Setting up libtokyotyrant3 (1.1.40-4.2) ...
+Setting up libtokyotyrant-dev (1.1.40-4.2) ...
+Setting up libyajl-dev (2.0.4-4) ...
+Setting up uuid-dev (2.20.1-5.1ubuntu20.9) ...
+Setting up xfslibs-dev (3.1.9ubuntu2) ...
+Setting up perl-modules (5.18.2-2ubuntu1.3) ...
+Setting up perl (5.18.2-2ubuntu1.3) ...
+Setting up libperl-dev (5.18.2-2ubuntu1.3) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.13) ...
+Processing triggers for initramfs-tools (0.103ubuntu4.7) ...
+update-initramfs: Not updating initramfs.
+
+travis_time:end:1960f474:start=1511819279052649106,finish=1511819301896442302,duration=22843793196[0Ktravis_fold:end:before_install.3[0Ktravis_fold:start:before_script[0Ktravis_time:start:0c209b1e[0K$ autoreconf -fi
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, `build-aux'.
+libtoolize: copying file `build-aux/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIR, `m4'.
+libtoolize: copying file `m4/libtool.m4'
+libtoolize: copying file `m4/ltoptions.m4'
+libtoolize: copying file `m4/ltsugar.m4'
+libtoolize: copying file `m4/ltversion.m4'
+libtoolize: copying file `m4/lt~obsolete.m4'
+configure.ac:14: installing 'build-aux/compile'
+configure.ac:14: installing 'build-aux/config.guess'
+configure.ac:14: installing 'build-aux/config.sub'
+configure.ac:16: installing 'build-aux/install-sh'
+configure.ac:16: installing 'build-aux/missing'
+Makefile.am: installing 'build-aux/depcomp'
+configure.ac: installing 'build-aux/ylwrap'
+parallel-tests: installing 'build-aux/test-driver'
+
+travis_time:end:0c209b1e:start=1511819301902885276,finish=1511819318284934596,duration=16382049320[0Ktravis_fold:end:before_script[0Kcoverity_scan:start$ export PROJECT_NAME=collectd/collectd
+[33;1mCoverity Scan analysis selected for branch coverity_scan.[0m
+[33;1mCoverity Scan analysis authorized per quota.[0m
+travis_fold:start:build_coverity[0Ktravis_time:start:03bc3394[0K$ curl -s https://scan.coverity.com/scripts/travisci_build_coverity_scan.sh | COVERITY_SCAN_PROJECT_NAME="$PROJECT_NAME" COVERITY_SCAN_NOTIFICATION_EMAIL="${COVERITY_SCAN_NOTIFICATION_EMAIL:-octo@collectd.org}" COVERITY_SCAN_BUILD_COMMAND="${COVERITY_SCAN_BUILD_COMMAND:-make -j 4}" COVERITY_SCAN_BUILD_COMMAND_PREPEND="${COVERITY_SCAN_BUILD_COMMAND_PREPEND:-./configure; make clean}" COVERITY_SCAN_BRANCH_PATTERN=${COVERITY_SCAN_BRANCH_PATTERN:-coverity_scan} bash
+[33;1mNote: COVERITY_SCAN_PROJECT_NAME and COVERITY_SCAN_TOKEN are available on Project Settings page on scan.coverity.com[0m
+[33;1mCoverity Scan configured to run on branch coverity_scan[0m
+[33;1mCoverity Scan analysis authorized per quota.[0m
+[33;1mDownloading Coverity Scan Analysis Tool...[0m
+2017-11-27 21:50:39 URL:https://scan.coverity.com/download/Linux [545194721/545194721] -> "/tmp/cov-analysis-Linux.tgz" [1]
+[33;1mExtracting Coverity Scan Analysis Tool...[0m
+/tmp/coverity-scan-analysis ~/build/collectd/collectd
+~/build/collectd/collectd
+[33;1mRunning Coverity Scan Analysis Tool...[0m
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking for gawk... gawk
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... no
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking dependency style of gcc... gcc3
+checking whether make supports nested variables... (cached) yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for gcc option to accept ISO C99... -std=gnu99
+checking for C compiler vendor... gnu
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking dependency style of g++... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for egrep... (cached) /bin/grep -E
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for flex... flex
+checking lex output file root... lex.yy
+checking lex library... -lfl
+checking whether yytext is a pointer... yes
+checking for bison... bison -y
+checking for valgrind... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking if Bison is the parser generator... yes
+checking for kernel type (linux-gnu)... Linux
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for arpa/inet.h... yes
+checking for endian.h... yes
+checking for fcntl.h... yes
+checking for fnmatch.h... yes
+checking for fs_info.h... no
+checking for fshelp.h... no
+checking for grp.h... yes
+checking for kstat.h... no
+checking for kvm.h... no
+checking for libgen.h... yes
+checking for mntent.h... yes
+checking for mnttab.h... no
+checking for netdb.h... yes
+checking for paths.h... yes
+checking for poll.h... yes
+checking for pthread_np.h... no
+checking for pwd.h... yes
+checking for regex.h... yes
+checking for sys/endian.h... no
+checking for sys/fs_types.h... no
+checking for sys/fstyp.h... no
+checking for sys/ioctl.h... yes
+checking for sys/isa_defs.h... no
+checking for sys/mntent.h... no
+checking for sys/mnttab.h... no
+checking for sys/param.h... yes
+checking for sys/resource.h... yes
+checking for sys/select.h... yes
+checking for sys/socket.h... yes
+checking for sys/statfs.h... yes
+checking for sys/statvfs.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/un.h... yes
+checking for sys/vfs.h... yes
+checking for sys/vfstab.h... no
+checking for sys/vmmeter.h... no
+checking for syslog.h... yes
+checking for wordexp.h... yes
+checking for linux/ip_vs.h... yes
+checking for netinet/in_systm.h... yes
+checking for netinet/in.h... yes
+checking for netinet/ip.h... yes
+checking for netinet/ip_icmp.h... yes
+checking for netinet/ip_var.h... no
+checking for netinet/ip6.h... yes
+checking for netinet/icmp6.h... yes
+checking for netinet/tcp.h... yes
+checking for netinet/udp.h... yes
+checking sys/dkstat.h usability... no
+checking sys/dkstat.h presence... no
+checking for sys/dkstat.h... no
+checking for sys/sysctl.h... yes
+checking ifaddrs.h usability... yes
+checking ifaddrs.h presence... yes
+checking for ifaddrs.h... yes
+checking for net/if.h... yes
+checking linux/major.h usability... yes
+checking linux/major.h presence... yes
+checking for linux/major.h... yes
+checking for linux/raid/md_u.h... yes
+checking sys/sysmacros.h usability... yes
+checking sys/sysmacros.h presence... yes
+checking for sys/sysmacros.h... yes
+checking for linux/wireless.h... yes
+checking for linux/if.h... yes
+checking for linux/inet_diag.h... yes
+checking for linux/netdevice.h... yes
+checking for linux/sockios.h... yes
+checking for linux/ethtool.h... yes
+checking for linux/un.h... yes
+checking cpuid.h usability... yes
+checking cpuid.h presence... yes
+checking for cpuid.h... yes
+checking sys/capability.h usability... yes
+checking sys/capability.h presence... yes
+checking for sys/capability.h... yes
+checking for cap_get_proc in -lcap... yes
+checking whether CAP_IS_SUPPORTED is declared... yes
+checking for sys/swap.h... yes
+checking for vm/anon.h... no
+checking sys/loadavg.h usability... no
+checking sys/loadavg.h presence... no
+checking for sys/loadavg.h... no
+checking linux/config.h usability... no
+checking linux/config.h presence... no
+checking for linux/config.h... no
+checking utmp.h usability... yes
+checking utmp.h presence... yes
+checking for utmp.h... yes
+checking utmpx.h usability... yes
+checking utmpx.h presence... yes
+checking for utmpx.h... yes
+checking for sys/ucred.h... no
+checking for sys/mount.h... yes
+checking for xfs/xqm.h... yes
+checking arpa/nameser.h usability... yes
+checking arpa/nameser.h presence... yes
+checking for arpa/nameser.h... yes
+checking for arpa/nameser_compat.h... yes
+checking for net/if_arp.h... yes
+checking net/ppp_defs.h usability... yes
+checking net/ppp_defs.h presence... yes
+checking for net/ppp_defs.h... yes
+checking for net/if_ppp.h... yes
+checking for netinet/if_ether.h... yes
+checking for net/pfvar.h... no
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking whether clock_boottime and clock_monotonic are supported... yes
+checking for an ANSI C-conforming const... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for uid_t in sys/types.h... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for asprintf... yes
+checking for closelog... yes
+checking for getaddrinfo... yes
+checking for getgrnam_r... yes
+checking for getnameinfo... yes
+checking for getpwnam_r... yes
+checking for gettimeofday... yes
+checking for if_indextoname... yes
+checking for openlog... yes
+checking for regcomp... yes
+checking for regerror... yes
+checking for regexec... yes
+checking for regfree... yes
+checking for select... yes
+checking for setenv... yes
+checking for setgroups... yes
+checking for strcasecmp... yes
+checking for strdup... yes
+checking for strncasecmp... yes
+checking for sysconf... yes
+checking whether strerror_r is declared... yes
+checking for strerror_r... yes
+checking whether strerror_r returns char *... no
+checking for strtok_r... yes
+checking for socket... yes
+checking for clock_gettime... yes
+checking for nanosleep... yes
+checking for getifaddrs... yes
+checking for getloadavg... yes
+checking for getutent... yes
+checking for getutxent... yes
+checking for host_statistics... no
+checking for processor_info... no
+checking for statfs... yes
+checking for statvfs... yes
+checking for sysctl... yes
+checking for sysctlbyname... no
+checking for syslog... yes
+checking for thread_info... no
+checking for strptime... yes
+checking whether strptime is exported by default... no
+checking whether strptime needs standards mode... yes
+checking for timegm... no
+checking for timegm with _BSD_SOURCE... yes
+checking for sysctl kern.cp_times... no
+checking for sysctl kern.cp_time... no
+checking for swapctl... no
+checking whether NAN is defined by default... yes
+checking if doubles are stored in x86 representation... yes
+checking whether clock_boottime and clock_monotonic are supported... (cached) yes
+checking for getfsstat... no
+checking for getvfsstat... no
+checking for listmntent... no
+checking for getmntent_r... yes
+checking for getmntent... yes
+checking whether getmntent takes one argument... yes
+checking whether getmntent takes two arguments... no
+checking whether htonll is defined... no
+checking for struct if_data.ifi_ibytes... no
+checking for struct if_data.ifi_opackets... no
+checking for struct if_data.ifi_ierrors... no
+checking for struct net_device_stats.rx_bytes... no
+checking for struct net_device_stats.tx_packets... no
+checking for struct net_device_stats.rx_errors... no
+checking for struct inet_diag_req.id... yes
+checking for struct inet_diag_req.idiag_states... yes
+checking for struct ip_mreqn.imr_ifindex... yes
+checking for struct kinfo_proc.ki_pid... no
+checking for struct kinfo_proc.ki_rssize... no
+checking for struct kinfo_proc.ki_rusage... no
+checking for struct kinfo_proc.p_pid... no
+checking for struct kinfo_proc.p_vm_rssize... no
+checking for struct kinfo_proc2.p_pid... no
+checking for struct kinfo_proc2.p_uru_maxrss... no
+checking for struct udphdr.uh_dport... yes
+checking for struct udphdr.uh_sport... yes
+checking for struct udphdr.dest... yes
+checking for struct udphdr.source... yes
+checking for kstat_io_t.nwritten... no
+checking for kstat_io_t.writes... no
+checking for kstat_io_t.nwrites... no
+checking for kstat_io_t.wtime... no
+checking for pthread_setname_np... no
+checking for pthread_set_name_np... no
+checking for struct ip6_ext... yes
+checking whether i2c_smbus_read_i2c_block_data is declared... yes
+checking for pthread_create in -lpthread... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for kvm_getprocs in -lkvm... no
+checking for kvm_getswapinfo in -lkvm... no
+checking for kvm_nlist in -lkvm... no
+checking for kvm_openfiles in -lkvm... no
+checking libaquaero5.h usability... no
+checking libaquaero5.h presence... no
+checking for libaquaero5.h... no
+checking hiredis/hiredis.h usability... yes
+checking hiredis/hiredis.h presence... yes
+checking for hiredis/hiredis.h... yes
+checking for redisCommand in -lhiredis... yes
+checking curl/curl.h usability... yes
+checking curl/curl.h presence... yes
+checking for curl/curl.h... yes
+checking for curl_easy_init in -lcurl... yes
+checking whether CURLOPT_USERNAME is declared... yes
+checking whether CURLOPT_TIMEOUT_MS is declared... yes
+checking for CURLINFO_APPCONNECT_TIME... yes
+checking dbi/dbi.h usability... yes
+checking dbi/dbi.h presence... yes
+checking for dbi/dbi.h... yes
+checking for dbi_initialize in -ldbi... yes
+checking for DPDK... no
+configure: no DPDK pkg-config, using defaults
+checking rte_config.h usability... no
+checking rte_config.h presence... no
+checking for rte_config.h... no
+checking libesmtp.h usability... yes
+checking libesmtp.h presence... yes
+checking for libesmtp.h... yes
+checking for smtp_create_session in -lesmtp... yes
+checking gm_protocol.h usability... yes
+checking gm_protocol.h presence... yes
+checking for gm_protocol.h... yes
+checking for xdr_Ganglia_value_msg in -lganglia... yes
+checking gcrypt.h usability... yes
+checking gcrypt.h presence... yes
+checking for gcrypt.h... yes
+checking for gcry_md_hash_buffer in -lgcrypt... yes
+checking gps.h usability... yes
+checking gps.h presence... yes
+checking for gps.h... yes
+checking for gps_open in -lgps... yes
+checking for GRPCPP... no
+checking whether g++ accepts -std=c++11... yes
+checking for grpc_cpp_plugin... no
+checking libiptc/libiptc.h usability... yes
+checking libiptc/libiptc.h presence... yes
+checking for libiptc/libiptc.h... yes
+checking libiptc/libip6tc.h usability... yes
+checking libiptc/libip6tc.h presence... yes
+checking for libiptc/libip6tc.h... yes
+checking for iptc_handle_t... no
+checking for ip6tc_handle_t... no
+checking for library containing iptc_init... -liptc
+checking for jni.h... found in /usr/lib/jvm/java-8-oracle/include
+checking for jni_md.h... found in /usr/lib/jvm/java-8-oracle/include/linux
+checking for libjvm.so... found in /usr/lib/jvm/java-8-oracle/jre/lib/amd64/server
+checking for javac... /usr/lib/jvm/java-8-oracle/bin/javac
+checking for jar... /usr/lib/jvm/java-8-oracle/bin/jar
+configure: Building with JAVA_CPPFLAGS set to:  -I/usr/lib/jvm/java-8-oracle/include -I/usr/lib/jvm/java-8-oracle/include/linux
+configure: Building with JAVA_LDFLAGS set to:  -L/usr/lib/jvm/java-8-oracle/jre/lib/amd64/server -Wl,-rpath -Wl,/usr/lib/jvm/java-8-oracle/jre/lib/amd64/server
+checking jni.h usability... yes
+checking jni.h presence... yes
+checking for jni.h... yes
+checking for JNI_CreateJavaVM in -ljvm... yes
+configure: Building with JAVA_LIBS set to:  -ljvm
+checking ldap.h usability... yes
+checking ldap.h presence... yes
+checking for ldap.h... yes
+checking for ldap_initialize in -lldap... yes
+checking for LUA... no
+checking for LUA... no
+checking for LUA... no
+checking for LUA... no
+checking for LUA... yes
+checking lua.h usability... yes
+checking lua.h presence... yes
+checking for lua.h... yes
+checking lauxlib.h usability... yes
+checking lauxlib.h presence... yes
+checking for lauxlib.h... yes
+checking lualib.h usability... yes
+checking lualib.h presence... yes
+checking for lualib.h... yes
+checking for lua_settop... yes
+checking lvm2app.h usability... yes
+checking lvm2app.h presence... yes
+checking for lvm2app.h... yes
+checking for lvm_lv_get_property in -llvm2app... yes
+checking libmemcached/memcached.h usability... yes
+checking libmemcached/memcached.h presence... yes
+checking for libmemcached/memcached.h... yes
+checking for memcached_create in -lmemcached... yes
+checking for MICROHTTPD... yes
+checking microhttpd.h usability... yes
+checking microhttpd.h presence... yes
+checking for microhttpd.h... yes
+checking for MHD_start_daemon in -lmicrohttpd... yes
+configure: Checking for libmodbus using /usr/bin/pkg-config
+checking modbus.h usability... yes
+checking modbus.h presence... yes
+checking for modbus.h... yes
+checking for modbus_connect in -lmodbus... yes
+checking for LIBMONGOC... no
+checking mosquitto.h usability... yes
+checking mosquitto.h presence... yes
+checking for mosquitto.h... yes
+checking for mosquitto_connect in -lmosquitto... yes
+checking mysql.h usability... yes
+checking mysql.h presence... yes
+checking for mysql.h... yes
+checking for library containing mysql_get_server_version... none required
+checking for libmnl.h... no
+checking for libmnl/libmnl.h... yes
+checking for linux/gen_stats.h... yes
+checking for linux/pkt_sched.h... yes
+checking for struct rtnl_link_stats64.tx_window_errors... yes
+checking for mnl_nlmsg_get_payload in -lmnl... yes
+checking netapp_api.h usability... no
+checking netapp_api.h presence... no
+checking for netapp_api.h... no
+checking net-snmp/net-snmp-config.h usability... yes
+checking net-snmp/net-snmp-config.h presence... yes
+checking for net-snmp/net-snmp-config.h... yes
+checking for net-snmp/net-snmp-includes.h... yes
+checking for init_snmp in -lnetsnmp... yes
+checking for net-snmp/agent/net-snmp-agent-includes.h... yes
+checking for netsnmp_init_helpers in -lnetsnmphelpers... no
+checking for init_agent in -lnetsnmpagent... yes
+checking oping.h usability... yes
+checking oping.h presence... yes
+checking for oping.h... yes
+checking for ping_construct in -loping... yes
+checking owcapi.h usability... yes
+checking owcapi.h presence... yes
+checking for owcapi.h... yes
+checking for OW_get in -lowcapi... yes
+checking pcap.h usability... yes
+checking pcap.h presence... yes
+checking for pcap.h... yes
+checking for pcap_open_live in -lpcap... yes
+checking whether libpcap has PCAP_ERROR_IFACE_NOT_UP... yes
+checking for perl... /usr/bin/perl
+checking for libperl... yes
+checking if Perl supports ithreads... yes
+checking for broken Perl_load_module()... no
+checking for struct mgvtbl.svt_local... yes
+checking libpq-fe.h usability... yes
+checking libpq-fe.h presence... yes
+checking for libpq-fe.h... yes
+checking for PQserverVersion in -lpq... yes
+checking pqos.h usability... no
+checking pqos.h presence... no
+checking for pqos.h... no
+checking jevents.h usability... no
+checking jevents.h presence... no
+checking for jevents.h... no
+checking for PROTOBUF... no
+checking for main in -lprotobuf... no
+checking for protoc... no
+checking for PROTOBUF_C... no
+checking for protobuf_c_message_pack in -lprotobuf-c... yes
+checking protobuf-c/protobuf-c.h usability... no
+checking protobuf-c/protobuf-c.h presence... no
+checking for protobuf-c/protobuf-c.h... no
+checking google/protobuf-c/protobuf-c.h usability... yes
+checking google/protobuf-c/protobuf-c.h presence... yes
+checking for google/protobuf-c/protobuf-c.h... yes
+checking for protoc-c... /usr/bin/protoc-c
+checking for python3-config... /opt/pyenv/shims/python3-config
+checking Python.h usability... yes
+checking Python.h presence... yes
+checking for Python.h... yes
+checking for libpython... yes
+checking amqp.h usability... yes
+checking amqp.h presence... yes
+checking for amqp.h... yes
+checking for amqp_rpc_reply_t.library_errno... no
+checking for amqp_basic_publish in -lrabbitmq... yes
+checking amqp_tcp_socket.h usability... yes
+checking amqp_tcp_socket.h presence... yes
+checking for amqp_tcp_socket.h... yes
+checking amqp_socket.h usability... no
+checking amqp_socket.h presence... no
+checking for amqp_socket.h... no
+checking for amqp_tcp_socket_new... yes
+checking whether amqp_socket_close is declared... no
+checking librdkafka/rdkafka.h usability... yes
+checking librdkafka/rdkafka.h presence... yes
+checking for librdkafka/rdkafka.h... yes
+checking for rd_kafka_new in -lrdkafka... yes
+checking for rd_kafka_conf_set_log_cb in -lrdkafka... no
+checking for rd_kafka_set_logger in -lrdkafka... yes
+checking routeros_api.h usability... no
+checking routeros_api.h presence... no
+checking for routeros_api.h... no
+checking for RRD... no
+checking rrd.h usability... yes
+checking rrd.h presence... yes
+checking for rrd.h... yes
+checking for rrd_update_r in -lrrd_th... yes
+checking for rrdc_update in -lrrd_th... yes
+checking sensors/sensors.h usability... yes
+checking sensors/sensors.h presence... yes
+checking for sensors/sensors.h... yes
+checking for sensors_init in -lsensors... yes
+checking for LIBSIGROK... yes
+checking pkg-config for libstatgrab... found
+checking for libstatgrab CFLAGS...  
+checking for libstatgrab LDFLAGS... -lstatgrab  
+checking statgrab.h usability... yes
+checking statgrab.h presence... yes
+checking for statgrab.h... yes
+checking for sg_init in -lstatgrab... yes
+checking if libstatgrab >= 0.90... yes
+checking tcrdb.h usability... yes
+checking tcrdb.h presence... yes
+checking for tcrdb.h... yes
+checking for tcrdbrnum in -ltokyotyrant... yes
+checking libudev.h usability... yes
+checking libudev.h presence... yes
+checking for libudev.h... yes
+checking for udev_new in -ludev... yes
+configure: Checking for libupsclient using /usr/bin/pkg-config
+checking upsclient.h usability... yes
+checking upsclient.h presence... yes
+checking for upsclient.h... yes
+checking for upscli_connect in -lupsclient... yes
+checking for upscli_init in -lupsclient... yes
+checking for upscli_tryconnect in -lupsclient... yes
+checking for UPSCONN_t... yes
+checking for UPSCONN... no
+checking xenctrl.h usability... yes
+checking xenctrl.h presence... yes
+checking for xenctrl.h... yes
+checking for xc_getcpuinfo in -lxenctrl... yes
+checking yajl/yajl_parse.h usability... yes
+checking yajl/yajl_parse.h presence... yes
+checking for yajl/yajl_parse.h... yes
+checking yajl/yajl_tree.h usability... yes
+checking yajl/yajl_tree.h presence... yes
+checking for yajl/yajl_tree.h... yes
+checking yajl/yajl_version.h usability... yes
+checking yajl/yajl_version.h presence... yes
+checking for yajl/yajl_version.h... yes
+checking for yajl_alloc in -lyajl... yes
+checking for yajl_tree_parse in -lyajl... yes
+checking MicAccessApi.h usability... no
+checking MicAccessApi.h presence... no
+checking for MicAccessApi.h... no
+checking vapi/vsc.h usability... no
+checking vapi/vsc.h presence... no
+checking for vapi/vsc.h... no
+checking vsc.h usability... yes
+checking vsc.h presence... yes
+checking for vsc.h... yes
+checking libxml/parser.h usability... yes
+checking libxml/parser.h presence... yes
+checking for libxml/parser.h... yes
+checking for xmlXPathEval in -lxml2... yes
+checking libvirt/libvirt.h usability... yes
+checking libvirt/libvirt.h presence... yes
+checking for libvirt/libvirt.h... yes
+checking for virDomainBlockStats in -lvirt... yes
+checking for libOpenIPMIpthread... yes
+checking for libOpenIPMIpthread CFLAGS... Package pthread was not found in the pkg-config search path.
+Perhaps you should add the directory containing `pthread.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'pthread', required by 'OpenIPMIpthread', not found
+/usr/bin/pkg-config --cflags OpenIPMIpthread failed
+checking atasmart.h usability... yes
+checking atasmart.h presence... yes
+checking for atasmart.h... yes
+checking for sk_disk_open in -latasmart... yes
+checking for LIBNOTIFY... yes
+checking for LIBRIEMANN_CLIENT... no
+checking which default log plugin to load... syslog
+checking which default write plugin to load... rrdtool
+checking for the ExtUtils::MakeMaker module... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating src/libcollectdclient/collectd/lcc_features.h
+config.status: creating Makefile
+config.status: creating src/collectd.conf
+config.status: creating src/libcollectdclient/libcollectdclient.pc
+config.status: creating src/config.h
+config.status: executing libtool commands
+config.status: executing depfiles commands
+
+Configuration:
+  Build:
+    Platform  . . . . . . Linux
+    Compiler vendor . . . gnu
+    CC  . . . . . . . . . gcc -std=gnu99
+    CFLAGS  . . . . . . . -Wall -Werror -g -O2
+    CXXFLAGS  . . . . . . -Wall -Werror -g -O2
+    CPP . . . . . . . . . gcc -E
+    CPPFLAGS  . . . . . . 
+    GRPC_CPP_PLUGIN . . . 
+    LD  . . . . . . . . . /usr/bin/ld -m elf_x86_64
+    LDFLAGS . . . . . . . 
+    PROTOC  . . . . . . . 
+    YACC  . . . . . . . . bison -y
+    YFLAGS  . . . . . . . 
+
+  Libraries:
+    intel mic . . . . . . no (MicAccessApi not found)
+    libaquaero5 . . . . . no (libaquaero5.h not found)
+    libatasmart . . . . . yes
+    libcurl . . . . . . . yes
+    libdbi  . . . . . . . yes
+    libdpdk . . . . . . . no (rte_config.h not found)
+    libesmtp  . . . . . . yes
+    libganglia  . . . . . yes
+    libgcrypt . . . . . . yes
+    libgps  . . . . . . . yes
+    libgrpc++ . . . . . . no (pkg-config could not find libgrpc++)
+    libhiredis  . . . . . yes
+    libi2c-dev  . . . . . yes
+    libiokit  . . . . . . no
+    libiptc . . . . . . . yes
+    libjevents  . . . . . no (jevents.h not found)
+    libjvm  . . . . . . . yes
+    libkstat  . . . . . . no (Solaris only)
+    libkvm  . . . . . . . no
+    libldap . . . . . . . yes
+    liblua  . . . . . . . yes
+    liblvm2app  . . . . . yes
+    libmemcached  . . . . yes
+    libmicrohttpd . . . . yes
+    libmnl  . . . . . . . yes
+    libmodbus . . . . . . yes
+    libmongoc . . . . . . no (pkg-config could not find libmongoc)
+    libmosquitto  . . . . yes
+    libmysql  . . . . . . yes
+    libnetapp . . . . . . no (netapp_api.h not found)
+    libnetsnmp  . . . . . yes
+    libnetsnmpagent . . . yes
+    libnotify . . . . . . yes
+    libopenipmi . . . . . no (/usr/bin/pkg-config --cflags OpenIPMIpthread failed)
+    liboping  . . . . . . yes
+    libowcapi . . . . . . yes
+    libpcap . . . . . . . yes
+    libperfstat . . . . . no (AIX only)
+    libperl . . . . . . . yes (version 5.18.2)
+    libpq . . . . . . . . yes
+    libpqos . . . . . . . no (pqos.h not found)
+    libprotobuf . . . . . no (libprotobuf not found)
+    libprotobuf-c . . . . yes
+    libpython . . . . . . yes
+    librabbitmq . . . . . yes
+    libriemann-client . . no (pkg-config doesn't know libriemann-client)
+    librdkafka  . . . . . yes
+    librouteros . . . . . no (routeros_api.h not found)
+    librrd  . . . . . . . yes
+    libsensors  . . . . . yes
+    libsigrok   . . . . . yes
+    libstatgrab . . . . . yes
+    libtokyotyrant  . . . yes
+    libudev . . . . . . . yes
+    libupsclient  . . . . yes
+    libvarnish  . . . . . yes
+    libvirt . . . . . . . yes
+    libxenctrl  . . . . . yes
+    libxml2 . . . . . . . yes
+    libxmms . . . . . . . no
+    libyajl . . . . . . . yes
+    oracle  . . . . . . . no (ORACLE_HOME is not set)
+    protobuf-c  . . . . . yes
+    protoc 3  . . . . . . no
+
+  Features:
+    daemon mode . . . . . yes
+    debug . . . . . . . . no
+
+  Bindings:
+    perl  . . . . . . . . yes (PREFIX=NONE)
+
+  Modules:
+    aggregation . . . . . yes
+    amqp    . . . . . . . yes
+    apache  . . . . . . . yes
+    apcups  . . . . . . . yes
+    apple_sensors . . . . no
+    aquaero . . . . . . . no (libaquaero5.h not found)
+    ascent  . . . . . . . yes
+    barometer . . . . . . yes
+    battery . . . . . . . yes
+    bind  . . . . . . . . yes
+    ceph  . . . . . . . . yes
+    cgroups . . . . . . . yes
+    chrony. . . . . . . . yes
+    conntrack . . . . . . yes
+    contextswitch . . . . yes
+    cpu . . . . . . . . . yes
+    cpufreq . . . . . . . yes
+    cpusleep  . . . . . . yes
+    csv . . . . . . . . . yes
+    curl  . . . . . . . . yes
+    curl_json . . . . . . yes
+    curl_xml  . . . . . . yes
+    dbi . . . . . . . . . yes
+    df  . . . . . . . . . yes
+    disk  . . . . . . . . yes
+    dns . . . . . . . . . yes
+    dpdkevents. . . . . . no
+    dpdkstat  . . . . . . no
+    drbd  . . . . . . . . yes
+    email . . . . . . . . yes
+    entropy . . . . . . . yes
+    ethstat . . . . . . . yes
+    exec  . . . . . . . . yes
+    fhcount . . . . . . . yes
+    filecount . . . . . . yes
+    fscache . . . . . . . yes
+    gmond . . . . . . . . yes
+    gps . . . . . . . . . yes
+    grpc  . . . . . . . . no
+    hddtemp . . . . . . . yes
+    hugepages . . . . . . yes
+    intel_pmu . . . . . . no (jevents.h not found)
+    intel_rdt . . . . . . no (pqos.h not found)
+    interface . . . . . . yes
+    ipc . . . . . . . . . yes
+    ipmi  . . . . . . . . no
+    iptables  . . . . . . yes
+    ipvs  . . . . . . . . yes
+    irq . . . . . . . . . yes
+    java  . . . . . . . . yes
+    load  . . . . . . . . yes
+    logfile . . . . . . . yes
+    log_logstash  . . . . yes
+    lpar  . . . . . . . . no (AIX only)
+    lua . . . . . . . . . yes
+    lvm . . . . . . . . . yes
+    madwifi . . . . . . . yes
+    match_empty_counter . yes
+    match_hashed  . . . . yes
+    match_regex . . . . . yes
+    match_timediff  . . . yes
+    match_value . . . . . yes
+    mbmon . . . . . . . . yes
+    mcelog  . . . . . . . yes
+    md  . . . . . . . . . yes
+    memcachec . . . . . . yes
+    memcached . . . . . . yes
+    memory  . . . . . . . yes
+    mic . . . . . . . . . no (MicAccessApi not found)
+    modbus  . . . . . . . yes
+    mqtt  . . . . . . . . yes
+    multimeter  . . . . . yes
+    mysql . . . . . . . . yes
+    netapp  . . . . . . . no (netapp_api.h not found)
+    netlink . . . . . . . yes
+    network . . . . . . . yes
+    nfs . . . . . . . . . yes
+    nginx . . . . . . . . yes
+    notify_desktop  . . . yes
+    notify_email  . . . . yes
+    notify_nagios . . . . yes
+    ntpd  . . . . . . . . yes
+    numa  . . . . . . . . yes
+    nut . . . . . . . . . yes
+    olsrd . . . . . . . . yes
+    onewire . . . . . . . yes
+    openldap  . . . . . . yes
+    openvpn . . . . . . . yes
+    oracle  . . . . . . . no (ORACLE_HOME is not set)
+    ovs_events  . . . . . yes
+    ovs_stats . . . . . . yes
+    perl  . . . . . . . . yes
+    pf  . . . . . . . . . no
+    pinba . . . . . . . . yes
+    ping  . . . . . . . . yes
+    postgresql  . . . . . yes
+    powerdns  . . . . . . yes
+    processes . . . . . . yes
+    protocols . . . . . . yes
+    python  . . . . . . . yes
+    redis . . . . . . . . yes
+    routeros  . . . . . . no (routeros_api.h not found)
+    rrdcached . . . . . . yes
+    rrdtool . . . . . . . yes
+    sensors . . . . . . . yes
+    serial  . . . . . . . yes
+    sigrok  . . . . . . . yes
+    smart . . . . . . . . yes
+    snmp  . . . . . . . . yes
+    snmp_agent  . . . . . yes
+    statsd  . . . . . . . yes
+    swap  . . . . . . . . yes
+    synproxy  . . . . . . yes
+    syslog  . . . . . . . yes
+    table . . . . . . . . yes
+    tail_csv  . . . . . . yes
+    tail  . . . . . . . . yes
+    tape  . . . . . . . . no
+    target_notification . yes
+    target_replace  . . . yes
+    target_scale  . . . . yes
+    target_set  . . . . . yes
+    target_v5upgrade  . . yes
+    tcpconns  . . . . . . yes
+    teamspeak2  . . . . . yes
+    ted . . . . . . . . . yes
+    thermal . . . . . . . yes
+    threshold . . . . . . yes
+    tokyotyrant . . . . . yes
+    turbostat . . . . . . yes
+    unixsock  . . . . . . yes
+    uptime  . . . . . . . yes
+    users . . . . . . . . yes
+    uuid  . . . . . . . . yes
+    varnish . . . . . . . yes
+    virt  . . . . . . . . yes
+    vmem  . . . . . . . . yes
+    vserver . . . . . . . yes
+    wireless  . . . . . . yes
+    write_graphite  . . . yes
+    write_http  . . . . . yes
+    write_kafka . . . . . yes
+    write_log . . . . . . yes
+    write_mongodb . . . . no (pkg-config could not find libmongoc)
+    write_prometheus. . . yes
+    write_redis . . . . . yes
+    write_riemann . . . . no (pkg-config doesn't know libriemann-client)
+    write_sensu . . . . . yes
+    write_tsdb  . . . . . yes
+    xencpu  . . . . . . . yes
+    xmms  . . . . . . . . no
+    zfs_arc . . . . . . . yes
+    zone  . . . . . . . . no
+    zookeeper . . . . . . yes
+
+ rm -f collectd-nagios collectd-tg collectdctl
+test -z "libplugin_mock.la" || rm -f libplugin_mock.la
+rm -f ./so_locations
+ rm -f test_common test_format_graphite test_meta_data test_utils_avltree test_utils_cmds test_utils_heap test_utils_latency test_utils_mount test_utils_subst test_utils_time test_utils_vl_lookup test_libcollectd_network_parse test_format_json test_plugin_ceph test_plugin_curl_json
+test -z ".perl-directory-stamp bindings/buildperl/Collectd.pm bindings/buildperl/Collectd/Plugins/OpenVZ.pm bindings/buildperl/Collectd/Unixsock.pm bindings/buildperl/Makefile.PL collectd-api.jar collectd.grpc.pb.cc collectd.grpc.pb.h collectd.pb.cc collectd.pb.h generic-jmx.jar org/collectd/api/*.class org/collectd/java/*.class prometheus.pb-c.c prometheus.pb-c.h src/pinba.pb-c.c src/pinba.pb-c.h types.pb.cc types.pb.h" || rm -f .perl-directory-stamp bindings/buildperl/Collectd.pm bindings/buildperl/Collectd/Plugins/OpenVZ.pm bindings/buildperl/Collectd/Unixsock.pm bindings/buildperl/Makefile.PL collectd-api.jar collectd.grpc.pb.cc collectd.grpc.pb.h collectd.pb.cc collectd.pb.h generic-jmx.jar org/collectd/api/*.class org/collectd/java/*.class prometheus.pb-c.c prometheus.pb-c.h src/pinba.pb-c.c src/pinba.pb-c.h types.pb.cc types.pb.h
+test -z "libcollectdclient.la" || rm -f libcollectdclient.la
+rm -f ./so_locations
+rm -rf .libs _libs
+rm -rf src/.libs src/_libs
+rm -rf src/daemon/.libs src/daemon/_libs
+rm -rf src/libcollectdclient/.libs src/libcollectdclient/_libs
+rm -rf src/liboconfig/.libs src/liboconfig/_libs
+rm -rf buildperl
+rm -f *.class classnoinst.stamp
+test -z "libavltree.la libcmds.la libcommon.la libformat_graphite.la libformat_json.la libheap.la libignorelist.la liblatency.la liblookup.la libmetadata.la libmount.la liboconfig.la" || rm -f libavltree.la libcmds.la libcommon.la libformat_graphite.la libformat_json.la libheap.la libignorelist.la liblatency.la liblookup.la libmetadata.la libmount.la liboconfig.la
+rm -f ./so_locations
+test -z "aggregation.la amqp.la apache.la apcups.la   ascent.la barometer.la battery.la bind.la ceph.la cgroups.la chrony.la conntrack.la contextswitch.la cpu.la cpufreq.la cpusleep.la csv.la curl.la curl_json.la curl_xml.la dbi.la df.la disk.la dns.la   drbd.la email.la entropy.la exec.la ethstat.la fhcount.la filecount.la fscache.la gmond.la gps.la  hddtemp.la hugepages.la   interface.la ipc.la iptables.la  ipvs.la irq.la java.la load.la logfile.la log_logstash.la  lua.la lvm.la madwifi.la match_empty_counter.la match_hashed.la match_regex.la match_timediff.la match_value.la mbmon.la mcelog.la md.la memcachec.la memcached.la memory.la  modbus.la mqtt.la multimeter.la mysql.la  netlink.la network.la nfs.la nginx.la notify_desktop.la notify_email.la notify_nagios.la ntpd.la numa.la nut.la olsrd.la onewire.la openldap.la openvpn.la  ovs_events.la ovs_stats.la perl.la  pinba.la ping.la postgresql.la powerdns.la python.la processes.la protocols.la redis.la  rrdcached.la rrdtool.la sensors.la serial.la sigrok.la smart.la snmp.la snmp_agent.la statsd.la swap.la synproxy.la syslog.la table.la tail.la tail_csv.la  target_notification.la target_replace.la target_scale.la target_set.la target_v5upgrade.la tcpconns.la teamspeak2.la ted.la thermal.la threshold.la tokyotyrant.la turbostat.la unixsock.la uptime.la users.la uuid.la varnish.la virt.la vmem.la vserver.la wireless.la write_graphite.la write_http.la write_kafka.la write_log.la  write_prometheus.la write_redis.la  write_sensu.la write_tsdb.la xencpu.la  zfs_arc.la zookeeper.la " || rm -f aggregation.la amqp.la apache.la apcups.la   ascent.la barometer.la battery.la bind.la ceph.la cgroups.la chrony.la conntrack.la contextswitch.la cpu.la cpufreq.la cpusleep.la csv.la curl.la curl_json.la curl_xml.la dbi.la df.la disk.la dns.la   drbd.la email.la entropy.la exec.la ethstat.la fhcount.la filecount.la fscache.la gmond.la gps.la  hddtemp.la hugepages.la   interface.la ipc.la iptables.la  ipvs.la irq.la java.la load.la logfile.la log_logstash.la  lua.la lvm.la madwifi.la match_empty_counter.la match_hashed.la match_regex.la match_timediff.la match_value.la mbmon.la mcelog.la md.la memcachec.la memcached.la memory.la  modbus.la mqtt.la multimeter.la mysql.la  netlink.la network.la nfs.la nginx.la notify_desktop.la notify_email.la notify_nagios.la ntpd.la numa.la nut.la olsrd.la onewire.la openldap.la openvpn.la  ovs_events.la ovs_stats.la perl.la  pinba.la ping.la postgresql.la powerdns.la python.la processes.la protocols.la redis.la  rrdcached.la rrdtool.la sensors.la serial.la sigrok.la smart.la snmp.la snmp_agent.la statsd.la swap.la synproxy.la syslog.la table.la tail.la tail_csv.la  target_notification.la target_replace.la target_scale.la target_set.la target_v5upgrade.la tcpconns.la teamspeak2.la ted.la thermal.la threshold.la tokyotyrant.la turbostat.la unixsock.la uptime.la users.la uuid.la varnish.la virt.la vmem.la vserver.la wireless.la write_graphite.la write_http.la write_kafka.la write_log.la  write_prometheus.la write_redis.la  write_sensu.la write_tsdb.la xencpu.la  zfs_arc.la zookeeper.la 
+rm -f ./so_locations
+ rm -f collectd collectdmon
+rm -f *.o
+rm -f src/*.o
+rm -f src/*.lo
+rm -f src/daemon/*.o
+rm -f src/daemon/*.lo
+rm -f src/libcollectdclient/*.o
+rm -f src/libcollectdclient/*.lo
+rm -f src/liboconfig/*.o
+rm -f src/liboconfig/*.lo
+test -z "test_common.log test_format_graphite.log test_meta_data.log test_utils_avltree.log test_utils_cmds.log test_utils_heap.log test_utils_latency.log test_utils_mount.log test_utils_subst.log test_utils_time.log test_utils_vl_lookup.log test_libcollectd_network_parse.log test_format_json.log test_plugin_ceph.log test_plugin_curl_json.log" || rm -f test_common.log test_format_graphite.log test_meta_data.log test_utils_avltree.log test_utils_cmds.log test_utils_heap.log test_utils_latency.log test_utils_mount.log test_utils_subst.log test_utils_time.log test_utils_vl_lookup.log test_libcollectd_network_parse.log test_format_json.log test_plugin_ceph.log test_plugin_curl_json.log
+test -z "test_common.trs test_format_graphite.trs test_meta_data.trs test_utils_avltree.trs test_utils_cmds.trs test_utils_heap.trs test_utils_latency.trs test_utils_mount.trs test_utils_subst.trs test_utils_time.trs test_utils_vl_lookup.trs test_libcollectd_network_parse.trs test_format_json.trs test_plugin_ceph.trs test_plugin_curl_json.trs" || rm -f test_common.trs test_format_graphite.trs test_meta_data.trs test_utils_avltree.trs test_utils_cmds.trs test_utils_heap.trs test_utils_latency.trs test_utils_mount.trs test_utils_subst.trs test_utils_time.trs test_utils_vl_lookup.trs test_libcollectd_network_parse.trs test_format_json.trs test_plugin_ceph.trs test_plugin_curl_json.trs
+test -z "test-suite.log" || rm -f test-suite.log
+rm -f *.lo
+Coverity Build Capture (64-bit) version 2017.07 on Linux 4.4.0-93-generic x86_64
+Internal version numbers: c7e331b562 p-milo-push-30112.651
+
+
+  POD2MAN  src/collectd.1
+  YACC     src/liboconfig/parser.c
+  POD2MAN  src/collectd-email.5
+  POD2MAN  src/collectd.conf.5
+  POD2MAN  src/collectd-exec.5
+  POD2MAN  src/collectdctl.1
+updating src/liboconfig/parser.h
+  POD2MAN  src/collectd-java.5
+  POD2MAN  src/collectd-lua.5
+  POD2MAN  src/collectdmon.1
+  POD2MAN  src/collectd-nagios.1
+  POD2MAN  src/collectd-perl.5
+  POD2MAN  src/collectd-python.5
+  POD2MAN  src/collectd-snmp.5
+  POD2MAN  src/collectd-tg.1
+  POD2MAN  src/collectd-threshold.5
+  POD2MAN  src/collectd-unixsock.5
+  POD2MAN  src/types.db.5
+  PROTOC-C src/pinba.pb-c.c
+  PROTOC-C src/pinba.pb-c.h
+  PROTOC-C prometheus.pb-c.c
+  PROTOC-C prometheus.pb-c.h
+make  all-am
+make[1]: Entering directory `/home/travis/build/collectd/collectd'
+  LEX      src/liboconfig/scanner.c
+  CC       write_prometheus_la-prometheus.pb-c.lo
+  CC       src/write_redis_la-write_redis.lo
+  CC       src/write_sensu.lo
+  CC       src/write_tsdb.lo
+  CC       src/xencpu_la-xencpu.lo
+  CC       src/zfs_arc.lo
+  CC       src/zookeeper.lo
+  CC       src/collectd_nagios-collectd-nagios.o
+  CC       src/collectd_tg-collectd-tg.o
+  CC       src/collectdctl-collectdctl.o
+  CC       src/daemon/collectd-collectd.o
+  CC       src/daemon/collectd-configfile.o
+  CC       src/daemon/collectd-filter_chain.o
+  CC       src/daemon/collectd-globals.o
+  CC       src/daemon/collectd-meta_data.o
+  CC       src/daemon/collectd-plugin.o
+  CC       src/daemon/collectd-utils_cache.o
+  CC       src/daemon/collectd-utils_complain.o
+  CC       src/daemon/collectd-utils_llist.o
+  CC       src/daemon/collectd-utils_random.o
+  CC       src/daemon/collectd-utils_subst.o
+  CC       src/daemon/collectd-utils_time.o
+  CC       src/daemon/collectd-types_list.o
+  CC       src/daemon/collectd-utils_threshold.o
+  CC       src/collectdmon.o
+CLASSPATH=.:./.${CLASSPATH:+":$CLASSPATH"} /usr/lib/jvm/java-8-oracle/bin/javac -d .    bindings/java/org/collectd/api/Collectd.java bindings/java/org/collectd/api/CollectdConfigInterface.java bindings/java/org/collectd/api/CollectdFlushInterface.java bindings/java/org/collectd/api/CollectdInitInterface.java bindings/java/org/collectd/api/CollectdLogInterface.java bindings/java/org/collectd/api/CollectdMatchFactoryInterface.java bindings/java/org/collectd/api/CollectdMatchInterface.java bindings/java/org/collectd/api/CollectdNotificationInterface.java bindings/java/org/collectd/api/CollectdReadInterface.java bindings/java/org/collectd/api/CollectdShutdownInterface.java bindings/java/org/collectd/api/CollectdTargetFactoryInterface.java bindings/java/org/collectd/api/CollectdTargetInterface.java bindings/java/org/collectd/api/CollectdWriteInterface.java bindings/java/org/collectd/api/DataSet.java bindings/java/org/collectd/api/DataSource.java bindings/java/org/collectd/api/Notification.java bindings/java/org/collectd/api/OConfigItem.java bindings/java/org/collectd/api/OConfigValue.java bindings/java/org/collectd/api/PluginData.java bindings/java/org/collectd/api/ValueList.java bindings/java/org/collectd/java/GenericJMX.java bindings/java/org/collectd/java/GenericJMXConfConnection.java bindings/java/org/collectd/java/GenericJMXConfMBean.java bindings/java/org/collectd/java/GenericJMXConfValue.java bindings/java/org/collectd/java/JMXMemory.java
+if test ! -d buildperl; then \
+	  mkdir -p buildperl/Collectd/Plugins; \
+	  cp ./bindings/perl/lib/Collectd.pm buildperl/; \
+	  cp ./bindings/perl/Makefile.PL buildperl/; \
+	  cp ./bindings/perl/lib/Collectd/Unixsock.pm buildperl/Collectd/; \
+	  cp ./bindings/perl/lib/Collectd/Plugins/OpenVZ.pm buildperl/Collectd/Plugins/; \
+	fi
+touch .perl-directory-stamp
+  CC       src/libcollectdclient/libcollectdclient_la-client.lo
+  CC       src/libcollectdclient/libcollectdclient_la-network.lo
+  CC       src/libcollectdclient/libcollectdclient_la-network_buffer.lo
+  CC       src/libcollectdclient/libcollectdclient_la-network_parse.lo
+  CC       src/libcollectdclient/libcollectdclient_la-server.lo
+  CC       src/daemon/utils_avltree.lo
+  CC       src/utils_cmds.lo
+  CC       src/utils_cmd_flush.lo
+  CC       src/utils_cmd_getthreshold.lo
+  CC       src/utils_cmd_getval.lo
+  CC       src/utils_cmd_listval.lo
+  CC       src/utils_cmd_putnotif.lo
+  CC       src/utils_cmd_putval.lo
+echo timestamp > classnoinst.stamp
+  CC       src/utils_parse_option.lo
+  CC       src/daemon/common.lo
+  CC       src/daemon/meta_data.lo
+  CC       src/utils_format_graphite.lo
+  CC       src/libformat_json_la-utils_format_json.lo
+  CC       src/daemon/utils_heap.lo
+  CC       src/utils_ignorelist.lo
+  CC       src/utils_latency.lo
+  CC       src/utils_latency_config.lo
+  CC       src/utils_vl_lookup.lo
+  CC       src/utils_mount.lo
+  CC       src/liboconfig/oconfig.lo
+  CC       src/liboconfig/scanner.lo
+  CC       src/liboconfig/parser.lo
+  CC       src/aggregation.lo
+  CC       src/amqp_la-amqp.lo
+  CC       src/apache_la-apache.lo
+  CC       src/apcups.lo
+  CC       src/ascent_la-ascent.lo
+  CC       src/barometer.lo
+  CC       src/battery.lo
+  CC       src/battery_statefs.lo
+  CC       src/bind_la-bind.lo
+  CC       src/ceph_la-ceph.lo
+  CC       src/cgroups.lo
+  CC       src/chrony.lo
+  CC       src/conntrack.lo
+  CC       src/contextswitch.lo
+  CC       src/cpu_la-cpu.lo
+  CC       src/cpufreq.lo
+  CC       src/cpusleep.lo
+  CC       src/csv.lo
+  CC       src/curl_la-curl.lo
+  CC       src/curl_la-utils_curl_stats.lo
+  CC       src/curl_la-utils_match.lo
+  CC       src/curl_json_la-curl_json.lo
+  CC       src/curl_json_la-utils_curl_stats.lo
+  CC       src/curl_xml_la-curl_xml.lo
+  CC       src/curl_xml_la-utils_curl_stats.lo
+  CC       src/dbi_la-dbi.lo
+  CC       src/dbi_la-utils_db_query.lo
+  CC       src/df.lo
+  CC       src/disk_la-disk.lo
+  CC       src/dns_la-dns.lo
+  CC       src/dns_la-utils_dns.lo
+  CC       src/drbd.lo
+  CC       src/email.lo
+  CC       src/entropy.lo
+  CC       src/exec.lo
+  CC       src/ethstat.lo
+  CC       src/fhcount.lo
+  CC       src/filecount.lo
+  CC       src/fscache.lo
+  CC       src/gmond_la-gmond.lo
+  CC       src/gps_la-gps.lo
+  CC       src/hddtemp.lo
+  CC       src/hugepages.lo
+  CC       src/interface_la-interface.lo
+  CC       src/ipc.lo
+  CC       src/iptables_la-iptables.lo
+  CC       src/ipvs.lo
+  CC       src/irq.lo
+  CC       src/java_la-java.lo
+  CC       src/load_la-load.lo
+  CC       src/logfile.lo
+  CC       src/log_logstash_la-log_logstash.lo
+  CC       src/lua_la-lua.lo
+  CC       src/lua_la-utils_lua.lo
+  CC       src/lvm_la-lvm.lo
+  CC       src/madwifi.lo
+  CC       src/match_empty_counter.lo
+  CC       src/match_hashed.lo
+  CC       src/match_regex.lo
+  CC       src/match_timediff.lo
+  CC       src/match_value.lo
+  CC       src/mbmon.lo
+  CC       src/mcelog.lo
+  CC       src/md.lo
+  CC       src/memcachec_la-memcachec.lo
+  CC       src/memcachec_la-utils_match.lo
+  CC       src/memcached.lo
+  CC       src/memory_la-memory.lo
+  CC       src/modbus_la-modbus.lo
+  CC       src/mqtt_la-mqtt.lo
+  CC       src/multimeter.lo
+  CC       src/mysql_la-mysql.lo
+  CC       src/netlink_la-netlink.lo
+  CC       src/network_la-network.lo
+  CC       src/network_la-utils_fbhash.lo
+  CC       src/nfs.lo
+  CC       src/nginx_la-nginx.lo
+  CC       src/notify_desktop_la-notify_desktop.lo
+  CC       src/notify_email_la-notify_email.lo
+  CC       src/notify_nagios.lo
+  CC       src/ntpd.lo
+  CC       src/numa.lo
+  CC       src/nut_la-nut.lo
+  CC       src/olsrd.lo
+  CC       src/onewire_la-onewire.lo
+  CC       src/openldap_la-openldap.lo
+  CC       src/openvpn.lo
+  CC       src/ovs_events_la-ovs_events.lo
+  CC       src/ovs_events_la-utils_ovs.lo
+  CC       src/ovs_stats_la-ovs_stats.lo
+  CC       src/ovs_stats_la-utils_ovs.lo
+  CC       src/perl_la-perl.lo
+  CC       src/pinba_la-pinba.lo
+  CC       src/pinba_la-pinba.pb-c.lo
+  CC       src/ping_la-ping.lo
+  CC       src/postgresql_la-postgresql.lo
+  CC       src/postgresql_la-utils_db_query.lo
+  CC       src/powerdns.lo
+  CC       src/python_la-python.lo
+  CC       src/python_la-pyconfig.lo
+  CC       src/python_la-pyvalues.lo
+  CC       src/processes.lo
+  CC       src/protocols.lo
+  CC       src/redis_la-redis.lo
+  CC       src/rrdcached_la-rrdcached.lo
+  CC       src/rrdcached_la-utils_rrdcreate.lo
+  CC       src/rrdtool_la-rrdtool.lo
+  CC       src/rrdtool_la-utils_rrdcreate.lo
+  CC       src/sensors_la-sensors.lo
+  CC       src/serial.lo
+  CC       src/sigrok_la-sigrok.lo
+  CC       src/smart_la-smart.lo
+  CC       src/snmp_la-snmp.lo
+  CC       src/snmp_agent_la-snmp_agent.lo
+  CC       src/statsd.lo
+  CC       src/swap_la-swap.lo
+  CC       src/synproxy.lo
+  CC       src/syslog.lo
+  CC       src/table.lo
+  CC       src/tail.lo
+  CC       src/utils_match.lo
+  CC       src/utils_tail.lo
+  CC       src/utils_tail_match.lo
+  CC       src/tail_csv.lo
+  CC       src/target_notification.lo
+  CC       src/target_replace.lo
+  CC       src/target_scale.lo
+  CC       src/target_set.lo
+  CC       src/target_v5upgrade.lo
+  CC       src/tcpconns.lo
+  CC       src/teamspeak2.lo
+  CC       src/ted.lo
+  CC       src/thermal.lo
+  CC       src/threshold.lo
+  CC       src/tokyotyrant_la-tokyotyrant.lo
+  CC       src/turbostat.lo
+  CC       src/unixsock.lo
+  CC       src/uptime_la-uptime.lo
+  CC       src/users_la-users.lo
+  CC       src/uuid.lo
+  CC       src/varnish_la-varnish.lo
+  CC       src/virt_la-virt.lo
+  CC       src/vmem.lo
+  CC       src/vserver.lo
+  CC       src/wireless.lo
+  CC       src/write_graphite.lo
+  CC       src/write_http_la-write_http.lo
+  CC       src/write_http_la-utils_format_kairosdb.lo
+  CC       src/write_kafka_la-write_kafka.lo
+  CC       src/write_log.lo
+  CC       src/write_prometheus_la-write_prometheus.lo
+  CCLD     write_redis.la
+  CCLD     write_sensu.la
+  CCLD     write_tsdb.la
+  CCLD     xencpu.la
+  CCLD     zfs_arc.la
+  CCLD     zookeeper.la
+  CCLD     collectdmon
+/usr/lib/jvm/java-8-oracle/bin/jar cf  collectd-api.jar org/collectd/api/*.class
+/usr/lib/jvm/java-8-oracle/bin/jar cf  generic-jmx.jar org/collectd/java/*.class
+cd buildperl && /usr/bin/perl Makefile.PL PREFIX=NONE
+  CCLD     libcollectdclient.la
+  CCLD     libavltree.la
+  CCLD     libcommon.la
+Writing Makefile for Collectd
+Writing MYMETA.yml and MYMETA.json
+  CCLD     libmetadata.la
+  CCLD     libformat_graphite.la
+  CCLD     libformat_json.la
+  CCLD     libheap.la
+  CCLD     libignorelist.la
+  CCLD     liblatency.la
+  CCLD     liblookup.la
+  CCLD     libmount.la
+  CCLD     liboconfig.la
+  CCLD     aggregation.la
+  CCLD     apache.la
+  CCLD     apcups.la
+  CCLD     ascent.la
+  CCLD     barometer.la
+  CCLD     battery.la
+  CCLD     bind.la
+  CCLD     ceph.la
+  CCLD     cgroups.la
+  CCLD     chrony.la
+  CCLD     conntrack.la
+  CCLD     contextswitch.la
+  CCLD     cpu.la
+  CCLD     cpufreq.la
+  CCLD     cpusleep.la
+  CCLD     csv.la
+  CCLD     curl.la
+  CCLD     curl_json.la
+  CCLD     curl_xml.la
+  CCLD     dbi.la
+  CCLD     df.la
+  CCLD     disk.la
+  CCLD     dns.la
+  CCLD     drbd.la
+  CCLD     email.la
+  CCLD     entropy.la
+  CCLD     ethstat.la
+  CCLD     fhcount.la
+  CCLD     filecount.la
+  CCLD     fscache.la
+  CCLD     gmond.la
+  CCLD     gps.la
+  CCLD     hddtemp.la
+  CCLD     hugepages.la
+  CCLD     interface.la
+  CCLD     ipc.la
+  CCLD     iptables.la
+  CCLD     ipvs.la
+  CCLD     irq.la
+  CCLD     java.la
+  CCLD     load.la
+  CCLD     logfile.la
+  CCLD     log_logstash.la
+  CCLD     lua.la
+  CCLD     lvm.la
+  CCLD     madwifi.la
+  CCLD     match_empty_counter.la
+  CCLD     match_hashed.la
+  CCLD     match_regex.la
+  CCLD     match_timediff.la
+  CCLD     match_value.la
+  CCLD     mbmon.la
+  CCLD     mcelog.la
+  CCLD     md.la
+  CCLD     memcachec.la
+  CCLD     memcached.la
+  CCLD     memory.la
+  CCLD     modbus.la
+  CCLD     mqtt.la
+  CCLD     multimeter.la
+  CCLD     mysql.la
+  CCLD     netlink.la
+  CCLD     network.la
+  CCLD     nginx.la
+  CCLD     nfs.la
+  CCLD     notify_desktop.la
+  CCLD     notify_email.la
+  CCLD     notify_nagios.la
+  CCLD     ntpd.la
+  CCLD     numa.la
+  CCLD     nut.la
+  CCLD     olsrd.la
+  CCLD     onewire.la
+  CCLD     openldap.la
+  CCLD     openvpn.la
+  CCLD     ovs_events.la
+  CCLD     ovs_stats.la
+  CCLD     perl.la
+  CCLD     pinba.la
+  CCLD     ping.la
+  CCLD     postgresql.la
+  CCLD     powerdns.la
+  CCLD     python.la
+  CCLD     processes.la
+  CCLD     protocols.la
+  CCLD     redis.la
+  CCLD     rrdcached.la
+  CCLD     rrdtool.la
+  CCLD     sensors.la
+  CCLD     serial.la
+  CCLD     sigrok.la
+  CCLD     smart.la
+  CCLD     snmp.la
+  CCLD     snmp_agent.la
+  CCLD     statsd.la
+  CCLD     swap.la
+  CCLD     synproxy.la
+  CCLD     syslog.la
+  CCLD     table.la
+  CCLD     tail.la
+  CCLD     tail_csv.la
+  CCLD     target_notification.la
+  CCLD     target_replace.la
+  CCLD     target_scale.la
+  CCLD     target_set.la
+  CCLD     target_v5upgrade.la
+  CCLD     tcpconns.la
+  CCLD     teamspeak2.la
+  CCLD     ted.la
+  CCLD     thermal.la
+  CCLD     threshold.la
+  CCLD     tokyotyrant.la
+  CCLD     turbostat.la
+  CCLD     uptime.la
+  CCLD     users.la
+  CCLD     uuid.la
+  CCLD     varnish.la
+  CCLD     virt.la
+  CCLD     vmem.la
+  CCLD     vserver.la
+  CCLD     wireless.la
+  CCLD     write_graphite.la
+  CCLD     write_http.la
+  CCLD     write_log.la
+  CCLD     write_prometheus.la
+  CCLD     collectd-nagios
+  CCLD     collectd-tg
+  CCLD     collectdctl
+  CCLD     collectd
+cd buildperl && make
+make[2]: Entering directory `/home/travis/build/collectd/collectd/buildperl'
+  CCLD     libcmds.la
+cp Collectd.pm blib/lib/Collectd.pm
+cp Collectd/Unixsock.pm blib/lib/Collectd/Unixsock.pm
+cp Collectd/Plugins/OpenVZ.pm blib/lib/Collectd/Plugins/OpenVZ.pm
+Manifying blib/man3/Collectd::Unixsock.3pm
+  CCLD     unixsock.la
+  CCLD     exec.la
+  CCLD     amqp.la
+make[2]: Leaving directory `/home/travis/build/collectd/collectd/buildperl'
+  CCLD     write_kafka.la
+make[1]: Leaving directory `/home/travis/build/collectd/collectd'
+Emitted 198 C/C++ compilation units (100%) successfully
+Emitted 25 Java compilation units (100%) successfully
+
+198 C/C++ compilation units (100%) are ready for analysis
+25 Java compilation units (100%) are ready for analysis
+The cov-build utility completed successfully.
+Extracting SCM data for 1236 files...
+|0----------25-----------50----------75---------100|
+****************************************************
+Please see the log file '/home/travis/build/collectd/collectd/cov-int/scm_log.txt' for warnings and SCM command issues.
+[WARNING] Unable to gather all SCM data - see log at /home/travis/build/collectd/collectd/cov-int/scm_log.txt for details.
+Successfully added SCM data for 273 files
+[33;1mTarring Coverity Scan Analysis results...[0m
+[33;1mUploading Coverity Scan Analysis results...[0m
+[33;1mCoverity Scan upload failed: {"message":"Your build is already in the queue for analysis. Please wait till analysis finishes before uploading another build."}.[0m
+
+travis_time:end:03bc3394:start=1511819318754762950,finish=1511819701723790760,duration=382969027810[0Ktravis_fold:end:build_coverity[0Kcoverity_scan:endtravis_time:start:0d2df854[0K$ ./configure && make -j 4 && make check
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking for gawk... gawk
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... no
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking dependency style of gcc... gcc3
+checking whether make supports nested variables... (cached) yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for gcc option to accept ISO C99... -std=gnu99
+checking for C compiler vendor... gnu
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking dependency style of g++... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for egrep... (cached) /bin/grep -E
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for flex... flex
+checking lex output file root... lex.yy
+checking lex library... -lfl
+checking whether yytext is a pointer... yes
+checking for bison... bison -y
+checking for valgrind... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking if Bison is the parser generator... yes
+checking for kernel type (linux-gnu)... Linux
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for arpa/inet.h... yes
+checking for endian.h... yes
+checking for fcntl.h... yes
+checking for fnmatch.h... yes
+checking for fs_info.h... no
+checking for fshelp.h... no
+checking for grp.h... yes
+checking for kstat.h... no
+checking for kvm.h... no
+checking for libgen.h... yes
+checking for mntent.h... yes
+checking for mnttab.h... no
+checking for netdb.h... yes
+checking for paths.h... yes
+checking for poll.h... yes
+checking for pthread_np.h... no
+checking for pwd.h... yes
+checking for regex.h... yes
+checking for sys/endian.h... no
+checking for sys/fs_types.h... no
+checking for sys/fstyp.h... no
+checking for sys/ioctl.h... yes
+checking for sys/isa_defs.h... no
+checking for sys/mntent.h... no
+checking for sys/mnttab.h... no
+checking for sys/param.h... yes
+checking for sys/resource.h... yes
+checking for sys/select.h... yes
+checking for sys/socket.h... yes
+checking for sys/statfs.h... yes
+checking for sys/statvfs.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/un.h... yes
+checking for sys/vfs.h... yes
+checking for sys/vfstab.h... no
+checking for sys/vmmeter.h... no
+checking for syslog.h... yes
+checking for wordexp.h... yes
+checking for linux/ip_vs.h... yes
+checking for netinet/in_systm.h... yes
+checking for netinet/in.h... yes
+checking for netinet/ip.h... yes
+checking for netinet/ip_icmp.h... yes
+checking for netinet/ip_var.h... no
+checking for netinet/ip6.h... yes
+checking for netinet/icmp6.h... yes
+checking for netinet/tcp.h... yes
+checking for netinet/udp.h... yes
+checking sys/dkstat.h usability... no
+checking sys/dkstat.h presence... no
+checking for sys/dkstat.h... no
+checking for sys/sysctl.h... yes
+checking ifaddrs.h usability... yes
+checking ifaddrs.h presence... yes
+checking for ifaddrs.h... yes
+checking for net/if.h... yes
+checking linux/major.h usability... yes
+checking linux/major.h presence... yes
+checking for linux/major.h... yes
+checking for linux/raid/md_u.h... yes
+checking sys/sysmacros.h usability... yes
+checking sys/sysmacros.h presence... yes
+checking for sys/sysmacros.h... yes
+checking for linux/wireless.h... yes
+checking for linux/if.h... yes
+checking for linux/inet_diag.h... yes
+checking for linux/netdevice.h... yes
+checking for linux/sockios.h... yes
+checking for linux/ethtool.h... yes
+checking for linux/un.h... yes
+checking cpuid.h usability... yes
+checking cpuid.h presence... yes
+checking for cpuid.h... yes
+checking sys/capability.h usability... yes
+checking sys/capability.h presence... yes
+checking for sys/capability.h... yes
+checking for cap_get_proc in -lcap... yes
+checking whether CAP_IS_SUPPORTED is declared... yes
+checking for sys/swap.h... yes
+checking for vm/anon.h... no
+checking sys/loadavg.h usability... no
+checking sys/loadavg.h presence... no
+checking for sys/loadavg.h... no
+checking linux/config.h usability... no
+checking linux/config.h presence... no
+checking for linux/config.h... no
+checking utmp.h usability... yes
+checking utmp.h presence... yes
+checking for utmp.h... yes
+checking utmpx.h usability... yes
+checking utmpx.h presence... yes
+checking for utmpx.h... yes
+checking for sys/ucred.h... no
+checking for sys/mount.h... yes
+checking for xfs/xqm.h... yes
+checking arpa/nameser.h usability... yes
+checking arpa/nameser.h presence... yes
+checking for arpa/nameser.h... yes
+checking for arpa/nameser_compat.h... yes
+checking for net/if_arp.h... yes
+checking net/ppp_defs.h usability... yes
+checking net/ppp_defs.h presence... yes
+checking for net/ppp_defs.h... yes
+checking for net/if_ppp.h... yes
+checking for netinet/if_ether.h... yes
+checking for net/pfvar.h... no
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking whether clock_boottime and clock_monotonic are supported... yes
+checking for an ANSI C-conforming const... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for uid_t in sys/types.h... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for asprintf... yes
+checking for closelog... yes
+checking for getaddrinfo... yes
+checking for getgrnam_r... yes
+checking for getnameinfo... yes
+checking for getpwnam_r... yes
+checking for gettimeofday... yes
+checking for if_indextoname... yes
+checking for openlog... yes
+checking for regcomp... yes
+checking for regerror... yes
+checking for regexec... yes
+checking for regfree... yes
+checking for select... yes
+checking for setenv... yes
+checking for setgroups... yes
+checking for strcasecmp... yes
+checking for strdup... yes
+checking for strncasecmp... yes
+checking for sysconf... yes
+checking whether strerror_r is declared... yes
+checking for strerror_r... yes
+checking whether strerror_r returns char *... no
+checking for strtok_r... yes
+checking for socket... yes
+checking for clock_gettime... yes
+checking for nanosleep... yes
+checking for getifaddrs... yes
+checking for getloadavg... yes
+checking for getutent... yes
+checking for getutxent... yes
+checking for host_statistics... no
+checking for processor_info... no
+checking for statfs... yes
+checking for statvfs... yes
+checking for sysctl... yes
+checking for sysctlbyname... no
+checking for syslog... yes
+checking for thread_info... no
+checking for strptime... yes
+checking whether strptime is exported by default... no
+checking whether strptime needs standards mode... yes
+checking for timegm... no
+checking for timegm with _BSD_SOURCE... yes
+checking for sysctl kern.cp_times... no
+checking for sysctl kern.cp_time... no
+checking for swapctl... no
+checking whether NAN is defined by default... yes
+checking if doubles are stored in x86 representation... yes
+checking whether clock_boottime and clock_monotonic are supported... (cached) yes
+checking for getfsstat... no
+checking for getvfsstat... no
+checking for listmntent... no
+checking for getmntent_r... yes
+checking for getmntent... yes
+checking whether getmntent takes one argument... yes
+checking whether getmntent takes two arguments... no
+checking whether htonll is defined... no
+checking for struct if_data.ifi_ibytes... no
+checking for struct if_data.ifi_opackets... no
+checking for struct if_data.ifi_ierrors... no
+checking for struct net_device_stats.rx_bytes... no
+checking for struct net_device_stats.tx_packets... no
+checking for struct net_device_stats.rx_errors... no
+checking for struct inet_diag_req.id... yes
+checking for struct inet_diag_req.idiag_states... yes
+checking for struct ip_mreqn.imr_ifindex... yes
+checking for struct kinfo_proc.ki_pid... no
+checking for struct kinfo_proc.ki_rssize... no
+checking for struct kinfo_proc.ki_rusage... no
+checking for struct kinfo_proc.p_pid... no
+checking for struct kinfo_proc.p_vm_rssize... no
+checking for struct kinfo_proc2.p_pid... no
+checking for struct kinfo_proc2.p_uru_maxrss... no
+checking for struct udphdr.uh_dport... yes
+checking for struct udphdr.uh_sport... yes
+checking for struct udphdr.dest... yes
+checking for struct udphdr.source... yes
+checking for kstat_io_t.nwritten... no
+checking for kstat_io_t.writes... no
+checking for kstat_io_t.nwrites... no
+checking for kstat_io_t.wtime... no
+checking for pthread_setname_np... no
+checking for pthread_set_name_np... no
+checking for struct ip6_ext... yes
+checking whether i2c_smbus_read_i2c_block_data is declared... yes
+checking for pthread_create in -lpthread... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for kvm_getprocs in -lkvm... no
+checking for kvm_getswapinfo in -lkvm... no
+checking for kvm_nlist in -lkvm... no
+checking for kvm_openfiles in -lkvm... no
+checking libaquaero5.h usability... no
+checking libaquaero5.h presence... no
+checking for libaquaero5.h... no
+checking hiredis/hiredis.h usability... yes
+checking hiredis/hiredis.h presence... yes
+checking for hiredis/hiredis.h... yes
+checking for redisCommand in -lhiredis... yes
+checking curl/curl.h usability... yes
+checking curl/curl.h presence... yes
+checking for curl/curl.h... yes
+checking for curl_easy_init in -lcurl... yes
+checking whether CURLOPT_USERNAME is declared... yes
+checking whether CURLOPT_TIMEOUT_MS is declared... yes
+checking for CURLINFO_APPCONNECT_TIME... yes
+checking dbi/dbi.h usability... yes
+checking dbi/dbi.h presence... yes
+checking for dbi/dbi.h... yes
+checking for dbi_initialize in -ldbi... yes
+checking for DPDK... no
+configure: no DPDK pkg-config, using defaults
+checking rte_config.h usability... no
+checking rte_config.h presence... no
+checking for rte_config.h... no
+checking libesmtp.h usability... yes
+checking libesmtp.h presence... yes
+checking for libesmtp.h... yes
+checking for smtp_create_session in -lesmtp... yes
+checking gm_protocol.h usability... yes
+checking gm_protocol.h presence... yes
+checking for gm_protocol.h... yes
+checking for xdr_Ganglia_value_msg in -lganglia... yes
+checking gcrypt.h usability... yes
+checking gcrypt.h presence... yes
+checking for gcrypt.h... yes
+checking for gcry_md_hash_buffer in -lgcrypt... yes
+checking gps.h usability... yes
+checking gps.h presence... yes
+checking for gps.h... yes
+checking for gps_open in -lgps... yes
+checking for GRPCPP... no
+checking whether g++ accepts -std=c++11... yes
+checking for grpc_cpp_plugin... no
+checking libiptc/libiptc.h usability... yes
+checking libiptc/libiptc.h presence... yes
+checking for libiptc/libiptc.h... yes
+checking libiptc/libip6tc.h usability... yes
+checking libiptc/libip6tc.h presence... yes
+checking for libiptc/libip6tc.h... yes
+checking for iptc_handle_t... no
+checking for ip6tc_handle_t... no
+checking for library containing iptc_init... -liptc
+checking for jni.h... found in /usr/lib/jvm/java-8-oracle/include
+checking for jni_md.h... found in /usr/lib/jvm/java-8-oracle/include/linux
+checking for libjvm.so... found in /usr/lib/jvm/java-8-oracle/jre/lib/amd64/server
+checking for javac... /usr/lib/jvm/java-8-oracle/bin/javac
+checking for jar... /usr/lib/jvm/java-8-oracle/bin/jar
+configure: Building with JAVA_CPPFLAGS set to:  -I/usr/lib/jvm/java-8-oracle/include -I/usr/lib/jvm/java-8-oracle/include/linux
+configure: Building with JAVA_LDFLAGS set to:  -L/usr/lib/jvm/java-8-oracle/jre/lib/amd64/server -Wl,-rpath -Wl,/usr/lib/jvm/java-8-oracle/jre/lib/amd64/server
+checking jni.h usability... yes
+checking jni.h presence... yes
+checking for jni.h... yes
+checking for JNI_CreateJavaVM in -ljvm... yes
+configure: Building with JAVA_LIBS set to:  -ljvm
+checking ldap.h usability... yes
+checking ldap.h presence... yes
+checking for ldap.h... yes
+checking for ldap_initialize in -lldap... yes
+checking for LUA... no
+checking for LUA... no
+checking for LUA... no
+checking for LUA... no
+checking for LUA... yes
+checking lua.h usability... yes
+checking lua.h presence... yes
+checking for lua.h... yes
+checking lauxlib.h usability... yes
+checking lauxlib.h presence... yes
+checking for lauxlib.h... yes
+checking lualib.h usability... yes
+checking lualib.h presence... yes
+checking for lualib.h... yes
+checking for lua_settop... yes
+checking lvm2app.h usability... yes
+checking lvm2app.h presence... yes
+checking for lvm2app.h... yes
+checking for lvm_lv_get_property in -llvm2app... yes
+checking libmemcached/memcached.h usability... yes
+checking libmemcached/memcached.h presence... yes
+checking for libmemcached/memcached.h... yes
+checking for memcached_create in -lmemcached... yes
+checking for MICROHTTPD... yes
+checking microhttpd.h usability... yes
+checking microhttpd.h presence... yes
+checking for microhttpd.h... yes
+checking for MHD_start_daemon in -lmicrohttpd... yes
+configure: Checking for libmodbus using /usr/bin/pkg-config
+checking modbus.h usability... yes
+checking modbus.h presence... yes
+checking for modbus.h... yes
+checking for modbus_connect in -lmodbus... yes
+checking for LIBMONGOC... no
+checking mosquitto.h usability... yes
+checking mosquitto.h presence... yes
+checking for mosquitto.h... yes
+checking for mosquitto_connect in -lmosquitto... yes
+checking mysql.h usability... yes
+checking mysql.h presence... yes
+checking for mysql.h... yes
+checking for library containing mysql_get_server_version... none required
+checking for libmnl.h... no
+checking for libmnl/libmnl.h... yes
+checking for linux/gen_stats.h... yes
+checking for linux/pkt_sched.h... yes
+checking for struct rtnl_link_stats64.tx_window_errors... yes
+checking for mnl_nlmsg_get_payload in -lmnl... yes
+checking netapp_api.h usability... no
+checking netapp_api.h presence... no
+checking for netapp_api.h... no
+checking net-snmp/net-snmp-config.h usability... yes
+checking net-snmp/net-snmp-config.h presence... yes
+checking for net-snmp/net-snmp-config.h... yes
+checking for net-snmp/net-snmp-includes.h... yes
+checking for init_snmp in -lnetsnmp... yes
+checking for net-snmp/agent/net-snmp-agent-includes.h... yes
+checking for netsnmp_init_helpers in -lnetsnmphelpers... no
+checking for init_agent in -lnetsnmpagent... yes
+checking oping.h usability... yes
+checking oping.h presence... yes
+checking for oping.h... yes
+checking for ping_construct in -loping... yes
+checking owcapi.h usability... yes
+checking owcapi.h presence... yes
+checking for owcapi.h... yes
+checking for OW_get in -lowcapi... yes
+checking pcap.h usability... yes
+checking pcap.h presence... yes
+checking for pcap.h... yes
+checking for pcap_open_live in -lpcap... yes
+checking whether libpcap has PCAP_ERROR_IFACE_NOT_UP... yes
+checking for perl... /usr/bin/perl
+checking for libperl... yes
+checking if Perl supports ithreads... yes
+checking for broken Perl_load_module()... no
+checking for struct mgvtbl.svt_local... yes
+checking libpq-fe.h usability... yes
+checking libpq-fe.h presence... yes
+checking for libpq-fe.h... yes
+checking for PQserverVersion in -lpq... yes
+checking pqos.h usability... no
+checking pqos.h presence... no
+checking for pqos.h... no
+checking jevents.h usability... no
+checking jevents.h presence... no
+checking for jevents.h... no
+checking for PROTOBUF... no
+checking for main in -lprotobuf... no
+checking for protoc... no
+checking for PROTOBUF_C... no
+checking for protobuf_c_message_pack in -lprotobuf-c... yes
+checking protobuf-c/protobuf-c.h usability... no
+checking protobuf-c/protobuf-c.h presence... no
+checking for protobuf-c/protobuf-c.h... no
+checking google/protobuf-c/protobuf-c.h usability... yes
+checking google/protobuf-c/protobuf-c.h presence... yes
+checking for google/protobuf-c/protobuf-c.h... yes
+checking for protoc-c... /usr/bin/protoc-c
+checking for python3-config... /opt/pyenv/shims/python3-config
+checking Python.h usability... yes
+checking Python.h presence... yes
+checking for Python.h... yes
+checking for libpython... yes
+checking amqp.h usability... yes
+checking amqp.h presence... yes
+checking for amqp.h... yes
+checking for amqp_rpc_reply_t.library_errno... no
+checking for amqp_basic_publish in -lrabbitmq... yes
+checking amqp_tcp_socket.h usability... yes
+checking amqp_tcp_socket.h presence... yes
+checking for amqp_tcp_socket.h... yes
+checking amqp_socket.h usability... no
+checking amqp_socket.h presence... no
+checking for amqp_socket.h... no
+checking for amqp_tcp_socket_new... yes
+checking whether amqp_socket_close is declared... no
+checking librdkafka/rdkafka.h usability... yes
+checking librdkafka/rdkafka.h presence... yes
+checking for librdkafka/rdkafka.h... yes
+checking for rd_kafka_new in -lrdkafka... yes
+checking for rd_kafka_conf_set_log_cb in -lrdkafka... no
+checking for rd_kafka_set_logger in -lrdkafka... yes
+checking routeros_api.h usability... no
+checking routeros_api.h presence... no
+checking for routeros_api.h... no
+checking for RRD... no
+checking rrd.h usability... yes
+checking rrd.h presence... yes
+checking for rrd.h... yes
+checking for rrd_update_r in -lrrd_th... yes
+checking for rrdc_update in -lrrd_th... yes
+checking sensors/sensors.h usability... yes
+checking sensors/sensors.h presence... yes
+checking for sensors/sensors.h... yes
+checking for sensors_init in -lsensors... yes
+checking for LIBSIGROK... yes
+checking pkg-config for libstatgrab... found
+checking for libstatgrab CFLAGS...  
+checking for libstatgrab LDFLAGS... -lstatgrab  
+checking statgrab.h usability... yes
+checking statgrab.h presence... yes
+checking for statgrab.h... yes
+checking for sg_init in -lstatgrab... yes
+checking if libstatgrab >= 0.90... yes
+checking tcrdb.h usability... yes
+checking tcrdb.h presence... yes
+checking for tcrdb.h... yes
+checking for tcrdbrnum in -ltokyotyrant... yes
+checking libudev.h usability... yes
+checking libudev.h presence... yes
+checking for libudev.h... yes
+checking for udev_new in -ludev... yes
+configure: Checking for libupsclient using /usr/bin/pkg-config
+checking upsclient.h usability... yes
+checking upsclient.h presence... yes
+checking for upsclient.h... yes
+checking for upscli_connect in -lupsclient... yes
+checking for upscli_init in -lupsclient... yes
+checking for upscli_tryconnect in -lupsclient... yes
+checking for UPSCONN_t... yes
+checking for UPSCONN... no
+checking xenctrl.h usability... yes
+checking xenctrl.h presence... yes
+checking for xenctrl.h... yes
+checking for xc_getcpuinfo in -lxenctrl... yes
+checking yajl/yajl_parse.h usability... yes
+checking yajl/yajl_parse.h presence... yes
+checking for yajl/yajl_parse.h... yes
+checking yajl/yajl_tree.h usability... yes
+checking yajl/yajl_tree.h presence... yes
+checking for yajl/yajl_tree.h... yes
+checking yajl/yajl_version.h usability... yes
+checking yajl/yajl_version.h presence... yes
+checking for yajl/yajl_version.h... yes
+checking for yajl_alloc in -lyajl... yes
+checking for yajl_tree_parse in -lyajl... yes
+checking MicAccessApi.h usability... no
+checking MicAccessApi.h presence... no
+checking for MicAccessApi.h... no
+checking vapi/vsc.h usability... no
+checking vapi/vsc.h presence... no
+checking for vapi/vsc.h... no
+checking vsc.h usability... yes
+checking vsc.h presence... yes
+checking for vsc.h... yes
+checking libxml/parser.h usability... yes
+checking libxml/parser.h presence... yes
+checking for libxml/parser.h... yes
+checking for xmlXPathEval in -lxml2... yes
+checking libvirt/libvirt.h usability... yes
+checking libvirt/libvirt.h presence... yes
+checking for libvirt/libvirt.h... yes
+checking for virDomainBlockStats in -lvirt... yes
+checking for libOpenIPMIpthread... yes
+checking for libOpenIPMIpthread CFLAGS... Package pthread was not found in the pkg-config search path.
+Perhaps you should add the directory containing `pthread.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'pthread', required by 'OpenIPMIpthread', not found
+/usr/bin/pkg-config --cflags OpenIPMIpthread failed
+checking atasmart.h usability... yes
+checking atasmart.h presence... yes
+checking for atasmart.h... yes
+checking for sk_disk_open in -latasmart... yes
+checking for LIBNOTIFY... yes
+checking for LIBRIEMANN_CLIENT... no
+checking which default log plugin to load... syslog
+checking which default write plugin to load... rrdtool
+checking for the ExtUtils::MakeMaker module... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating src/libcollectdclient/collectd/lcc_features.h
+config.status: creating Makefile
+config.status: creating src/collectd.conf
+config.status: creating src/libcollectdclient/libcollectdclient.pc
+config.status: creating src/config.h
+config.status: src/config.h is unchanged
+config.status: executing libtool commands
+config.status: executing depfiles commands
+
+Configuration:
+  Build:
+    Platform  . . . . . . Linux
+    Compiler vendor . . . gnu
+    CC  . . . . . . . . . gcc -std=gnu99
+    CFLAGS  . . . . . . . -Wall -Werror -g -O2
+    CXXFLAGS  . . . . . . -Wall -Werror -g -O2
+    CPP . . . . . . . . . gcc -E
+    CPPFLAGS  . . . . . . 
+    GRPC_CPP_PLUGIN . . . 
+    LD  . . . . . . . . . /usr/bin/ld -m elf_x86_64
+    LDFLAGS . . . . . . . 
+    PROTOC  . . . . . . . 
+    YACC  . . . . . . . . bison -y
+    YFLAGS  . . . . . . . 
+
+  Libraries:
+    intel mic . . . . . . no (MicAccessApi not found)
+    libaquaero5 . . . . . no (libaquaero5.h not found)
+    libatasmart . . . . . yes
+    libcurl . . . . . . . yes
+    libdbi  . . . . . . . yes
+    libdpdk . . . . . . . no (rte_config.h not found)
+    libesmtp  . . . . . . yes
+    libganglia  . . . . . yes
+    libgcrypt . . . . . . yes
+    libgps  . . . . . . . yes
+    libgrpc++ . . . . . . no (pkg-config could not find libgrpc++)
+    libhiredis  . . . . . yes
+    libi2c-dev  . . . . . yes
+    libiokit  . . . . . . no
+    libiptc . . . . . . . yes
+    libjevents  . . . . . no (jevents.h not found)
+    libjvm  . . . . . . . yes
+    libkstat  . . . . . . no (Solaris only)
+    libkvm  . . . . . . . no
+    libldap . . . . . . . yes
+    liblua  . . . . . . . yes
+    liblvm2app  . . . . . yes
+    libmemcached  . . . . yes
+    libmicrohttpd . . . . yes
+    libmnl  . . . . . . . yes
+    libmodbus . . . . . . yes
+    libmongoc . . . . . . no (pkg-config could not find libmongoc)
+    libmosquitto  . . . . yes
+    libmysql  . . . . . . yes
+    libnetapp . . . . . . no (netapp_api.h not found)
+    libnetsnmp  . . . . . yes
+    libnetsnmpagent . . . yes
+    libnotify . . . . . . yes
+    libopenipmi . . . . . no (/usr/bin/pkg-config --cflags OpenIPMIpthread failed)
+    liboping  . . . . . . yes
+    libowcapi . . . . . . yes
+    libpcap . . . . . . . yes
+    libperfstat . . . . . no (AIX only)
+    libperl . . . . . . . yes (version 5.18.2)
+    libpq . . . . . . . . yes
+    libpqos . . . . . . . no (pqos.h not found)
+    libprotobuf . . . . . no (libprotobuf not found)
+    libprotobuf-c . . . . yes
+    libpython . . . . . . yes
+    librabbitmq . . . . . yes
+    libriemann-client . . no (pkg-config doesn't know libriemann-client)
+    librdkafka  . . . . . yes
+    librouteros . . . . . no (routeros_api.h not found)
+    librrd  . . . . . . . yes
+    libsensors  . . . . . yes
+    libsigrok   . . . . . yes
+    libstatgrab . . . . . yes
+    libtokyotyrant  . . . yes
+    libudev . . . . . . . yes
+    libupsclient  . . . . yes
+    libvarnish  . . . . . yes
+    libvirt . . . . . . . yes
+    libxenctrl  . . . . . yes
+    libxml2 . . . . . . . yes
+    libxmms . . . . . . . no
+    libyajl . . . . . . . yes
+    oracle  . . . . . . . no (ORACLE_HOME is not set)
+    protobuf-c  . . . . . yes
+    protoc 3  . . . . . . no
+
+  Features:
+    daemon mode . . . . . yes
+    debug . . . . . . . . no
+
+  Bindings:
+    perl  . . . . . . . . yes (PREFIX=NONE)
+
+  Modules:
+    aggregation . . . . . yes
+    amqp    . . . . . . . yes
+    apache  . . . . . . . yes
+    apcups  . . . . . . . yes
+    apple_sensors . . . . no
+    aquaero . . . . . . . no (libaquaero5.h not found)
+    ascent  . . . . . . . yes
+    barometer . . . . . . yes
+    battery . . . . . . . yes
+    bind  . . . . . . . . yes
+    ceph  . . . . . . . . yes
+    cgroups . . . . . . . yes
+    chrony. . . . . . . . yes
+    conntrack . . . . . . yes
+    contextswitch . . . . yes
+    cpu . . . . . . . . . yes
+    cpufreq . . . . . . . yes
+    cpusleep  . . . . . . yes
+    csv . . . . . . . . . yes
+    curl  . . . . . . . . yes
+    curl_json . . . . . . yes
+    curl_xml  . . . . . . yes
+    dbi . . . . . . . . . yes
+    df  . . . . . . . . . yes
+    disk  . . . . . . . . yes
+    dns . . . . . . . . . yes
+    dpdkevents. . . . . . no
+    dpdkstat  . . . . . . no
+    drbd  . . . . . . . . yes
+    email . . . . . . . . yes
+    entropy . . . . . . . yes
+    ethstat . . . . . . . yes
+    exec  . . . . . . . . yes
+    fhcount . . . . . . . yes
+    filecount . . . . . . yes
+    fscache . . . . . . . yes
+    gmond . . . . . . . . yes
+    gps . . . . . . . . . yes
+    grpc  . . . . . . . . no
+    hddtemp . . . . . . . yes
+    hugepages . . . . . . yes
+    intel_pmu . . . . . . no (jevents.h not found)
+    intel_rdt . . . . . . no (pqos.h not found)
+    interface . . . . . . yes
+    ipc . . . . . . . . . yes
+    ipmi  . . . . . . . . no
+    iptables  . . . . . . yes
+    ipvs  . . . . . . . . yes
+    irq . . . . . . . . . yes
+    java  . . . . . . . . yes
+    load  . . . . . . . . yes
+    logfile . . . . . . . yes
+    log_logstash  . . . . yes
+    lpar  . . . . . . . . no (AIX only)
+    lua . . . . . . . . . yes
+    lvm . . . . . . . . . yes
+    madwifi . . . . . . . yes
+    match_empty_counter . yes
+    match_hashed  . . . . yes
+    match_regex . . . . . yes
+    match_timediff  . . . yes
+    match_value . . . . . yes
+    mbmon . . . . . . . . yes
+    mcelog  . . . . . . . yes
+    md  . . . . . . . . . yes
+    memcachec . . . . . . yes
+    memcached . . . . . . yes
+    memory  . . . . . . . yes
+    mic . . . . . . . . . no (MicAccessApi not found)
+    modbus  . . . . . . . yes
+    mqtt  . . . . . . . . yes
+    multimeter  . . . . . yes
+    mysql . . . . . . . . yes
+    netapp  . . . . . . . no (netapp_api.h not found)
+    netlink . . . . . . . yes
+    network . . . . . . . yes
+    nfs . . . . . . . . . yes
+    nginx . . . . . . . . yes
+    notify_desktop  . . . yes
+    notify_email  . . . . yes
+    notify_nagios . . . . yes
+    ntpd  . . . . . . . . yes
+    numa  . . . . . . . . yes
+    nut . . . . . . . . . yes
+    olsrd . . . . . . . . yes
+    onewire . . . . . . . yes
+    openldap  . . . . . . yes
+    openvpn . . . . . . . yes
+    oracle  . . . . . . . no (ORACLE_HOME is not set)
+    ovs_events  . . . . . yes
+    ovs_stats . . . . . . yes
+    perl  . . . . . . . . yes
+    pf  . . . . . . . . . no
+    pinba . . . . . . . . yes
+    ping  . . . . . . . . yes
+    postgresql  . . . . . yes
+    powerdns  . . . . . . yes
+    processes . . . . . . yes
+    protocols . . . . . . yes
+    python  . . . . . . . yes
+    redis . . . . . . . . yes
+    routeros  . . . . . . no (routeros_api.h not found)
+    rrdcached . . . . . . yes
+    rrdtool . . . . . . . yes
+    sensors . . . . . . . yes
+    serial  . . . . . . . yes
+    sigrok  . . . . . . . yes
+    smart . . . . . . . . yes
+    snmp  . . . . . . . . yes
+    snmp_agent  . . . . . yes
+    statsd  . . . . . . . yes
+    swap  . . . . . . . . yes
+    synproxy  . . . . . . yes
+    syslog  . . . . . . . yes
+    table . . . . . . . . yes
+    tail_csv  . . . . . . yes
+    tail  . . . . . . . . yes
+    tape  . . . . . . . . no
+    target_notification . yes
+    target_replace  . . . yes
+    target_scale  . . . . yes
+    target_set  . . . . . yes
+    target_v5upgrade  . . yes
+    tcpconns  . . . . . . yes
+    teamspeak2  . . . . . yes
+    ted . . . . . . . . . yes
+    thermal . . . . . . . yes
+    threshold . . . . . . yes
+    tokyotyrant . . . . . yes
+    turbostat . . . . . . yes
+    unixsock  . . . . . . yes
+    uptime  . . . . . . . yes
+    users . . . . . . . . yes
+    uuid  . . . . . . . . yes
+    varnish . . . . . . . yes
+    virt  . . . . . . . . yes
+    vmem  . . . . . . . . yes
+    vserver . . . . . . . yes
+    wireless  . . . . . . yes
+    write_graphite  . . . yes
+    write_http  . . . . . yes
+    write_kafka . . . . . yes
+    write_log . . . . . . yes
+    write_mongodb . . . . no (pkg-config could not find libmongoc)
+    write_prometheus. . . yes
+    write_redis . . . . . yes
+    write_riemann . . . . no (pkg-config doesn't know libriemann-client)
+    write_sensu . . . . . yes
+    write_tsdb  . . . . . yes
+    xencpu  . . . . . . . yes
+    xmms  . . . . . . . . no
+    zfs_arc . . . . . . . yes
+    zone  . . . . . . . . no
+    zookeeper . . . . . . yes
+
+make  all-am
+make[1]: Entering directory `/home/travis/build/collectd/collectd'
+cd buildperl && /usr/bin/perl Makefile.PL PREFIX=NONE
+  CC       src/libcollectdclient/libcollectdclient_la-client.lo
+  CC       src/libcollectdclient/libcollectdclient_la-network.lo
+  CC       src/libcollectdclient/libcollectdclient_la-network_buffer.lo
+Writing Makefile for Collectd
+Writing MYMETA.yml and MYMETA.json
+  CC       src/libcollectdclient/libcollectdclient_la-network_parse.lo
+  CC       src/libcollectdclient/libcollectdclient_la-server.lo
+  CC       src/collectd_nagios-collectd-nagios.o
+  CC       src/collectd_tg-collectd-tg.o
+  CC       src/collectdctl-collectdctl.o
+cd buildperl && make
+make[2]: Entering directory `/home/travis/build/collectd/collectd/buildperl'
+  CCLD     libcollectdclient.la
+Skip blib/lib/Collectd.pm (unchanged)
+Skip blib/lib/Collectd/Unixsock.pm (unchanged)
+Skip blib/lib/Collectd/Plugins/OpenVZ.pm (unchanged)
+Manifying blib/man3/Collectd::Unixsock.3pm
+make[2]: Leaving directory `/home/travis/build/collectd/collectd/buildperl'
+  CCLD     collectd-nagios
+  CCLD     collectd-tg
+  CCLD     collectdctl
+make[1]: Leaving directory `/home/travis/build/collectd/collectd'
+make  check-am
+make[1]: Entering directory `/home/travis/build/collectd/collectd'
+cd buildperl && make
+make[2]: Entering directory `/home/travis/build/collectd/collectd/buildperl'
+make[2]: Leaving directory `/home/travis/build/collectd/collectd/buildperl'
+make  libplugin_mock.la test_common test_format_graphite test_meta_data test_utils_avltree test_utils_cmds test_utils_heap test_utils_latency test_utils_mount test_utils_subst test_utils_time test_utils_vl_lookup test_libcollectd_network_parse test_format_json test_plugin_ceph test_plugin_curl_json
+make[2]: Entering directory `/home/travis/build/collectd/collectd'
+  CC       src/daemon/libplugin_mock_la-plugin_mock.lo
+  CC       src/daemon/libplugin_mock_la-utils_cache_mock.lo
+  CC       src/daemon/libplugin_mock_la-utils_complain.lo
+  CC       src/daemon/libplugin_mock_la-utils_time.lo
+  CCLD     libplugin_mock.la
+  CC       src/daemon/common_test.o
+  CCLD     test_common
+  CC       src/utils_format_graphite_test.o
+  CCLD     test_format_graphite
+  CC       src/daemon/meta_data_test.o
+  CCLD     test_meta_data
+  CC       src/daemon/utils_avltree_test.o
+  CCLD     test_utils_avltree
+  CC       src/utils_cmds_test.o
+  CCLD     test_utils_cmds
+  CC       src/daemon/utils_heap_test.o
+  CCLD     test_utils_heap
+  CC       src/utils_latency_test.o
+  CCLD     test_utils_latency
+  CC       src/utils_mount_test.o
+  CCLD     test_utils_mount
+  CC       src/daemon/utils_subst_test.o
+  CC       src/daemon/utils_subst.o
+  CCLD     test_utils_subst
+  CC       src/daemon/utils_time_test.o
+  CCLD     test_utils_time
+  CC       src/utils_vl_lookup_test.o
+  CCLD     test_utils_vl_lookup
+  CC       src/libcollectdclient/test_libcollectd_network_parse-network_parse_test.o
+  CCLD     test_libcollectd_network_parse
+  CC       src/utils_format_json_test.o
+  CCLD     test_format_json
+  CC       src/test_plugin_ceph-ceph_test.o
+  CCLD     test_plugin_ceph
+  CC       src/test_plugin_curl_json-curl_json_test.o
+  CC       src/test_plugin_curl_json-utils_curl_stats.o
+  CC       src/daemon/test_plugin_curl_json-configfile.o
+  CC       src/daemon/test_plugin_curl_json-types_list.o
+  CCLD     test_plugin_curl_json
+make[2]: Leaving directory `/home/travis/build/collectd/collectd'
+make  check-TESTS
+make[2]: Entering directory `/home/travis/build/collectd/collectd'
+make[3]: Entering directory `/home/travis/build/collectd/collectd'
+PASS: test_common
+PASS: test_format_graphite
+PASS: test_meta_data
+PASS: test_utils_avltree
+PASS: test_utils_cmds
+PASS: test_utils_heap
+PASS: test_utils_latency
+PASS: test_utils_mount
+PASS: test_utils_subst
+PASS: test_utils_time
+PASS: test_utils_vl_lookup
+PASS: test_libcollectd_network_parse
+PASS: test_format_json
+PASS: test_plugin_ceph
+PASS: test_plugin_curl_json
+make[4]: Entering directory `/home/travis/build/collectd/collectd'
+make  all-am
+make[5]: Entering directory `/home/travis/build/collectd/collectd'
+cd buildperl && make
+make[6]: Entering directory `/home/travis/build/collectd/collectd/buildperl'
+make[6]: Leaving directory `/home/travis/build/collectd/collectd/buildperl'
+make[5]: Leaving directory `/home/travis/build/collectd/collectd'
+make[4]: Leaving directory `/home/travis/build/collectd/collectd'
+============================================================================
+Testsuite summary for collectd 5.8.0.31.g2b3e3f6
+============================================================================
+# TOTAL: 15
+# PASS:  15
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[3]: Leaving directory `/home/travis/build/collectd/collectd'
+make[2]: Leaving directory `/home/travis/build/collectd/collectd'
+make[1]: Leaving directory `/home/travis/build/collectd/collectd'
+
+travis_time:end:0d2df854:start=1511819701732994983,finish=1511819734138240920,duration=32405245937[0K
+[32;1mThe command "./configure && make -j 4 && make check" exited with 0.[0m
+
+Done. Your build exited with 0.

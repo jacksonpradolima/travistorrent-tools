@@ -1,0 +1,811 @@
+travis_fold:start:worker_info[0K[33;1mWorker information[0m
+hostname: travis-worker-gce-org-prod-8:659c46cf-11f5-4237-b8a7-5cb9293336bf
+version: v2.1.0-44-ge7ef5db https://github.com/travis-ci/worker/tree/e7ef5db4f469f8e76792dee8309e601b6e53e56b
+instance: testing-gce-04446113-7965-4031-a8c5-557914db5796:travis-ci-ruby-precise-1450195856
+startup: 21.478183076s
+travis_fold:end:worker_info[0Ktravis_fold:start:system_info[0K[33;1mBuild system information[0m
+Build language: c
+Build group: stable
+Build dist: precise
+[34m[1mBuild image provisioning date and time[0m
+Tue Dec 15 16:36:18 UTC 2015
+[34m[1mOperating System Details[0m
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+[34m[1mLinux Version[0m
+3.13.0-63-generic
+[34m[1mCookbooks Version[0m
+fad6c97 https://github.com/travis-ci/travis-cookbooks/tree/fad6c97
+[34m[1mGit version[0m
+git version 1.8.5.6
+[34m[1mbash version[0m
+GNU bash, version 4.2.25(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2011 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+[34m[1mGCC version[0m
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+[34m[1mLLVM version[0m
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+[34m[1mPre-installed Ruby versions[0m
+ree-1.8.7-2012.02
+ruby-1.8.7-p374
+ruby-1.9.2-p330
+ruby-1.9.3-p551
+ruby-2.0.0-p647-clang
+ruby-2.1.2
+ruby-2.1.3
+ruby-2.1.4
+ruby-2.1.5
+ruby-2.2.0
+[34m[1mPre-installed Node.js versions[0m
+v0.10.36
+[34m[1mPre-installed Go versions[0m
+1.4.2
+[34m[1mmysql --version[0m
+mysql  Ver 14.14 Distrib 5.5.46, for debian-linux-gnu (x86_64) using readline 6.2
+[34m[1mPre-installed PostgreSQL versions[0m
+9.1.19
+9.2.14
+9.3.10
+9.4.5
+[34m[1mRedis version[0m
+redis-server 3.0.5
+[34m[1mriak version[0m
+2.1.3
+[34m[1mMongoDB version[0m
+MongoDB 2.4.14
+[34m[1mCouchDB version[0m
+couchdb 1.6.1
+[34m[1mNeo4j version[0m
+1.9.4
+[34m[1mCassandra version[0m
+2.0.9
+[34m[1mElasticSearch version[0m
+1.4.0
+[34m[1mInstalled Sphinx versions[0m
+2.0.10
+2.1.9
+2.2.6
+[34m[1mDefault Sphinx version[0m
+2.2.6
+[34m[1mInstalled Firefox version[0m
+firefox 38.4.0esr
+[34m[1mPhantomJS version[0m
+1.9.8
+[34m[1mant -version[0m
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+[34m[1mmvn -version[0m
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_80, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "3.13.0-63-generic", arch: "amd64", family: "unix"
+travis_fold:end:system_info[0K
+travis_fold:start:git.checkout[0Ktravis_time:start:0b6b07a4[0K$ git clone --depth=50 --branch=master https://github.com/robol/MPSolve.git robol/MPSolve
+Cloning into 'robol/MPSolve'...
+remote: Counting objects: 1099, done.[K
+remote: Compressing objects:   0% (1/674)   [Kremote: Compressing objects:   1% (7/674)   [Kremote: Compressing objects:   2% (14/674)   [Kremote: Compressing objects:   3% (21/674)   [Kremote: Compressing objects:   4% (27/674)   [Kremote: Compressing objects:   5% (34/674)   [Kremote: Compressing objects:   6% (41/674)   [Kremote: Compressing objects:   7% (48/674)   [Kremote: Compressing objects:   8% (54/674)   [Kremote: Compressing objects:   9% (61/674)   [Kremote: Compressing objects:  10% (68/674)   [Kremote: Compressing objects:  11% (75/674)   [Kremote: Compressing objects:  12% (81/674)   [Kremote: Compressing objects:  13% (88/674)   [Kremote: Compressing objects:  14% (95/674)   [Kremote: Compressing objects:  15% (102/674)   [Kremote: Compressing objects:  16% (108/674)   [Kremote: Compressing objects:  17% (115/674)   [Kremote: Compressing objects:  18% (122/674)   [Kremote: Compressing objects:  19% (129/674)   [Kremote: Compressing objects:  20% (135/674)   [Kremote: Compressing objects:  21% (142/674)   [Kremote: Compressing objects:  22% (149/674)   [Kremote: Compressing objects:  23% (156/674)   [Kremote: Compressing objects:  24% (162/674)   [Kremote: Compressing objects:  25% (169/674)   [Kremote: Compressing objects:  26% (176/674)   [Kremote: Compressing objects:  27% (182/674)   [Kremote: Compressing objects:  28% (189/674)   [Kremote: Compressing objects:  29% (196/674)   [Kremote: Compressing objects:  30% (203/674)   [Kremote: Compressing objects:  31% (209/674)   [Kremote: Compressing objects:  32% (216/674)   [Kremote: Compressing objects:  33% (223/674)   [Kremote: Compressing objects:  34% (230/674)   [Kremote: Compressing objects:  35% (236/674)   [Kremote: Compressing objects:  36% (243/674)   [Kremote: Compressing objects:  37% (250/674)   [Kremote: Compressing objects:  38% (257/674)   [Kremote: Compressing objects:  39% (263/674)   [Kremote: Compressing objects:  40% (270/674)   [Kremote: Compressing objects:  41% (277/674)   [Kremote: Compressing objects:  42% (284/674)   [Kremote: Compressing objects:  43% (290/674)   [Kremote: Compressing objects:  44% (297/674)   [Kremote: Compressing objects:  45% (304/674)   [Kremote: Compressing objects:  46% (311/674)   [Kremote: Compressing objects:  47% (317/674)   [Kremote: Compressing objects:  48% (324/674)   [Kremote: Compressing objects:  49% (331/674)   [Kremote: Compressing objects:  50% (337/674)   [Kremote: Compressing objects:  51% (344/674)   [Kremote: Compressing objects:  52% (351/674)   [Kremote: Compressing objects:  53% (358/674)   [Kremote: Compressing objects:  54% (364/674)   [Kremote: Compressing objects:  55% (371/674)   [Kremote: Compressing objects:  56% (378/674)   [Kremote: Compressing objects:  57% (385/674)   [Kremote: Compressing objects:  58% (391/674)   [Kremote: Compressing objects:  59% (398/674)   [Kremote: Compressing objects:  60% (405/674)   [Kremote: Compressing objects:  61% (412/674)   [Kremote: Compressing objects:  62% (418/674)   [Kremote: Compressing objects:  63% (425/674)   [Kremote: Compressing objects:  64% (432/674)   [Kremote: Compressing objects:  65% (439/674)   [Kremote: Compressing objects:  66% (445/674)   [Kremote: Compressing objects:  67% (452/674)   [Kremote: Compressing objects:  68% (459/674)   [Kremote: Compressing objects:  69% (466/674)   [Kremote: Compressing objects:  70% (472/674)   [Kremote: Compressing objects:  71% (479/674)   [Kremote: Compressing objects:  72% (486/674)   [Kremote: Compressing objects:  73% (493/674)   [Kremote: Compressing objects:  74% (499/674)   [Kremote: Compressing objects:  75% (506/674)   [Kremote: Compressing objects:  76% (513/674)   [Kremote: Compressing objects:  77% (519/674)   [Kremote: Compressing objects:  78% (526/674)   [Kremote: Compressing objects:  79% (533/674)   [Kremote: Compressing objects:  80% (540/674)   [Kremote: Compressing objects:  81% (546/674)   [Kremote: Compressing objects:  82% (553/674)   [Kremote: Compressing objects:  83% (560/674)   [Kremote: Compressing objects:  84% (567/674)   [Kremote: Compressing objects:  85% (573/674)   [Kremote: Compressing objects:  86% (580/674)   [Kremote: Compressing objects:  87% (587/674)   [Kremote: Compressing objects:  88% (594/674)   [Kremote: Compressing objects:  89% (600/674)   [Kremote: Compressing objects:  90% (607/674)   [Kremote: Compressing objects:  91% (614/674)   [Kremote: Compressing objects:  92% (621/674)   [Kremote: Compressing objects:  93% (627/674)   [Kremote: Compressing objects:  94% (634/674)   [Kremote: Compressing objects:  95% (641/674)   [Kremote: Compressing objects:  96% (648/674)   [Kremote: Compressing objects:  97% (654/674)   [Kremote: Compressing objects:  98% (661/674)   [Kremote: Compressing objects:  99% (668/674)   [Kremote: Compressing objects: 100% (674/674)   [Kremote: Compressing objects: 100% (674/674), done.[K
+Receiving objects:   0% (1/1099)   Receiving objects:   1% (11/1099)   Receiving objects:   2% (22/1099)   Receiving objects:   3% (33/1099)   Receiving objects:   4% (44/1099)   Receiving objects:   5% (55/1099)   Receiving objects:   6% (66/1099)   Receiving objects:   7% (77/1099)   Receiving objects:   8% (88/1099)   Receiving objects:   9% (99/1099)   Receiving objects:  10% (110/1099)   Receiving objects:  11% (121/1099)   Receiving objects:  12% (132/1099)   Receiving objects:  13% (143/1099)   Receiving objects:  14% (154/1099)   Receiving objects:  15% (165/1099)   Receiving objects:  16% (176/1099)   Receiving objects:  17% (187/1099)   Receiving objects:  18% (198/1099)   Receiving objects:  19% (209/1099)   Receiving objects:  20% (220/1099)   Receiving objects:  21% (231/1099)   Receiving objects:  22% (242/1099)   Receiving objects:  23% (253/1099)   Receiving objects:  24% (264/1099)   Receiving objects:  25% (275/1099)   Receiving objects:  26% (286/1099)   Receiving objects:  27% (297/1099)   Receiving objects:  28% (308/1099)   Receiving objects:  29% (319/1099)   Receiving objects:  30% (330/1099)   Receiving objects:  31% (341/1099)   Receiving objects:  32% (352/1099)   Receiving objects:  33% (363/1099)   Receiving objects:  34% (374/1099)   Receiving objects:  35% (385/1099)   Receiving objects:  36% (396/1099)   Receiving objects:  37% (407/1099)   Receiving objects:  38% (418/1099)   Receiving objects:  39% (429/1099)   Receiving objects:  40% (440/1099)   Receiving objects:  41% (451/1099)   Receiving objects:  42% (462/1099)   Receiving objects:  43% (473/1099)   Receiving objects:  44% (484/1099)   Receiving objects:  45% (495/1099)   Receiving objects:  46% (506/1099)   Receiving objects:  47% (517/1099)   Receiving objects:  48% (528/1099)   Receiving objects:  49% (539/1099)   Receiving objects:  50% (550/1099)   Receiving objects:  51% (561/1099)   Receiving objects:  52% (572/1099)   Receiving objects:  53% (583/1099)   Receiving objects:  54% (594/1099)   Receiving objects:  55% (605/1099)   Receiving objects:  56% (616/1099)   Receiving objects:  57% (627/1099)   Receiving objects:  58% (638/1099)   Receiving objects:  59% (649/1099)   Receiving objects:  60% (660/1099)   Receiving objects:  61% (671/1099)   Receiving objects:  62% (682/1099)   Receiving objects:  63% (693/1099)   Receiving objects:  64% (704/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  65% (715/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  66% (726/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  67% (737/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  68% (748/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  69% (759/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  70% (770/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  71% (781/1099), 16.16 MiB | 32.24 MiB/s   remote: Total 1099 (delta 467), reused 875 (delta 408), pack-reused 0[K
+Receiving objects:  72% (792/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  73% (803/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  74% (814/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  75% (825/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  76% (836/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  77% (847/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  78% (858/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  79% (869/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  80% (880/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  81% (891/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  82% (902/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  83% (913/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  84% (924/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  85% (935/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  86% (946/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  87% (957/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  88% (968/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  89% (979/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  90% (990/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  91% (1001/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  92% (1012/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  93% (1023/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  94% (1034/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  95% (1045/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  96% (1056/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  97% (1067/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  98% (1078/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects:  99% (1089/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects: 100% (1099/1099), 16.16 MiB | 32.24 MiB/s   Receiving objects: 100% (1099/1099), 19.53 MiB | 32.24 MiB/s, done.
+Resolving deltas:   0% (0/467)   Resolving deltas:   2% (14/467)   Resolving deltas:   3% (18/467)   Resolving deltas:   4% (20/467)   Resolving deltas:  14% (67/467)   Resolving deltas:  16% (77/467)   Resolving deltas:  17% (80/467)   Resolving deltas:  18% (86/467)   Resolving deltas:  19% (89/467)   Resolving deltas:  20% (95/467)   Resolving deltas:  21% (99/467)   Resolving deltas:  22% (103/467)   Resolving deltas:  23% (109/467)   Resolving deltas:  24% (113/467)   Resolving deltas:  25% (117/467)   Resolving deltas:  26% (124/467)   Resolving deltas:  27% (127/467)   Resolving deltas:  28% (131/467)   Resolving deltas:  29% (136/467)   Resolving deltas:  30% (141/467)   Resolving deltas:  31% (147/467)   Resolving deltas:  32% (152/467)   Resolving deltas:  33% (155/467)   Resolving deltas:  34% (159/467)   Resolving deltas:  35% (164/467)   Resolving deltas:  36% (171/467)   Resolving deltas:  37% (173/467)   Resolving deltas:  40% (187/467)   Resolving deltas:  45% (213/467)   Resolving deltas:  47% (220/467)   Resolving deltas:  48% (228/467)   Resolving deltas:  49% (229/467)   Resolving deltas:  50% (234/467)   Resolving deltas:  51% (239/467)   Resolving deltas:  52% (246/467)   Resolving deltas:  53% (249/467)   Resolving deltas:  54% (253/467)   Resolving deltas:  55% (260/467)   Resolving deltas:  56% (264/467)   Resolving deltas:  57% (267/467)   Resolving deltas:  58% (271/467)   Resolving deltas:  59% (276/467)   Resolving deltas:  60% (282/467)   Resolving deltas:  61% (285/467)   Resolving deltas:  62% (291/467)   Resolving deltas:  63% (296/467)   Resolving deltas:  64% (299/467)   Resolving deltas:  65% (305/467)   Resolving deltas:  66% (312/467)   Resolving deltas:  67% (313/467)   Resolving deltas:  68% (322/467)   Resolving deltas:  69% (323/467)   Resolving deltas:  70% (327/467)   Resolving deltas:  71% (332/467)   Resolving deltas:  72% (337/467)   Resolving deltas:  73% (342/467)   Resolving deltas:  74% (346/467)   Resolving deltas:  75% (351/467)   Resolving deltas:  76% (359/467)   Resolving deltas:  77% (360/467)   Resolving deltas:  78% (367/467)   Resolving deltas:  79% (372/467)   Resolving deltas:  80% (374/467)   Resolving deltas:  81% (380/467)   Resolving deltas:  83% (389/467)   Resolving deltas:  84% (394/467)   Resolving deltas:  85% (399/467)   Resolving deltas:  86% (403/467)   Resolving deltas:  87% (409/467)   Resolving deltas:  88% (412/467)   Resolving deltas:  89% (416/467)   Resolving deltas:  90% (421/467)   Resolving deltas:  91% (426/467)   Resolving deltas:  92% (431/467)   Resolving deltas:  94% (440/467)   Resolving deltas:  95% (447/467)   Resolving deltas:  97% (457/467)   Resolving deltas:  98% (458/467)   Resolving deltas:  99% (466/467)   Resolving deltas: 100% (467/467)   Resolving deltas: 100% (467/467), done.
+Checking connectivity... done.
+
+travis_time:end:0b6b07a4:start=1455293630716166678,finish=1455293632432258774,duration=1716092096[0K$ cd robol/MPSolve
+$ git checkout -qf 75efb0cccf35587f9043e147914f228aa8dd13e7
+travis_fold:end:git.checkout[0K
+[33;1mSetting environment variables from repository settings[0m
+$ export MPS_JOBS=4
+
+$ export CC=clang
+$ clang --version
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+travis_fold:start:before_install.1[0Ktravis_time:start:00350922[0K$ sudo apt-get update -qq
+
+travis_time:end:00350922:start=1455293632804198227,finish=1455293645522473207,duration=12718274980[0Ktravis_fold:end:before_install.1[0Ktravis_fold:start:before_install.2[0Ktravis_time:start:251ec646[0K$ sudo apt-get install -y libgmp-dev libtcmalloc-minimal0 check octave3.2-headers libmpfr-dev
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  fonts-liberation gfortran gfortran-4.6 gnuplot gnuplot-nox gnuplot-x11 groff
+  libamd2.2.0 libarpack2 libatlas3gf-base libblas-dev libccolamd2.7.1
+  libcholmod1.7.1 libcolamd2.7.1 libcxsparse2.2.3 libfftw3-3 libfftw3-dev
+  libfltk1.1 libglpk0 libgmpxx4ldbl libgraphicsmagick++3 libgraphicsmagick3
+  libhdf5-serial-dev libibverbs1 liblapack-dev liblua5.1-0 libnuma1
+  libopenmpi1.3 libparpack2 libqhull5 libqrupdate1 libtorque2 libumfpack5.4.0
+  libwxbase2.8-0 libwxgtk2.8-0 octave3.2 octave3.2-common psutils texinfo
+  ttf-liberation
+Suggested packages:
+  gfortran-multilib gfortran-doc gfortran-4.6-multilib gfortran-4.6-doc
+  libgfortran3-dbg gnuplot-doc libiodbc2-dev libgmp10-doc graphicsmagick-dbg
+  libhdf5-doc libmpfr-doc libgnomeprintui2.2-0 octave3.2-info octave3.2-doc
+  octave3.2-htmldoc octave3.2-emacsen texlive-base texlive-latex-base
+  texlive-generic-recommended texinfo-doc-nonfree
+The following NEW packages will be installed:
+  check fonts-liberation gfortran gfortran-4.6 gnuplot gnuplot-nox gnuplot-x11
+  groff libamd2.2.0 libarpack2 libatlas3gf-base libblas-dev libccolamd2.7.1
+  libcholmod1.7.1 libcolamd2.7.1 libcxsparse2.2.3 libfftw3-3 libfftw3-dev
+  libfltk1.1 libglpk0 libgmp-dev libgmpxx4ldbl libgraphicsmagick++3
+  libgraphicsmagick3 libhdf5-serial-dev libibverbs1 liblapack-dev liblua5.1-0
+  libmpfr-dev libnuma1 libopenmpi1.3 libparpack2 libqhull5 libqrupdate1
+  libtcmalloc-minimal0 libtorque2 libumfpack5.4.0 libwxbase2.8-0 libwxgtk2.8-0
+  octave3.2 octave3.2-common octave3.2-headers psutils texinfo ttf-liberation
+0 upgraded, 45 newly installed, 0 to remove and 101 not upgraded.
+Need to get 50.5 MB of archives.
+After this operation, 160 MB of additional disk space will be used.
+0% [Working]            Get:1 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main libfltk1.1 amd64 1.1.10-10 [396 kB]
+            0% [1 libfltk1.1 12.1 kB/396 kB 3%]                                   1% [Working]            Get:2 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main libgmpxx4ldbl amd64 2:5.0.2+dfsg-2ubuntu1 [8,720 B]
+            1% [2 libgmpxx4ldbl 8,720 B/8,720 B 100%]                                         1% [Waiting for headers]                        Get:3 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise-updates/main liblua5.1-0 amd64 5.1.4-12ubuntu1.1 [172 kB]
+                        1% [3 liblua5.1-0 32.4 kB/172 kB 19%]                                     1% [Working]            Get:4 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libwxbase2.8-0 amd64 2.8.12.1-6ubuntu2 [583 kB]
+            1% [4 libwxbase2.8-0 6,534 B/583 kB 1%]                                       2% [Working]            Get:5 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libwxgtk2.8-0 amd64 2.8.12.1-6ubuntu2 [3,328 kB]
+            2% [5 libwxgtk2.8-0 17.6 kB/3,328 kB 1%]                                        9% [Working]            Get:6 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main check amd64 0.9.8-1.1ubuntu1 [107 kB]
+            9% [6 check 25.8 kB/107 kB 24%]                               9% [Waiting for headers]                        Get:7 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise-updates/main fonts-liberation all 1.07.0-2ubuntu0.1 [1,314 kB]
+                        9% [7 fonts-liberation 41.0 kB/1,314 kB 3%]                                           12% [Working]             Get:8 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main gfortran-4.6 amd64 4.6.3-1ubuntu5 [5,579 kB]
+             12% [8 gfortran-4.6 21.6 kB/5,579 kB 0%]                                        23% [Working]             Get:9 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main gfortran amd64 4:4.6.3-1ubuntu5 [1,206 B]
+             23% [9 gfortran 1,206 B/1,206 B 100%]                                     23% [Working]             Get:10 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe gnuplot-nox amd64 4.4.3-0ubuntu3 [996 kB]
+             23% [10 gnuplot-nox 0 B/996 kB 0%]                                  25% [Working]             Get:11 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe gnuplot-x11 amd64 4.4.3-0ubuntu3 [703 kB]
+             25% [11 gnuplot-x11 22.8 kB/703 kB 3%]                                      26% [Working]             Get:12 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe gnuplot all 4.4.3-0ubuntu3 [1,068 B]
+             26% [12 gnuplot 1,068 B/1,068 B 100%]                                     26% [Working]             Get:13 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main groff amd64 1.21-7 [3,564 kB]
+             26% [13 groff 9,600 B/3,564 kB 0%]                                  33% [Working]             Get:14 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libamd2.2.0 amd64 1:3.4.0-2ubuntu3 [26.5 kB]
+             33% [14 libamd2.2.0 0 B/26.5 kB 0%]                                   33% [Working]             Get:15 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libatlas3gf-base amd64 3.8.4-3build1 [6,191 kB]
+             33% [15 libatlas3gf-base 12.3 kB/6,191 kB 0%]                                             46% [Working]             Get:16 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main libibverbs1 amd64 1.1.5-1ubuntu1 [27.3 kB]
+             46% [16 libibverbs1 23.5 kB/27.3 kB 86%]                                        46% [Working]             Get:17 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main libnuma1 amd64 2.0.8~rc3-1 [23.1 kB]
+             46% [17 libnuma1 23.1 kB/23.1 kB 100%]                                      46% [Working]             Get:18 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise-updates/universe libtorque2 amd64 2.4.16+dfsg-1+deb7u4build0.12.04.1 [91.9 kB]
+             46% [18 libtorque2 16.4 kB/91.9 kB 18%]                                       46% [Working]             Get:19 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libopenmpi1.3 amd64 1.4.3-2.1ubuntu3 [1,350 kB]
+             46% [19 libopenmpi1.3 8,192 B/1,350 kB 1%]                                          48% [Working]             Get:20 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libparpack2 amd64 3.0.2-3 [229 kB]
+             49% [20 libparpack2 26.2 kB/229 kB 11%]                                       49% [Working]             Get:21 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libarpack2 amd64 3.0.2-3 [126 kB]
+             49% [21 libarpack2 3,949 B/126 kB 3%]                                     49% [Working]             Get:22 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main libblas-dev amd64 1.2.20110419-2ubuntu1 [302 kB]
+             49% [22 libblas-dev 8,556 B/302 kB 3%]                                      50% [Working]             Get:23 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libccolamd2.7.1 amd64 1:3.4.0-2ubuntu3 [28.0 kB]
+             50% [23 libccolamd2.7.1 11.0 kB/28.0 kB 39%]                                            50% [Working]             Get:24 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libcolamd2.7.1 amd64 1:3.4.0-2ubuntu3 [19.6 kB]
+             50% [24 libcolamd2.7.1 5,619 B/19.6 kB 29%]                                           50% [Working]             Get:25 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libcholmod1.7.1 amd64 1:3.4.0-2ubuntu3 [400 kB]
+             50% [25 libcholmod1.7.1 10.8 kB/400 kB 3%]                                          51% [Working]             Get:26 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libcxsparse2.2.3 amd64 1:3.4.0-2ubuntu3 [107 kB]
+             51% [26 libcxsparse2.2.3 16.0 kB/107 kB 15%]                                            51% [Working]             Get:27 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main libfftw3-3 amd64 3.3-1ubuntu1 [1,611 kB]
+             51% [27 libfftw3-3 2,322 B/1,611 kB 0%]                                       54% [Working]             Get:28 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main libfftw3-dev amd64 3.3-1ubuntu1 [2,168 kB]
+             54% [28 libfftw3-dev 4,096 B/2,168 kB 0%]                                         58% [Working]             Get:29 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libglpk0 amd64 4.45-1build1 [417 kB]
+             58% [29 libglpk0 22.7 kB/417 kB 5%]                                   59% [Working]             Get:30 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main libgmp-dev amd64 2:5.0.2+dfsg-2ubuntu1 [351 kB]
+             59% [30 libgmp-dev 22.9 kB/351 kB 7%]                                     60% [Working]             Get:31 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libgraphicsmagick3 amd64 1.3.12-1.1build1 [1,273 kB]
+             60% [31 libgraphicsmagick3 40.3 kB/1,273 kB 3%]                                               62% [Working]             Get:32 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libgraphicsmagick++3 amd64 1.3.12-1.1build1 [129 kB]
+             62% [32 libgraphicsmagick++3 3,796 B/129 kB 3%]                                               63% [Working]             Get:33 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libhdf5-serial-dev amd64 1.8.4-patch1-3ubuntu2 [2,278 kB]
+             63% [33 libhdf5-serial-dev 14.1 kB/2,278 kB 1%]                                               67% [Waiting for headers]                         Get:34 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main liblapack-dev amd64 3.3.1-1 [4,873 kB]
+                         67% [34 liblapack-dev 22.0 kB/4,873 kB 0%]                                          77% [Working]             Get:35 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main libmpfr-dev amd64 3.1.0-3ubuntu2 [248 kB]
+             77% [35 libmpfr-dev 5,579 B/248 kB 2%]                                      77% [Working]             Get:36 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libqhull5 amd64 2009.1-3ubuntu1 [156 kB]
+             77% [36 libqhull5 16.0 kB/156 kB 10%]                                     78% [Working]             Get:37 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libqrupdate1 amd64 1.1.1-1 [90.8 kB]
+             78% [37 libqrupdate1 20.2 kB/90.8 kB 22%]                                         78% [Working]             Get:38 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libtcmalloc-minimal0 amd64 1.7-1ubuntu1 [147 kB]
+             78% [38 libtcmalloc-minimal0 18.6 kB/147 kB 13%]                                                78% [Working]             Get:39 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe libumfpack5.4.0 amd64 1:3.4.0-2ubuntu3 [345 kB]
+             78% [39 libumfpack5.4.0 8,192 B/345 kB 2%]                                          79% [Working]             Get:40 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main texinfo amd64 4.13a.dfsg.1-8ubuntu2 [460 kB]
+             79% [40 texinfo 2,285 B/460 kB 0%]                                  80% [Working]             Get:41 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe octave3.2-common all 3.2.4-12 [579 kB]
+             80% [41 octave3.2-common 16.4 kB/579 kB 3%]                                           81% [Working]             Get:42 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe octave3.2 amd64 3.2.4-12 [9,064 kB]
+             81% [42 octave3.2 4,096 B/9,064 kB 0%]                                      99% [Working]             Get:43 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/universe octave3.2-headers amd64 3.2.4-12 [499 kB]
+             99% [43 octave3.2-headers 18.7 kB/499 kB 4%]                                            100% [Waiting for headers]                          Get:44 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise/main psutils amd64 1.17-31 [95.3 kB]
+                          100% [44 psutils 12.3 kB/95.3 kB 13%]                                     100% [Working]              Get:45 http://us-central1.gce.archive.ubuntu.com/ubuntu/ precise-updates/main ttf-liberation all 1.07.0-2ubuntu0.1 [2,896 B]
+              100% [45 ttf-liberation 2,896 B/2,896 B 100%]                                             100% [Working]              Fetched 50.5 MB in 1s (41.0 MB/s)
+Extracting templates from packages: 66%Extracting templates from packages: 100%
+Selecting previously unselected package libfltk1.1.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 124639 files and directories currently installed.)
+Unpacking libfltk1.1 (from .../libfltk1.1_1.1.10-10_amd64.deb) ...
+Selecting previously unselected package libgmpxx4ldbl.
+Unpacking libgmpxx4ldbl (from .../libgmpxx4ldbl_2%3a5.0.2+dfsg-2ubuntu1_amd64.deb) ...
+Selecting previously unselected package liblua5.1-0.
+Unpacking liblua5.1-0 (from .../liblua5.1-0_5.1.4-12ubuntu1.1_amd64.deb) ...
+Selecting previously unselected package libwxbase2.8-0.
+Unpacking libwxbase2.8-0 (from .../libwxbase2.8-0_2.8.12.1-6ubuntu2_amd64.deb) ...
+Selecting previously unselected package libwxgtk2.8-0.
+Unpacking libwxgtk2.8-0 (from .../libwxgtk2.8-0_2.8.12.1-6ubuntu2_amd64.deb) ...
+Selecting previously unselected package check.
+Unpacking check (from .../check_0.9.8-1.1ubuntu1_amd64.deb) ...
+Selecting previously unselected package fonts-liberation.
+Unpacking fonts-liberation (from .../fonts-liberation_1.07.0-2ubuntu0.1_all.deb) ...
+Selecting previously unselected package gfortran-4.6.
+Unpacking gfortran-4.6 (from .../gfortran-4.6_4.6.3-1ubuntu5_amd64.deb) ...
+Selecting previously unselected package gfortran.
+Unpacking gfortran (from .../gfortran_4%3a4.6.3-1ubuntu5_amd64.deb) ...
+Selecting previously unselected package gnuplot-nox.
+Unpacking gnuplot-nox (from .../gnuplot-nox_4.4.3-0ubuntu3_amd64.deb) ...
+Selecting previously unselected package gnuplot-x11.
+Unpacking gnuplot-x11 (from .../gnuplot-x11_4.4.3-0ubuntu3_amd64.deb) ...
+Adding 'diversion of /usr/bin/gnuplot to /usr/bin/gnuplot-nox by gnuplot-x11'
+Adding 'diversion of /usr/share/man/man1/gnuplot.1.gz to /usr/share/man/man1/gnuplot-nox.1.gz by gnuplot-x11'
+Selecting previously unselected package gnuplot.
+Unpacking gnuplot (from .../gnuplot_4.4.3-0ubuntu3_all.deb) ...
+Selecting previously unselected package groff.
+Unpacking groff (from .../groff_1.21-7_amd64.deb) ...
+Selecting previously unselected package libamd2.2.0.
+Unpacking libamd2.2.0 (from .../libamd2.2.0_1%3a3.4.0-2ubuntu3_amd64.deb) ...
+Selecting previously unselected package libatlas3gf-base.
+Unpacking libatlas3gf-base (from .../libatlas3gf-base_3.8.4-3build1_amd64.deb) ...
+Selecting previously unselected package libibverbs1.
+Unpacking libibverbs1 (from .../libibverbs1_1.1.5-1ubuntu1_amd64.deb) ...
+Selecting previously unselected package libnuma1.
+Unpacking libnuma1 (from .../libnuma1_2.0.8~rc3-1_amd64.deb) ...
+Selecting previously unselected package libtorque2.
+Unpacking libtorque2 (from .../libtorque2_2.4.16+dfsg-1+deb7u4build0.12.04.1_amd64.deb) ...
+Selecting previously unselected package libopenmpi1.3.
+Unpacking libopenmpi1.3 (from .../libopenmpi1.3_1.4.3-2.1ubuntu3_amd64.deb) ...
+Selecting previously unselected package libparpack2.
+Unpacking libparpack2 (from .../libparpack2_3.0.2-3_amd64.deb) ...
+Selecting previously unselected package libarpack2.
+Unpacking libarpack2 (from .../libarpack2_3.0.2-3_amd64.deb) ...
+Selecting previously unselected package libblas-dev.
+Unpacking libblas-dev (from .../libblas-dev_1.2.20110419-2ubuntu1_amd64.deb) ...
+Selecting previously unselected package libccolamd2.7.1.
+Unpacking libccolamd2.7.1 (from .../libccolamd2.7.1_1%3a3.4.0-2ubuntu3_amd64.deb) ...
+Selecting previously unselected package libcolamd2.7.1.
+Unpacking libcolamd2.7.1 (from .../libcolamd2.7.1_1%3a3.4.0-2ubuntu3_amd64.deb) ...
+Selecting previously unselected package libcholmod1.7.1.
+Unpacking libcholmod1.7.1 (from .../libcholmod1.7.1_1%3a3.4.0-2ubuntu3_amd64.deb) ...
+Selecting previously unselected package libcxsparse2.2.3.
+Unpacking libcxsparse2.2.3 (from .../libcxsparse2.2.3_1%3a3.4.0-2ubuntu3_amd64.deb) ...
+Selecting previously unselected package libfftw3-3.
+Unpacking libfftw3-3 (from .../libfftw3-3_3.3-1ubuntu1_amd64.deb) ...
+Selecting previously unselected package libfftw3-dev.
+Unpacking libfftw3-dev (from .../libfftw3-dev_3.3-1ubuntu1_amd64.deb) ...
+Selecting previously unselected package libglpk0.
+Unpacking libglpk0 (from .../libglpk0_4.45-1build1_amd64.deb) ...
+Selecting previously unselected package libgmp-dev.
+Unpacking libgmp-dev (from .../libgmp-dev_2%3a5.0.2+dfsg-2ubuntu1_amd64.deb) ...
+Selecting previously unselected package libgraphicsmagick3.
+Unpacking libgraphicsmagick3 (from .../libgraphicsmagick3_1.3.12-1.1build1_amd64.deb) ...
+Selecting previously unselected package libgraphicsmagick++3.
+Unpacking libgraphicsmagick++3 (from .../libgraphicsmagick++3_1.3.12-1.1build1_amd64.deb) ...
+Selecting previously unselected package libhdf5-serial-dev.
+Unpacking libhdf5-serial-dev (from .../libhdf5-serial-dev_1.8.4-patch1-3ubuntu2_amd64.deb) ...
+Selecting previously unselected package liblapack-dev.
+Unpacking liblapack-dev (from .../liblapack-dev_3.3.1-1_amd64.deb) ...
+Selecting previously unselected package libmpfr-dev.
+Unpacking libmpfr-dev (from .../libmpfr-dev_3.1.0-3ubuntu2_amd64.deb) ...
+Selecting previously unselected package libqhull5.
+Unpacking libqhull5 (from .../libqhull5_2009.1-3ubuntu1_amd64.deb) ...
+Selecting previously unselected package libqrupdate1.
+Unpacking libqrupdate1 (from .../libqrupdate1_1.1.1-1_amd64.deb) ...
+Selecting previously unselected package libtcmalloc-minimal0.
+Unpacking libtcmalloc-minimal0 (from .../libtcmalloc-minimal0_1.7-1ubuntu1_amd64.deb) ...
+Selecting previously unselected package libumfpack5.4.0.
+Unpacking libumfpack5.4.0 (from .../libumfpack5.4.0_1%3a3.4.0-2ubuntu3_amd64.deb) ...
+Selecting previously unselected package texinfo.
+Unpacking texinfo (from .../texinfo_4.13a.dfsg.1-8ubuntu2_amd64.deb) ...
+Selecting previously unselected package octave3.2-common.
+Unpacking octave3.2-common (from .../octave3.2-common_3.2.4-12_all.deb) ...
+Selecting previously unselected package octave3.2.
+Unpacking octave3.2 (from .../octave3.2_3.2.4-12_amd64.deb) ...
+Selecting previously unselected package octave3.2-headers.
+Unpacking octave3.2-headers (from .../octave3.2-headers_3.2.4-12_amd64.deb) ...
+Selecting previously unselected package psutils.
+Unpacking psutils (from .../psutils_1.17-31_amd64.deb) ...
+Selecting previously unselected package ttf-liberation.
+Unpacking ttf-liberation (from .../ttf-liberation_1.07.0-2ubuntu0.1_all.deb) ...
+Processing triggers for install-info ...
+Processing triggers for fontconfig ...
+Processing triggers for man-db ...
+Processing triggers for ccache ...
+Updating symlinks in /usr/lib/ccache ...
+Setting up libfltk1.1 (1.1.10-10) ...
+Setting up libgmpxx4ldbl (2:5.0.2+dfsg-2ubuntu1) ...
+Setting up liblua5.1-0 (5.1.4-12ubuntu1.1) ...
+Setting up libwxbase2.8-0 (2.8.12.1-6ubuntu2) ...
+Setting up libwxgtk2.8-0 (2.8.12.1-6ubuntu2) ...
+Setting up check (0.9.8-1.1ubuntu1) ...
+Setting up fonts-liberation (1.07.0-2ubuntu0.1) ...
+Setting up gfortran-4.6 (4.6.3-1ubuntu5) ...
+Setting up gfortran (4:4.6.3-1ubuntu5) ...
+update-alternatives: using /usr/bin/gfortran to provide /usr/bin/f95 (f95) in auto mode.
+Setting up gnuplot-nox (4.4.3-0ubuntu3) ...
+Setting up gnuplot-x11 (4.4.3-0ubuntu3) ...
+Setting up gnuplot (4.4.3-0ubuntu3) ...
+Setting up groff (1.21-7) ...
+Setting up libamd2.2.0 (1:3.4.0-2ubuntu3) ...
+Setting up libatlas3gf-base (3.8.4-3build1) ...
+update-alternatives: using /usr/lib/atlas-base/atlas/libblas.so.3gf to provide /usr/lib/libblas.so.3gf (libblas.so.3gf) in auto mode.
+update-alternatives: using /usr/lib/atlas-base/atlas/liblapack.so.3gf to provide /usr/lib/liblapack.so.3gf (liblapack.so.3gf) in auto mode.
+Setting up libibverbs1 (1.1.5-1ubuntu1) ...
+Setting up libnuma1 (2.0.8~rc3-1) ...
+Setting up libtorque2 (2.4.16+dfsg-1+deb7u4build0.12.04.1) ...
+Setting up libopenmpi1.3 (1.4.3-2.1ubuntu3) ...
+Setting up libparpack2 (3.0.2-3) ...
+Setting up libarpack2 (3.0.2-3) ...
+Setting up libblas-dev (1.2.20110419-2ubuntu1) ...
+update-alternatives: using /usr/lib/libblas/libblas.so to provide /usr/lib/libblas.so (libblas.so) in auto mode.
+Setting up libccolamd2.7.1 (1:3.4.0-2ubuntu3) ...
+Setting up libcolamd2.7.1 (1:3.4.0-2ubuntu3) ...
+Setting up libcholmod1.7.1 (1:3.4.0-2ubuntu3) ...
+Setting up libcxsparse2.2.3 (1:3.4.0-2ubuntu3) ...
+Setting up libfftw3-3 (3.3-1ubuntu1) ...
+Setting up libfftw3-dev (3.3-1ubuntu1) ...
+Setting up libglpk0 (4.45-1build1) ...
+Setting up libgmp-dev (2:5.0.2+dfsg-2ubuntu1) ...
+Setting up libgraphicsmagick3 (1.3.12-1.1build1) ...
+Setting up libgraphicsmagick++3 (1.3.12-1.1build1) ...
+Setting up libhdf5-serial-dev (1.8.4-patch1-3ubuntu2) ...
+Setting up liblapack-dev (3.3.1-1) ...
+update-alternatives: using /usr/lib/lapack/liblapack.so to provide /usr/lib/liblapack.so (liblapack.so) in auto mode.
+Setting up libmpfr-dev (3.1.0-3ubuntu2) ...
+Setting up libqhull5 (2009.1-3ubuntu1) ...
+Setting up libqrupdate1 (1.1.1-1) ...
+Setting up libtcmalloc-minimal0 (1.7-1ubuntu1) ...
+Setting up libumfpack5.4.0 (1:3.4.0-2ubuntu3) ...
+Setting up texinfo (4.13a.dfsg.1-8ubuntu2) ...
+Setting up octave3.2-common (3.2.4-12) ...
+Setting up octave3.2 (3.2.4-12) ...
+update-alternatives: using /usr/bin/octave-3.2.4 to provide /usr/bin/octave (octave) in auto mode.
+update-alternatives: using /usr/bin/octave-bug-3.2.4 to provide /usr/bin/octave-bug (octave-bug) in auto mode.
+
+Setting up octave3.2-headers (3.2.4-12) ...
+update-alternatives: using /usr/bin/mkoctfile-3.2.4 to provide /usr/bin/mkoctfile (mkoctfile) in auto mode.
+update-alternatives: using /usr/bin/octave-config-3.2.4 to provide /usr/bin/octave-config (octave-config) in auto mode.
+update-alternatives: using /usr/bin/octave-depends-3.2.4 to provide /usr/bin/octave-depends (octave-depends) in auto mode.
+update-alternatives: using /usr/include/octave-3.2.4/octave to provide /usr/include/octave (octave-include) in auto mode.
+update-alternatives: using /usr/share/octave/debian/defs.make-3.2.4 to provide /usr/share/octave/debian/defs.make (octave-defs.make) in auto mode.
+Setting up psutils (1.17-31) ...
+Setting up ttf-liberation (1.07.0-2ubuntu0.1) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+
+travis_time:end:251ec646:start=1455293645526963986,finish=1455293658843229315,duration=13316265329[0Ktravis_fold:end:before_install.2[0Ktravis_time:start:09491f16[0K$ ./autogen.sh && ./configure MEX=mkoctfile MEXOPTS="--mex" && make && make check
+
+ ****************************************
+ *** MPSolve is initializing autoconf ***
+ ***                                  ***
+ *** Please use this command only if  ***
+ *** you checked out the source from  ***
+ *** the git repository!              ***
+ ****************************************
+
+libtoolize: putting auxiliary files in `.'.
+libtoolize: copying file `./config.guess'
+libtoolize: copying file `./config.sub'
+libtoolize: copying file `./install-sh'
+libtoolize: copying file `./ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIR, `m4'.
+libtoolize: copying file `m4/libtool.m4'
+libtoolize: copying file `m4/ltoptions.m4'
+libtoolize: copying file `m4/ltsugar.m4'
+libtoolize: copying file `m4/ltversion.m4'
+libtoolize: copying file `m4/lt~obsolete.m4'
+configure.ac:123: installing `./compile'
+configure.ac:12: installing `./missing'
+examples/fortran/Makefile.am: installing `./depcomp'
+examples/python/Makefile.am:5: installing `./py-compile'
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for gcc... clang
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether clang accepts -g... yes
+checking for clang option to accept ISO C89... none needed
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by clang... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking for gawk... gawk
+checking command to parse /usr/bin/nm -B output from clang object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... clang -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if clang supports -fno-rtti -fno-exceptions... yes
+checking for clang option to produce PIC... -fPIC -DPIC
+checking if clang PIC flag -fPIC -DPIC works... yes
+checking if clang static flag -static works... yes
+checking if clang supports -c -o file.o... yes
+checking if clang supports -c -o file.o... (cached) yes
+checking whether the clang linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking dependency style of clang... gcc3
+checking whether make supports nested variables... yes
+checking for gfortran... gfortran
+checking whether we are using the GNU Fortran compiler... yes
+checking whether gfortran accepts -g... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gfortran option to produce PIC... -fPIC
+checking if gfortran PIC flag -fPIC works... yes
+checking if gfortran static flag -static works... yes
+checking if gfortran supports -c -o file.o... yes
+checking if gfortran supports -c -o file.o... (cached) yes
+checking whether the gfortran linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for gcc... (cached) clang
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether clang accepts -g... (cached) yes
+checking for clang option to accept ISO C89... (cached) none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking dependency style of g++... gcc3
+checking for clang option to accept ISO C99... none needed
+checking whether clang and cc understand -c and -o together... yes
+checking for inline... inline
+checking whether C compiler accepts -fcx-limited-range... no
+checking whether C compiler accepts -fno-math-errno... yes
+checking whether C compiler accepts -fomit-frame-pointer... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for size_t... yes
+checking for error_at_line... yes
+checking for memset... yes
+checking for modf... yes
+checking for pow... no
+checking for sqrt... no
+checking for strchr... yes
+checking for Win32 platform... no
+checking for __attribute__((visibility("hidden")))... yes
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking whether to check for GCC pthread/shared inconsistencies... yes
+checking whether -pthread is sufficient with -shared... yes
+checking whether what we have so far is sufficient with -nostdlib... yes
+checking if sysconf(_SC_NPROCESSORS_ONLN) is supported... yes
+checking for malloc in -ltcmalloc_minimal... no
+checking for snprintf... yes
+checking for vsnprintf... yes
+checking for working snprintf... yes
+checking for working vsnprintf... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for getline... yes
+checking for strndup... yes
+checking if C99 complex.h is supported from the C++ compiler... no
+checking for pow in -lm... yes
+checking for __gmpz_init2 in -lgmp... yes
+checking for main in -lgmpxx... yes
+checking gmp.h usability... yes
+checking gmp.h presence... yes
+checking for gmp.h... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for CHECK... yes
+checking for GTK... no
+checking for GTK... yes
+checking for CAIRO... yes
+checking for QT4... yes
+checking for QT5... no
+checking for uic-qt4... uic-qt4
+checking for moc-qt4... moc-qt4
+checking for rcc-qt4... no
+checking for rcc... rcc
+checking for mkoctfile... mkoctfile
+checking for octave... octave
+checking if Octave is newer than 3.0... yes
+checking for a valid mex compiler... mkoctfile
+checking for the correct way to give -output to the mex compiler... -o
+checking for a Python interpreter with version >= 2.3... python
+checking for python... /usr/bin/python
+checking for python version... 2.7
+checking for python platform... linux2
+checking for python script directory... ${prefix}/lib/python2.7/dist-packages
+checking for python extension module directory... ${exec_prefix}/lib/python2.7/dist-packages
+checking for python2.7-config... /usr/bin/python2.7-config
+checking python include flags... -I/usr/include/python2.7 -I/usr/include/python2.7
+checking python module: ctypes... yes
+checking for doxygen... no
+configure: WARNING: Doxygen not found, documentation will not be generated
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating include/Makefile
+config.status: creating include/mps/Makefile
+config.status: creating include/mps/private/Makefile
+config.status: creating examples/Makefile
+config.status: creating examples/fortran/Makefile
+config.status: creating examples/octave/Makefile
+config.status: creating examples/matlab/Makefile
+config.status: creating examples/gtk/Makefile
+config.status: creating examples/python/Makefile
+config.status: creating examples/python/tests/Makefile
+config.status: creating examples/mandelbrot-solver/Makefile
+config.status: creating examples/mandelbrot-solver/mandelbrot-solver.1
+config.status: creating examples/quadratic-solver/Makefile
+config.status: creating examples/quadratic-solver/quadratic-solver.1
+config.status: creating include/mps/mt.h
+config.status: creating src/Makefile
+config.status: creating src/mpsolve/Makefile
+config.status: creating src/mpsolve/mpsolve.1
+config.status: creating src/libmps/Makefile
+config.status: creating src/tests/Makefile
+config.status: creating src/xmpsolve/Makefile
+config.status: creating src/xmpsolve/xmpsolve.desktop
+config.status: creating src/xmpsolve/xmpsolve.1
+config.status: creating doc/Makefile
+config.status: creating doc/Doxyfile
+config.status: creating mime/Makefile
+config.status: creating config.h
+config.status: executing libtool commands
+config.status: executing depfiles commands
+
+
+MPSolve configuration:
+
+        Source location:	.
+	Pthread CFLAGS:		-pthread
+        C compiler:		clang
+	CFLAGS:			-D_REENTRANT -Wall -DMPS_USE_BUILTIN_COMPLEX  -DNICE_DEBUG -fno-math-errno -fomit-frame-pointer -D_MPS_PRIVATE
+        LDFLAGS:                 
+	Additional CFLAGS:	-g -O2
+        Debug enabled:		yes
+        Check enabled:		yes
+	Octave module:		yes (generates examples/octave/mpsolve.tar.gz)
+	MATLAB (tm) module:	yes (generates examples/matlab/mpsolve-toolbox.tar.gz)
+	Graphical UI:		yes
+	Python module:          yes
+
+Type 'make' to compile MPSolve, and then make install
+to install the binaries, the library and the headers
+system-wide.
+
+
+make  all-recursive
+make[1]: Entering directory `/home/travis/build/robol/MPSolve'
+Making all in include
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/include'
+Making all in mps
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/include/mps'
+Making all in private
+make[4]: Entering directory `/home/travis/build/robol/MPSolve/include/mps/private'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/travis/build/robol/MPSolve/include/mps/private'
+make[4]: Entering directory `/home/travis/build/robol/MPSolve/include/mps'
+make[4]: Nothing to be done for `all-am'.
+make[4]: Leaving directory `/home/travis/build/robol/MPSolve/include/mps'
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/include/mps'
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/include'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/include'
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/include'
+Making all in src
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/src'
+Making all in libmps
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/src/libmps'
+  CC     chebyshev/chebyshev-evaluation.lo
+  CC     chebyshev/chebyshev-parser.lo
+  CC     chebyshev/chebyshev.lo
+  CC     common/aberth.lo
+  CC     common/approximation.lo
+  CC     common/cluster-analysis.lo
+  CC     common/cluster.lo
+  CC     common/context.lo
+  CC     common/convex.lo
+  CC     common/defaults.lo
+  CC     common/file-starting.lo
+  CC     common/improve.lo
+  CC     common/inclusion.lo
+  CC     common/inline-poly-parser.lo
+  CC     common/interface.lo
+  CC     common/jacobi-aberth.lo
+  CC     common/list-element.lo
+  CC     common/list.lo
+  CC     common/modify.lo
+  CXX    common/nroots-polynomial.lo
+  CC     common/parser.lo
+  CC     common/polynomial.lo
+  CXX    common/polynomialxx.lo
+  CC     common/recursive-starting.lo
+  CC     common/sort.lo
+  CC     common/starting-configuration.lo
+  CC     common/starting.lo
+  CC     common/strndup.lo
+  CC     common/test.lo
+  CC     common/tools.lo
+  CC     common/touch.lo
+  CC     common/user.lo
+  CC     common/utils.lo
+  CC     common/validation.lo
+  CXX    formal/formal-monomial.lo
+  CXX    formal/formal-polynomial.lo
+  CC     floating-point/gmptools.lo
+  CC     floating-point/link.lo
+  CC     floating-point/mpc.lo
+  CC     floating-point/mt.lo
+  CC     general/general-radius.lo
+  CC     general/general-starting.lo
+  CC     matrix/hessenberg-determinant.lo
+  CC     monomial/horner.lo
+  CC     monomial/monomial-matrix-poly.lo
+  CC     monomial/monomial-parser.lo
+  CC     monomial/monomial-poly.lo
+  CC     monomial/monomial-threading.lo
+  CC     monomial/newton.lo
+  CC     monomial/shift.lo
+  CC     secsolve/secular-ga.lo
+  CC     secsolve/secular-iteration.lo
+  CC     secsolve/secular-regeneration.lo
+  CC     secsolve/standard-regeneration-driver.lo
+  CC     secular/secular-equation.lo
+  CC     secular/secular-evaluation.lo
+  CC     secular/secular-newton.lo
+  CC     secular/secular-parser.lo
+  CC     secular/secular-starting.lo
+  CXX    system/abstract-input-stream.lo
+  CXX    system/file-input-stream.lo
+  CXX    system/memory-file-stream.lo
+  CC     system/data.lo
+  CC     system/debug.lo
+  CC     system/getline.lo
+  CC     system/getopts.lo
+  CC     system/input-buffer.lo
+  CC     system/input-output.lo
+  CC     system/threading.lo
+  CC     unisolve/main.lo
+  CC     unisolve/solve.lo
+  CXXLD  libmps.la
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/src/libmps'
+Making all in mpsolve
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/src/mpsolve'
+  CC     mpsolve-iteration-logger.o
+  CC     mpsolve-mpsolve.o
+  CCLD   mpsolve
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/src/mpsolve'
+Making all in tests
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/src/tests'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/src/tests'
+Making all in xmpsolve
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/src/xmpsolve'
+  GEN    polynomialparser_moc.cpp
+  GEN    polynomialsolver_moc.cpp
+  GEN    rootsmodel_moc.cpp
+  GEN    polsyntaxhighlighter_moc.cpp
+  GEN    mpsolveworker_moc.cpp
+  GEN    mainwindow_moc.cpp
+  GEN    polfileeditorwindow_moc.cpp
+  GEN    polfileeditor_moc.cpp
+  GEN    qrootsrenderer_moc.cpp
+  GEN    resources_qrc.cpp
+  GEN    ui_mainwindow.h
+  GEN    ui_polfileeditor.h
+  GEN    ui_polfileeditorwindow.h
+make  all-am
+make[4]: Entering directory `/home/travis/build/robol/MPSolve/src/xmpsolve'
+  CXX    xmpsolve-main.o
+  CXX    xmpsolve-polynomial.o
+  CXX    xmpsolve-monomial.o
+  CXX    xmpsolve-rootsrenderer.o
+  CXX    xmpsolve-root.o
+  CXX    xmpsolve-polynomialparser.o
+  CXX    xmpsolve-polynomialsolver.o
+  CXX    xmpsolve-rootsmodel.o
+  CXX    xmpsolve-polsyntaxhighlighter.o
+  CXX    xmpsolve-mpsolveworker.o
+  CXX    xmpsolve-mainwindow.o
+  CXX    xmpsolve-polfileeditorwindow.o
+  CXX    xmpsolve-polfileeditor.o
+  CXX    xmpsolve-qrootsrenderer.o
+  CXX    xmpsolve-polynomialparser_moc.o
+  CXX    xmpsolve-polynomialsolver_moc.o
+  CXX    xmpsolve-rootsmodel_moc.o
+  CXX    xmpsolve-polsyntaxhighlighter_moc.o
+  CXX    xmpsolve-mpsolveworker_moc.o
+  CXX    xmpsolve-mainwindow_moc.o
+  CXX    xmpsolve-polfileeditorwindow_moc.o
+  CXX    xmpsolve-polfileeditor_moc.o
+  CXX    xmpsolve-qrootsrenderer_moc.o
+  CXX    xmpsolve-resources_qrc.o
+  CXXLD  xmpsolve
+make[4]: Leaving directory `/home/travis/build/robol/MPSolve/src/xmpsolve'
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/src/xmpsolve'
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/src'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/src'
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/src'
+Making all in examples
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/examples'
+Making all in fortran
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/examples/fortran'
+  CC     libmps_fortran_la-mps_impl.lo
+  CCLD   libmps-fortran.la
+  FC     roots_of_unity.o
+  FCLD   roots_of_unity
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/examples/fortran'
+Making all in octave
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/examples/octave'
+  MKOCT    mps_roots.o
+  CXX    octave_support.o
+  GEN    mps_roots.oct
+  MKOCT    mps_polyeig_impl.o
+  GEN    mps_polyeig_impl.oct
+  MKOCT    mps_det.o
+  GEN    mps_det.oct
+  MKOCT    mps_secular.o
+  GEN    mps_secular.oct
+  MKOCT    mps_regenerate.o
+  GEN    mps_regenerate.oct
+  GEN    mpsolve.tar.gz
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/examples/octave'
+Making all in matlab
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/examples/matlab'
+  GEN    mps_roots_string
+  GEN    mps_roots_double
+  GEN    mps_kostlan
+  GEN    mps_interp
+  GEN    mpsolve-toolbox.tar.gz
+cp: cannot stat `mps_roots*.mex*': No such file or directory
+make[3]: *** [mpsolve-toolbox.tar.gz] Error 1
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/examples/matlab'
+make[2]: *** [all-recursive] Error 1
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/examples'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/home/travis/build/robol/MPSolve'
+make: *** [all] Error 2
+
+travis_time:end:09491f16:start=1455293658847626233,finish=1455293717622783908,duration=58775157675[0K
+[31;1mThe command "./autogen.sh && ./configure MEX=mkoctfile MEXOPTS="--mex" && make && make check" exited with 2.[0m
+
+Done. Your build exited with 1.

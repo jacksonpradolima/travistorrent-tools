@@ -1,0 +1,2132 @@
+Using worker: worker-linux-f25aadab-2.bb.travis-ci.org:travis-linux-13
+
+travis_fold:start:system_info[0K[33;1mBuild system information[0m
+Build language: c
+[34m[1mBuild image provisioning date and time[0m
+Wed Feb  4 18:22:50 UTC 2015
+[34m[1mOperating System Details[0m
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04 LTS
+Release:	12.04
+Codename:	precise
+[34m[1mLinux Version[0m
+2.6.32-042stab090.5
+[34m[1mCookbooks Version[0m
+23bb455 https://github.com/travis-ci/travis-cookbooks/tree/23bb455
+[34m[1mGCC version[0m
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+[34m[1mLLVM version[0m
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+[34m[1mPre-installed Ruby versions[0m
+ruby-1.9.3-p551
+[34m[1mPre-installed Node.js versions[0m
+v0.10.36
+[34m[1mPre-installed Go versions[0m
+1.4.1
+[34m[1mRedis version[0m
+redis-server 2.8.19
+[34m[1mriak version[0m
+2.0.2
+[34m[1mMongoDB version[0m
+MongoDB 2.4.12
+[34m[1mCouchDB version[0m
+couchdb 1.6.1
+[34m[1mNeo4j version[0m
+1.9.4
+[34m[1mCassandra version[0m
+2.0.9
+[34m[1mRabbitMQ Version[0m
+3.4.3
+[34m[1mElasticSearch version[0m
+1.4.0
+[34m[1mInstalled Sphinx versions[0m
+2.0.10
+2.1.9
+2.2.6
+[34m[1mDefault Sphinx version[0m
+2.2.6
+[34m[1mInstalled Firefox version[0m
+firefox 31.0esr
+[34m[1mPhantomJS version[0m
+1.9.8
+[34m[1mant -version[0m
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+[34m[1mmvn -version[0m
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_76, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "2.6.32-042stab090.5", arch: "amd64", family: "unix"
+travis_fold:end:system_info[0K
+travis_fold:start:git.checkout[0Ktravis_time:start:032b20e6[0K$ git clone --depth=50 --branch=master git://github.com/robol/MPSolve.git robol/MPSolve
+Cloning into 'robol/MPSolve'...
+remote: Counting objects: 927, done.[K
+remote: Compressing objects:   0% (1/613)   [Kremote: Compressing objects:   1% (7/613)   [Kremote: Compressing objects:   2% (13/613)   [Kremote: Compressing objects:   3% (19/613)   [Kremote: Compressing objects:   4% (25/613)   [Kremote: Compressing objects:   5% (31/613)   [Kremote: Compressing objects:   6% (37/613)   [Kremote: Compressing objects:   7% (43/613)   [Kremote: Compressing objects:   8% (50/613)   [Kremote: Compressing objects:   9% (56/613)   [Kremote: Compressing objects:  10% (62/613)   [Kremote: Compressing objects:  11% (68/613)   [Kremote: Compressing objects:  12% (74/613)   [Kremote: Compressing objects:  13% (80/613)   [Kremote: Compressing objects:  14% (86/613)   [Kremote: Compressing objects:  15% (92/613)   [Kremote: Compressing objects:  16% (99/613)   [Kremote: Compressing objects:  17% (105/613)   [Kremote: Compressing objects:  18% (111/613)   [Kremote: Compressing objects:  19% (117/613)   [Kremote: Compressing objects:  20% (123/613)   [Kremote: Compressing objects:  21% (129/613)   [Kremote: Compressing objects:  22% (135/613)   [Kremote: Compressing objects:  23% (141/613)   [Kremote: Compressing objects:  24% (148/613)   [Kremote: Compressing objects:  25% (154/613)   [Kremote: Compressing objects:  26% (160/613)   [Kremote: Compressing objects:  27% (166/613)   [Kremote: Compressing objects:  28% (172/613)   [Kremote: Compressing objects:  29% (178/613)   [Kremote: Compressing objects:  30% (184/613)   [Kremote: Compressing objects:  31% (191/613)   [Kremote: Compressing objects:  32% (197/613)   [Kremote: Compressing objects:  33% (203/613)   [Kremote: Compressing objects:  34% (209/613)   [Kremote: Compressing objects:  35% (215/613)   [Kremote: Compressing objects:  36% (221/613)   [Kremote: Compressing objects:  37% (227/613)   [Kremote: Compressing objects:  38% (233/613)   [Kremote: Compressing objects:  39% (240/613)   [Kremote: Compressing objects:  40% (246/613)   [Kremote: Compressing objects:  41% (252/613)   [Kremote: Compressing objects:  42% (258/613)   [Kremote: Compressing objects:  43% (264/613)   [Kremote: Compressing objects:  44% (270/613)   [Kremote: Compressing objects:  45% (276/613)   [Kremote: Compressing objects:  46% (282/613)   [Kremote: Compressing objects:  47% (289/613)   [Kremote: Compressing objects:  48% (295/613)   [Kremote: Compressing objects:  49% (301/613)   [Kremote: Compressing objects:  50% (307/613)   [Kremote: Compressing objects:  51% (313/613)   [Kremote: Compressing objects:  52% (319/613)   [Kremote: Compressing objects:  53% (325/613)   [Kremote: Compressing objects:  54% (332/613)   [Kremote: Compressing objects:  55% (338/613)   [Kremote: Compressing objects:  56% (344/613)   [Kremote: Compressing objects:  57% (350/613)   [Kremote: Compressing objects:  58% (356/613)   [Kremote: Compressing objects:  59% (362/613)   [Kremote: Compressing objects:  60% (368/613)   [Kremote: Compressing objects:  61% (374/613)   [Kremote: Compressing objects:  62% (381/613)   [Kremote: Compressing objects:  63% (387/613)   [Kremote: Compressing objects:  64% (393/613)   [Kremote: Compressing objects:  65% (399/613)   [Kremote: Compressing objects:  66% (405/613)   [Kremote: Compressing objects:  67% (411/613)   [Kremote: Compressing objects:  68% (417/613)   [Kremote: Compressing objects:  69% (423/613)   [Kremote: Compressing objects:  70% (430/613)   [Kremote: Compressing objects:  71% (436/613)   [Kremote: Compressing objects:  72% (442/613)   [Kremote: Compressing objects:  73% (448/613)   [Kremote: Compressing objects:  74% (454/613)   [Kremote: Compressing objects:  75% (460/613)   [Kremote: Compressing objects:  76% (466/613)   [Kremote: Compressing objects:  77% (473/613)   [Kremote: Compressing objects:  78% (479/613)   [Kremote: Compressing objects:  79% (485/613)   [Kremote: Compressing objects:  80% (491/613)   [Kremote: Compressing objects:  81% (497/613)   [Kremote: Compressing objects:  82% (503/613)   [Kremote: Compressing objects:  83% (509/613)   [Kremote: Compressing objects:  84% (515/613)   [Kremote: Compressing objects:  85% (522/613)   [Kremote: Compressing objects:  86% (528/613)   [Kremote: Compressing objects:  87% (534/613)   [Kremote: Compressing objects:  88% (540/613)   [Kremote: Compressing objects:  89% (546/613)   [Kremote: Compressing objects:  90% (552/613)   [Kremote: Compressing objects:  91% (558/613)   [Kremote: Compressing objects:  92% (564/613)   [Kremote: Compressing objects:  93% (571/613)   [Kremote: Compressing objects:  94% (577/613)   [Kremote: Compressing objects:  95% (583/613)   [Kremote: Compressing objects:  96% (589/613)   [Kremote: Compressing objects:  97% (595/613)   [Kremote: Compressing objects:  98% (601/613)   [Kremote: Compressing objects:  99% (607/613)   [Kremote: Compressing objects: 100% (613/613)   [Kremote: Compressing objects: 100% (613/613), done.[K
+Receiving objects:   0% (1/927)   Receiving objects:   1% (10/927)   Receiving objects:   2% (19/927)   Receiving objects:   3% (28/927)   Receiving objects:   4% (38/927)   Receiving objects:   5% (47/927)   Receiving objects:   6% (56/927)   Receiving objects:   7% (65/927)   Receiving objects:   8% (75/927)   Receiving objects:   9% (84/927)   Receiving objects:  10% (93/927)   Receiving objects:  11% (102/927)   Receiving objects:  12% (112/927)   Receiving objects:  13% (121/927)   Receiving objects:  14% (130/927)   Receiving objects:  15% (140/927)   Receiving objects:  16% (149/927)   Receiving objects:  17% (158/927)   Receiving objects:  18% (167/927)   Receiving objects:  19% (177/927)   Receiving objects:  20% (186/927)   Receiving objects:  21% (195/927)   Receiving objects:  22% (204/927)   Receiving objects:  23% (214/927)   Receiving objects:  24% (223/927)   Receiving objects:  25% (232/927)   Receiving objects:  26% (242/927)   Receiving objects:  27% (251/927)   Receiving objects:  28% (260/927)   Receiving objects:  29% (269/927)   Receiving objects:  30% (279/927)   Receiving objects:  31% (288/927)   Receiving objects:  32% (297/927)   Receiving objects:  33% (306/927)   Receiving objects:  34% (316/927)   Receiving objects:  35% (325/927)   Receiving objects:  36% (334/927)   Receiving objects:  37% (343/927)   Receiving objects:  38% (353/927)   Receiving objects:  39% (362/927)   Receiving objects:  40% (371/927)   Receiving objects:  41% (381/927)   Receiving objects:  42% (390/927)   Receiving objects:  43% (399/927)   Receiving objects:  44% (408/927)   Receiving objects:  45% (418/927)   Receiving objects:  46% (427/927)   Receiving objects:  47% (436/927)   Receiving objects:  48% (445/927)   Receiving objects:  49% (455/927)   Receiving objects:  50% (464/927)   Receiving objects:  51% (473/927)   Receiving objects:  52% (483/927)   Receiving objects:  53% (492/927)   Receiving objects:  54% (501/927)   Receiving objects:  55% (510/927)   Receiving objects:  56% (520/927)   Receiving objects:  57% (529/927)   Receiving objects:  58% (538/927)   Receiving objects:  59% (547/927), 3.07 MiB | 6.06 MiB/s   Receiving objects:  60% (557/927), 3.07 MiB | 6.06 MiB/s   Receiving objects:  61% (566/927), 3.07 MiB | 6.06 MiB/s   Receiving objects:  61% (574/927), 7.27 MiB | 7.22 MiB/s   Receiving objects:  62% (575/927), 7.27 MiB | 7.22 MiB/s   Receiving objects:  63% (585/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  64% (594/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  65% (603/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  66% (612/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  67% (622/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  68% (631/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  69% (640/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  70% (649/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  71% (659/927), 16.45 MiB | 10.91 MiB/s   remote: Total 927 (delta 330), reused 729 (delta 297), pack-reused 0[K
+Receiving objects:  72% (668/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  73% (677/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  74% (686/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  75% (696/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  76% (705/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  77% (714/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  78% (724/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  79% (733/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  80% (742/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  81% (751/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  82% (761/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  83% (770/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  84% (779/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  85% (788/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  86% (798/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  87% (807/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  88% (816/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  89% (826/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  90% (835/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  91% (844/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  92% (853/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  93% (863/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  94% (872/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  95% (881/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  96% (890/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  97% (900/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  98% (909/927), 16.45 MiB | 10.91 MiB/s   Receiving objects:  99% (918/927), 16.45 MiB | 10.91 MiB/s   Receiving objects: 100% (927/927), 16.45 MiB | 10.91 MiB/s   Receiving objects: 100% (927/927), 19.50 MiB | 10.91 MiB/s, done.
+Resolving deltas:   0% (0/330)   Resolving deltas:   1% (4/330)   Resolving deltas:   2% (7/330)   Resolving deltas:  13% (43/330)   Resolving deltas:  16% (56/330)   Resolving deltas:  17% (58/330)   Resolving deltas:  19% (64/330)   Resolving deltas:  22% (74/330)   Resolving deltas:  23% (77/330)   Resolving deltas:  24% (82/330)   Resolving deltas:  26% (89/330)   Resolving deltas:  27% (90/330)   Resolving deltas:  29% (96/330)   Resolving deltas:  31% (103/330)   Resolving deltas:  34% (113/330)   Resolving deltas:  35% (116/330)   Resolving deltas:  36% (121/330)   Resolving deltas:  39% (131/330)   Resolving deltas:  40% (133/330)   Resolving deltas:  41% (138/330)   Resolving deltas:  42% (140/330)   Resolving deltas:  43% (142/330)   Resolving deltas:  44% (147/330)   Resolving deltas:  45% (149/330)   Resolving deltas:  46% (152/330)   Resolving deltas:  48% (161/330)   Resolving deltas:  54% (181/330)   Resolving deltas:  60% (200/330)   Resolving deltas:  62% (206/330)   Resolving deltas:  63% (208/330)   Resolving deltas:  64% (213/330)   Resolving deltas:  65% (215/330)   Resolving deltas:  66% (218/330)   Resolving deltas:  67% (224/330)   Resolving deltas:  68% (225/330)   Resolving deltas:  69% (229/330)   Resolving deltas:  70% (231/330)   Resolving deltas:  71% (236/330)   Resolving deltas:  72% (238/330)   Resolving deltas:  73% (242/330)   Resolving deltas:  75% (249/330)   Resolving deltas:  76% (252/330)   Resolving deltas:  77% (256/330)   Resolving deltas:  78% (259/330)   Resolving deltas:  79% (262/330)   Resolving deltas:  80% (264/330)   Resolving deltas:  81% (268/330)   Resolving deltas:  82% (271/330)   Resolving deltas:  83% (274/330)   Resolving deltas:  84% (278/330)   Resolving deltas:  86% (284/330)   Resolving deltas:  87% (288/330)   Resolving deltas:  88% (293/330)   Resolving deltas:  89% (295/330)   Resolving deltas:  90% (299/330)   Resolving deltas:  91% (301/330)   Resolving deltas:  92% (305/330)   Resolving deltas:  93% (307/330)   Resolving deltas:  96% (320/330)   Resolving deltas:  97% (322/330)   Resolving deltas:  99% (329/330)   Resolving deltas: 100% (330/330)   Resolving deltas: 100% (330/330), done.
+Checking connectivity... done.
+travis_time:end:032b20e6:start=1426618301398384588,finish=1426618303655209086,duration=2256824498[0K$ cd robol/MPSolve
+$ git checkout -qf c6cfa27029316db901e496d49f65afb71f539130
+travis_fold:end:git.checkout[0K
+[33;1mSetting environment variables from repository settings[0m
+$ export MPS_JOBS=4
+
+$ export CC=gcc
+$ gcc --version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+travis_fold:start:before_install.1[0Ktravis_time:start:3790fc15[0K$ sudo apt-get update -qq
+travis_time:end:3790fc15:start=1426618304187440602,finish=1426618313487221248,duration=9299780646[0Ktravis_fold:end:before_install.1[0Ktravis_fold:start:before_install.2[0Ktravis_time:start:229e5f1c[0K$ sudo apt-get install -y libgmp-dev libtcmalloc-minimal0 check octave3.2-headers
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libgeos-3.2.2
+Use 'apt-get autoremove' to remove them.
+The following extra packages will be installed:
+  fonts-liberation gfortran gfortran-4.6 gnuplot gnuplot-nox gnuplot-x11 groff
+  libamd2.2.0 libarpack2 libatlas3gf-base libblas-dev libccolamd2.7.1
+  libcholmod1.7.1 libcolamd2.7.1 libcxsparse2.2.3 libfftw3-3 libfftw3-dev
+  libfltk1.1 libglpk0 libgmpxx4ldbl libgraphicsmagick++3 libgraphicsmagick3
+  libhdf5-serial-dev libibverbs1 liblapack-dev liblua5.1-0 libnuma1
+  libopenmpi1.3 libparpack2 libqhull5 libqrupdate1 libtorque2 libumfpack5.4.0
+  libwxbase2.8-0 libwxgtk2.8-0 octave3.2 octave3.2-common psutils texinfo
+  ttf-liberation
+Suggested packages:
+  gfortran-multilib gfortran-doc gfortran-4.6-multilib gfortran-4.6-doc
+  libgfortran3-dbg gnuplot-doc libiodbc2-dev libgmp10-doc libmpfr-dev
+  graphicsmagick-dbg libhdf5-doc libgnomeprintui2.2-0 octave3.2-info
+  octave3.2-doc octave3.2-htmldoc octave3.2-emacsen texlive-base
+  texlive-latex-base texlive-generic-recommended texinfo-doc-nonfree
+The following NEW packages will be installed:
+  check fonts-liberation gfortran gfortran-4.6 gnuplot gnuplot-nox gnuplot-x11
+  groff libamd2.2.0 libarpack2 libatlas3gf-base libblas-dev libccolamd2.7.1
+  libcholmod1.7.1 libcolamd2.7.1 libcxsparse2.2.3 libfftw3-3 libfftw3-dev
+  libfltk1.1 libglpk0 libgmp-dev libgmpxx4ldbl libgraphicsmagick++3
+  libgraphicsmagick3 libhdf5-serial-dev libibverbs1 liblapack-dev liblua5.1-0
+  libnuma1 libopenmpi1.3 libparpack2 libqhull5 libqrupdate1
+  libtcmalloc-minimal0 libtorque2 libumfpack5.4.0 libwxbase2.8-0 libwxgtk2.8-0
+  octave3.2 octave3.2-common octave3.2-headers psutils texinfo ttf-liberation
+0 upgraded, 44 newly installed, 0 to remove and 151 not upgraded.
+Need to get 50.2 MB of archives.
+After this operation, 159 MB of additional disk space will be used.
+0% [Working]            Get:1 http://us.archive.ubuntu.com/ubuntu/ precise/main libfltk1.1 amd64 1.1.10-10 [396 kB]
+            0% [1 libfltk1.1 14.0 kB/396 kB 4%]                                   1% [Working]            Get:2 http://us.archive.ubuntu.com/ubuntu/ precise/main libgmpxx4ldbl amd64 2:5.0.2+dfsg-2ubuntu1 [8,720 B]
+            1% [2 libgmpxx4ldbl 0 B/8,720 B 0%]                                   1% [Working]            Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main liblua5.1-0 amd64 5.1.4-12ubuntu1.1 [172 kB]
+            1% [3 liblua5.1-0 0 B/172 kB 0%]                                1% [Working]            Get:4 http://us.archive.ubuntu.com/ubuntu/ precise/universe libwxbase2.8-0 amd64 2.8.12.1-6ubuntu2 [583 kB]
+            1% [4 libwxbase2.8-0 12.1 kB/583 kB 2%]                                       2% [Working]            Get:5 http://us.archive.ubuntu.com/ubuntu/ precise/universe libwxgtk2.8-0 amd64 2.8.12.1-6ubuntu2 [3,328 kB]
+            2% [5 libwxgtk2.8-0 18.7 kB/3,328 kB 1%]                                        9% [Working]            Get:6 http://us.archive.ubuntu.com/ubuntu/ precise/main check amd64 0.9.8-1.1ubuntu1 [107 kB]
+            9% [6 check 16.4 kB/107 kB 15%]                               9% [Working]            Get:7 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main fonts-liberation all 1.07.0-2ubuntu0.1 [1,314 kB]
+            9% [7 fonts-liberation 0 B/1,314 kB 0%]                                       12% [Working]             Get:8 http://us.archive.ubuntu.com/ubuntu/ precise/main gfortran-4.6 amd64 4.6.3-1ubuntu5 [5,579 kB]
+             12% [8 gfortran-4.6 52.6 kB/5,579 kB 1%]                                        23% [Working]             Get:9 http://us.archive.ubuntu.com/ubuntu/ precise/main gfortran amd64 4:4.6.3-1ubuntu5 [1,206 B]
+             23% [9 gfortran 1,206 B/1,206 B 100%]                                     23% [Working]             Get:10 http://us.archive.ubuntu.com/ubuntu/ precise/universe gnuplot-nox amd64 4.4.3-0ubuntu3 [996 kB]
+             23% [10 gnuplot-nox 8,192 B/996 kB 1%]                                      25% [Working]             Get:11 http://us.archive.ubuntu.com/ubuntu/ precise/universe gnuplot-x11 amd64 4.4.3-0ubuntu3 [703 kB]
+             25% [11 gnuplot-x11 28.6 kB/703 kB 4%]                                      26% [Working]             Get:12 http://us.archive.ubuntu.com/ubuntu/ precise/universe gnuplot all 4.4.3-0ubuntu3 [1,068 B]
+             26% [12 gnuplot 1,068 B/1,068 B 100%]                                     26% [Waiting for headers]                         Get:13 http://us.archive.ubuntu.com/ubuntu/ precise/main groff amd64 1.21-7 [3,564 kB]
+                         26% [13 groff 44.9 kB/3,564 kB 1%]                                  33% [Working]             Get:14 http://us.archive.ubuntu.com/ubuntu/ precise/universe libamd2.2.0 amd64 1:3.4.0-2ubuntu3 [26.5 kB]
+             33% [14 libamd2.2.0 19.3 kB/26.5 kB 73%]                                        33% [Working]             Get:15 http://us.archive.ubuntu.com/ubuntu/ precise/universe libatlas3gf-base amd64 3.8.4-3build1 [6,191 kB]
+             33% [15 libatlas3gf-base 0 B/6,191 kB 0%]                                         46% [Working]             Get:16 http://us.archive.ubuntu.com/ubuntu/ precise/main libibverbs1 amd64 1.1.5-1ubuntu1 [27.3 kB]
+             46% [16 libibverbs1 12.3 kB/27.3 kB 45%]                                        46% [Working]             Get:17 http://us.archive.ubuntu.com/ubuntu/ precise/main libnuma1 amd64 2.0.8~rc3-1 [23.1 kB]
+             46% [17 libnuma1 0 B/23.1 kB 0%]                                46% [Working]             Get:18 http://us.archive.ubuntu.com/ubuntu/ precise/universe libtorque2 amd64 2.4.16+dfsg-1build1 [91.6 kB]
+             46% [18 libtorque2 41.2 kB/91.6 kB 45%]                                       46% [Working]             Get:19 http://us.archive.ubuntu.com/ubuntu/ precise/universe libopenmpi1.3 amd64 1.4.3-2.1ubuntu3 [1,350 kB]
+             46% [19 libopenmpi1.3 0 B/1,350 kB 0%]                                      49% [Waiting for headers]                         Get:20 http://us.archive.ubuntu.com/ubuntu/ precise/universe libparpack2 amd64 3.0.2-3 [229 kB]
+                         49% [20 libparpack2 41.0 kB/229 kB 18%]                                       49% [Working]             Get:21 http://us.archive.ubuntu.com/ubuntu/ precise/universe libarpack2 amd64 3.0.2-3 [126 kB]
+             49% [21 libarpack2 4,096 B/126 kB 3%]                                     49% [Working]             Get:22 http://us.archive.ubuntu.com/ubuntu/ precise/main libblas-dev amd64 1.2.20110419-2ubuntu1 [302 kB]
+             49% [22 libblas-dev 0 B/302 kB 0%]                                  Get:23 http://us.archive.ubuntu.com/ubuntu/ precise/universe libccolamd2.7.1 amd64 1:3.4.0-2ubuntu3 [28.0 kB]
+                                  50% [23 libccolamd2.7.1 28.0 kB/28.0 kB 100%]                                             Get:24 http://us.archive.ubuntu.com/ubuntu/ precise/universe libcolamd2.7.1 amd64 1:3.4.0-2ubuntu3 [19.6 kB]
+                                             Get:25 http://us.archive.ubuntu.com/ubuntu/ precise/universe libcholmod1.7.1 amd64 1:3.4.0-2ubuntu3 [400 kB]
+                                             51% [25 libcholmod1.7.1 253 kB/400 kB 63%]                                          51% [Working]             Get:26 http://us.archive.ubuntu.com/ubuntu/ precise/universe libcxsparse2.2.3 amd64 1:3.4.0-2ubuntu3 [107 kB]
+             51% [26 libcxsparse2.2.3 24.6 kB/107 kB 23%]                                            51% [Working]             Get:27 http://us.archive.ubuntu.com/ubuntu/ precise/main libfftw3-3 amd64 3.3-1ubuntu1 [1,611 kB]
+             51% [27 libfftw3-3 0 B/1,611 kB 0%]                                   54% [Waiting for headers]                         Get:28 http://us.archive.ubuntu.com/ubuntu/ precise/main libfftw3-dev amd64 3.3-1ubuntu1 [2,168 kB]
+                         54% [28 libfftw3-dev 34.5 kB/2,168 kB 2%]                                         59% [Working]             Get:29 http://us.archive.ubuntu.com/ubuntu/ precise/universe libglpk0 amd64 4.45-1build1 [417 kB]
+             59% [29 libglpk0 28.4 kB/417 kB 7%]                                   59% [Working]             Get:30 http://us.archive.ubuntu.com/ubuntu/ precise/main libgmp-dev amd64 2:5.0.2+dfsg-2ubuntu1 [351 kB]
+             59% [30 libgmp-dev 4,463 B/351 kB 1%]                                     60% [Working]             Get:31 http://us.archive.ubuntu.com/ubuntu/ precise/universe libgraphicsmagick3 amd64 1.3.12-1.1build1 [1,273 kB]
+             60% [31 libgraphicsmagick3 46.4 kB/1,273 kB 4%]                                               63% [Working]             Get:32 http://us.archive.ubuntu.com/ubuntu/ precise/universe libgraphicsmagick++3 amd64 1.3.12-1.1build1 [129 kB]
+             63% [32 libgraphicsmagick++3 18.5 kB/129 kB 14%]                                                63% [Working]             Get:33 http://us.archive.ubuntu.com/ubuntu/ precise/universe libhdf5-serial-dev amd64 1.8.4-patch1-3ubuntu2 [2,278 kB]
+             63% [33 libhdf5-serial-dev 20.5 kB/2,278 kB 1%]                                               68% [Working]             Get:34 http://us.archive.ubuntu.com/ubuntu/ precise/main liblapack-dev amd64 3.3.1-1 [4,873 kB]
+             68% [34 liblapack-dev 35.8 kB/4,873 kB 1%]                                          77% [Working]             Get:35 http://us.archive.ubuntu.com/ubuntu/ precise/universe libqhull5 amd64 2009.1-3ubuntu1 [156 kB]
+             77% [35 libqhull5 12.3 kB/156 kB 8%]                                    78% [Working]             Get:36 http://us.archive.ubuntu.com/ubuntu/ precise/universe libqrupdate1 amd64 1.1.1-1 [90.8 kB]
+             78% [36 libqrupdate1 12.3 kB/90.8 kB 14%]                                         78% [Working]             Get:37 http://us.archive.ubuntu.com/ubuntu/ precise/universe libtcmalloc-minimal0 amd64 1.7-1ubuntu1 [147 kB]
+             78% [37 libtcmalloc-minimal0 0 B/147 kB 0%]                                           78% [Working]             Get:38 http://us.archive.ubuntu.com/ubuntu/ precise/universe libumfpack5.4.0 amd64 1:3.4.0-2ubuntu3 [345 kB]
+             78% [38 libumfpack5.4.0 11.2 kB/345 kB 3%]                                          79% [Working]             Get:39 http://us.archive.ubuntu.com/ubuntu/ precise/main texinfo amd64 4.13a.dfsg.1-8ubuntu2 [460 kB]
+             79% [39 texinfo 36.9 kB/460 kB 8%]                                  80% [Working]             Get:40 http://us.archive.ubuntu.com/ubuntu/ precise/universe octave3.2-common all 3.2.4-12 [579 kB]
+             80% [40 octave3.2-common 32.8 kB/579 kB 6%]                                           81% [Working]             Get:41 http://us.archive.ubuntu.com/ubuntu/ precise/universe octave3.2 amd64 3.2.4-12 [9,064 kB]
+             81% [41 octave3.2 0 B/9,064 kB 0%]                                  99% [Working]             Get:42 http://us.archive.ubuntu.com/ubuntu/ precise/universe octave3.2-headers amd64 3.2.4-12 [499 kB]
+             99% [42 octave3.2-headers 47.6 kB/499 kB 10%]                                             100% [Working]              Get:43 http://us.archive.ubuntu.com/ubuntu/ precise/main psutils amd64 1.17-31 [95.3 kB]
+              100% [43 psutils 0 B/95.3 kB 0%]                                100% [Waiting for headers]                          Get:44 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main ttf-liberation all 1.07.0-2ubuntu0.1 [2,896 B]
+                          100% [44 ttf-liberation 2,896 B/2,896 B 100%]                                             100% [Working]              Fetched 50.2 MB in 2s (24.9 MB/s)
+Extracting templates from packages: 68%Extracting templates from packages: 100%
+Selecting previously unselected package libfltk1.1.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 76763 files and directories currently installed.)
+Unpacking libfltk1.1 (from .../libfltk1.1_1.1.10-10_amd64.deb) ...
+Selecting previously unselected package libgmpxx4ldbl.
+Unpacking libgmpxx4ldbl (from .../libgmpxx4ldbl_2%3a5.0.2+dfsg-2ubuntu1_amd64.deb) ...
+Selecting previously unselected package liblua5.1-0.
+Unpacking liblua5.1-0 (from .../liblua5.1-0_5.1.4-12ubuntu1.1_amd64.deb) ...
+Selecting previously unselected package libwxbase2.8-0.
+Unpacking libwxbase2.8-0 (from .../libwxbase2.8-0_2.8.12.1-6ubuntu2_amd64.deb) ...
+Selecting previously unselected package libwxgtk2.8-0.
+Unpacking libwxgtk2.8-0 (from .../libwxgtk2.8-0_2.8.12.1-6ubuntu2_amd64.deb) ...
+Selecting previously unselected package check.
+Unpacking check (from .../check_0.9.8-1.1ubuntu1_amd64.deb) ...
+Selecting previously unselected package fonts-liberation.
+Unpacking fonts-liberation (from .../fonts-liberation_1.07.0-2ubuntu0.1_all.deb) ...
+Selecting previously unselected package gfortran-4.6.
+Unpacking gfortran-4.6 (from .../gfortran-4.6_4.6.3-1ubuntu5_amd64.deb) ...
+Selecting previously unselected package gfortran.
+Unpacking gfortran (from .../gfortran_4%3a4.6.3-1ubuntu5_amd64.deb) ...
+Selecting previously unselected package gnuplot-nox.
+Unpacking gnuplot-nox (from .../gnuplot-nox_4.4.3-0ubuntu3_amd64.deb) ...
+Selecting previously unselected package gnuplot-x11.
+Unpacking gnuplot-x11 (from .../gnuplot-x11_4.4.3-0ubuntu3_amd64.deb) ...
+Adding 'diversion of /usr/bin/gnuplot to /usr/bin/gnuplot-nox by gnuplot-x11'
+Adding 'diversion of /usr/share/man/man1/gnuplot.1.gz to /usr/share/man/man1/gnuplot-nox.1.gz by gnuplot-x11'
+Selecting previously unselected package gnuplot.
+Unpacking gnuplot (from .../gnuplot_4.4.3-0ubuntu3_all.deb) ...
+Selecting previously unselected package groff.
+Unpacking groff (from .../groff_1.21-7_amd64.deb) ...
+Selecting previously unselected package libamd2.2.0.
+Unpacking libamd2.2.0 (from .../libamd2.2.0_1%3a3.4.0-2ubuntu3_amd64.deb) ...
+Selecting previously unselected package libatlas3gf-base.
+Unpacking libatlas3gf-base (from .../libatlas3gf-base_3.8.4-3build1_amd64.deb) ...
+Selecting previously unselected package libibverbs1.
+Unpacking libibverbs1 (from .../libibverbs1_1.1.5-1ubuntu1_amd64.deb) ...
+Selecting previously unselected package libnuma1.
+Unpacking libnuma1 (from .../libnuma1_2.0.8~rc3-1_amd64.deb) ...
+Selecting previously unselected package libtorque2.
+Unpacking libtorque2 (from .../libtorque2_2.4.16+dfsg-1build1_amd64.deb) ...
+Selecting previously unselected package libopenmpi1.3.
+Unpacking libopenmpi1.3 (from .../libopenmpi1.3_1.4.3-2.1ubuntu3_amd64.deb) ...
+Selecting previously unselected package libparpack2.
+Unpacking libparpack2 (from .../libparpack2_3.0.2-3_amd64.deb) ...
+Selecting previously unselected package libarpack2.
+Unpacking libarpack2 (from .../libarpack2_3.0.2-3_amd64.deb) ...
+Selecting previously unselected package libblas-dev.
+Unpacking libblas-dev (from .../libblas-dev_1.2.20110419-2ubuntu1_amd64.deb) ...
+Selecting previously unselected package libccolamd2.7.1.
+Unpacking libccolamd2.7.1 (from .../libccolamd2.7.1_1%3a3.4.0-2ubuntu3_amd64.deb) ...
+Selecting previously unselected package libcolamd2.7.1.
+Unpacking libcolamd2.7.1 (from .../libcolamd2.7.1_1%3a3.4.0-2ubuntu3_amd64.deb) ...
+Selecting previously unselected package libcholmod1.7.1.
+Unpacking libcholmod1.7.1 (from .../libcholmod1.7.1_1%3a3.4.0-2ubuntu3_amd64.deb) ...
+Selecting previously unselected package libcxsparse2.2.3.
+Unpacking libcxsparse2.2.3 (from .../libcxsparse2.2.3_1%3a3.4.0-2ubuntu3_amd64.deb) ...
+Selecting previously unselected package libfftw3-3.
+Unpacking libfftw3-3 (from .../libfftw3-3_3.3-1ubuntu1_amd64.deb) ...
+Selecting previously unselected package libfftw3-dev.
+Unpacking libfftw3-dev (from .../libfftw3-dev_3.3-1ubuntu1_amd64.deb) ...
+Selecting previously unselected package libglpk0.
+Unpacking libglpk0 (from .../libglpk0_4.45-1build1_amd64.deb) ...
+Selecting previously unselected package libgmp-dev.
+Unpacking libgmp-dev (from .../libgmp-dev_2%3a5.0.2+dfsg-2ubuntu1_amd64.deb) ...
+Selecting previously unselected package libgraphicsmagick3.
+Unpacking libgraphicsmagick3 (from .../libgraphicsmagick3_1.3.12-1.1build1_amd64.deb) ...
+Selecting previously unselected package libgraphicsmagick++3.
+Unpacking libgraphicsmagick++3 (from .../libgraphicsmagick++3_1.3.12-1.1build1_amd64.deb) ...
+Selecting previously unselected package libhdf5-serial-dev.
+Unpacking libhdf5-serial-dev (from .../libhdf5-serial-dev_1.8.4-patch1-3ubuntu2_amd64.deb) ...
+Selecting previously unselected package liblapack-dev.
+Unpacking liblapack-dev (from .../liblapack-dev_3.3.1-1_amd64.deb) ...
+Selecting previously unselected package libqhull5.
+Unpacking libqhull5 (from .../libqhull5_2009.1-3ubuntu1_amd64.deb) ...
+Selecting previously unselected package libqrupdate1.
+Unpacking libqrupdate1 (from .../libqrupdate1_1.1.1-1_amd64.deb) ...
+Selecting previously unselected package libtcmalloc-minimal0.
+Unpacking libtcmalloc-minimal0 (from .../libtcmalloc-minimal0_1.7-1ubuntu1_amd64.deb) ...
+Selecting previously unselected package libumfpack5.4.0.
+Unpacking libumfpack5.4.0 (from .../libumfpack5.4.0_1%3a3.4.0-2ubuntu3_amd64.deb) ...
+Selecting previously unselected package texinfo.
+Unpacking texinfo (from .../texinfo_4.13a.dfsg.1-8ubuntu2_amd64.deb) ...
+Selecting previously unselected package octave3.2-common.
+Unpacking octave3.2-common (from .../octave3.2-common_3.2.4-12_all.deb) ...
+Selecting previously unselected package octave3.2.
+Unpacking octave3.2 (from .../octave3.2_3.2.4-12_amd64.deb) ...
+Selecting previously unselected package octave3.2-headers.
+Unpacking octave3.2-headers (from .../octave3.2-headers_3.2.4-12_amd64.deb) ...
+Selecting previously unselected package psutils.
+Unpacking psutils (from .../psutils_1.17-31_amd64.deb) ...
+Selecting previously unselected package ttf-liberation.
+Unpacking ttf-liberation (from .../ttf-liberation_1.07.0-2ubuntu0.1_all.deb) ...
+Processing triggers for fontconfig ...
+Processing triggers for man-db ...
+Processing triggers for ccache ...
+Updating symlinks in /usr/lib/ccache ...
+Setting up libfltk1.1 (1.1.10-10) ...
+Setting up libgmpxx4ldbl (2:5.0.2+dfsg-2ubuntu1) ...
+Setting up liblua5.1-0 (5.1.4-12ubuntu1.1) ...
+Setting up libwxbase2.8-0 (2.8.12.1-6ubuntu2) ...
+Setting up libwxgtk2.8-0 (2.8.12.1-6ubuntu2) ...
+Setting up check (0.9.8-1.1ubuntu1) ...
+Setting up fonts-liberation (1.07.0-2ubuntu0.1) ...
+Setting up gfortran-4.6 (4.6.3-1ubuntu5) ...
+Setting up gfortran (4:4.6.3-1ubuntu5) ...
+update-alternatives: using /usr/bin/gfortran to provide /usr/bin/f95 (f95) in auto mode.
+Setting up gnuplot-nox (4.4.3-0ubuntu3) ...
+Setting up gnuplot-x11 (4.4.3-0ubuntu3) ...
+Setting up gnuplot (4.4.3-0ubuntu3) ...
+Setting up groff (1.21-7) ...
+Setting up libamd2.2.0 (1:3.4.0-2ubuntu3) ...
+Setting up libatlas3gf-base (3.8.4-3build1) ...
+update-alternatives: using /usr/lib/atlas-base/atlas/libblas.so.3gf to provide /usr/lib/libblas.so.3gf (libblas.so.3gf) in auto mode.
+update-alternatives: using /usr/lib/atlas-base/atlas/liblapack.so.3gf to provide /usr/lib/liblapack.so.3gf (liblapack.so.3gf) in auto mode.
+Setting up libibverbs1 (1.1.5-1ubuntu1) ...
+Setting up libnuma1 (2.0.8~rc3-1) ...
+Setting up libtorque2 (2.4.16+dfsg-1build1) ...
+Setting up libopenmpi1.3 (1.4.3-2.1ubuntu3) ...
+Setting up libparpack2 (3.0.2-3) ...
+Setting up libarpack2 (3.0.2-3) ...
+Setting up libblas-dev (1.2.20110419-2ubuntu1) ...
+update-alternatives: using /usr/lib/libblas/libblas.so to provide /usr/lib/libblas.so (libblas.so) in auto mode.
+Setting up libccolamd2.7.1 (1:3.4.0-2ubuntu3) ...
+Setting up libcolamd2.7.1 (1:3.4.0-2ubuntu3) ...
+Setting up libcholmod1.7.1 (1:3.4.0-2ubuntu3) ...
+Setting up libcxsparse2.2.3 (1:3.4.0-2ubuntu3) ...
+Setting up libfftw3-3 (3.3-1ubuntu1) ...
+Setting up libfftw3-dev (3.3-1ubuntu1) ...
+Setting up libglpk0 (4.45-1build1) ...
+Setting up libgmp-dev (2:5.0.2+dfsg-2ubuntu1) ...
+Setting up libgraphicsmagick3 (1.3.12-1.1build1) ...
+Setting up libgraphicsmagick++3 (1.3.12-1.1build1) ...
+Setting up libhdf5-serial-dev (1.8.4-patch1-3ubuntu2) ...
+Setting up liblapack-dev (3.3.1-1) ...
+update-alternatives: using /usr/lib/lapack/liblapack.so to provide /usr/lib/liblapack.so (liblapack.so) in auto mode.
+Setting up libqhull5 (2009.1-3ubuntu1) ...
+Setting up libqrupdate1 (1.1.1-1) ...
+Setting up libtcmalloc-minimal0 (1.7-1ubuntu1) ...
+Setting up libumfpack5.4.0 (1:3.4.0-2ubuntu3) ...
+Setting up texinfo (4.13a.dfsg.1-8ubuntu2) ...
+Setting up octave3.2-common (3.2.4-12) ...
+Setting up octave3.2 (3.2.4-12) ...
+update-alternatives: using /usr/bin/octave-3.2.4 to provide /usr/bin/octave (octave) in auto mode.
+update-alternatives: using /usr/bin/octave-bug-3.2.4 to provide /usr/bin/octave-bug (octave-bug) in auto mode.
+
+Setting up octave3.2-headers (3.2.4-12) ...
+update-alternatives: using /usr/bin/mkoctfile-3.2.4 to provide /usr/bin/mkoctfile (mkoctfile) in auto mode.
+update-alternatives: using /usr/bin/octave-config-3.2.4 to provide /usr/bin/octave-config (octave-config) in auto mode.
+update-alternatives: using /usr/bin/octave-depends-3.2.4 to provide /usr/bin/octave-depends (octave-depends) in auto mode.
+update-alternatives: using /usr/include/octave-3.2.4/octave to provide /usr/include/octave (octave-include) in auto mode.
+update-alternatives: using /usr/share/octave/debian/defs.make-3.2.4 to provide /usr/share/octave/debian/defs.make (octave-defs.make) in auto mode.
+Setting up psutils (1.17-31) ...
+Setting up ttf-liberation (1.07.0-2ubuntu0.1) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_time:end:229e5f1c:start=1426618313495406974,finish=1426618325721282209,duration=12225875235[0Ktravis_fold:end:before_install.2[0Ktravis_time:start:1b3caeff[0K$ ./autogen.sh && ./configure && make && make check
+
+ ****************************************
+ *** MPSolve is initializing autoconf ***
+ ***                                  ***
+ *** Please use this command only if  ***
+ *** you checked out the source from  ***
+ *** the git repository!              ***
+ ****************************************
+
+libtoolize: putting auxiliary files in `.'.
+libtoolize: copying file `./config.guess'
+libtoolize: copying file `./config.sub'
+libtoolize: copying file `./install-sh'
+libtoolize: copying file `./ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIR, `m4'.
+libtoolize: copying file `m4/libtool.m4'
+libtoolize: copying file `m4/ltoptions.m4'
+libtoolize: copying file `m4/ltsugar.m4'
+libtoolize: copying file `m4/ltversion.m4'
+libtoolize: copying file `m4/lt~obsolete.m4'
+configure.ac:123: installing `./compile'
+configure.ac:12: installing `./missing'
+examples/fortran/Makefile.am: installing `./depcomp'
+examples/python/Makefile.am:5: installing `./py-compile'
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1966080
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking for gawk... gawk
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking whether make supports nested variables... yes
+checking for gfortran... gfortran
+checking whether we are using the GNU Fortran compiler... yes
+checking whether gfortran accepts -g... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gfortran option to produce PIC... -fPIC
+checking if gfortran PIC flag -fPIC works... yes
+checking if gfortran static flag -static works... yes
+checking if gfortran supports -c -o file.o... yes
+checking if gfortran supports -c -o file.o... (cached) yes
+checking whether the gfortran linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking dependency style of g++... gcc3
+checking for gcc option to accept ISO C99... -std=gnu99
+checking whether gcc -std=gnu99 and cc understand -c and -o together... yes
+checking for inline... inline
+checking whether C compiler accepts -fcx-limited-range... yes
+checking whether C compiler accepts -fno-math-errno... yes
+checking whether C compiler accepts -fomit-frame-pointer... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for size_t... yes
+checking for error_at_line... yes
+checking for memset... yes
+checking for modf... yes
+checking for pow... no
+checking for sqrt... no
+checking for strchr... yes
+checking for Win32 platform... no
+checking for __attribute__((visibility("hidden")))... yes
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking whether to check for GCC pthread/shared inconsistencies... yes
+checking whether -pthread is sufficient with -shared... yes
+checking whether what we have so far is sufficient with -nostdlib... yes
+checking if sysconf(_SC_NPROCESSORS_ONLN) is supported... yes
+checking for malloc in -ltcmalloc_minimal... no
+checking for snprintf... yes
+checking for vsnprintf... yes
+checking for working snprintf... yes
+checking for working vsnprintf... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for getline... yes
+checking for strndup... yes
+checking if C99 complex.h is supported from the C++ compiler... no
+checking for pow in -lm... yes
+checking for __gmpz_init2 in -lgmp... yes
+checking for main in -lgmpxx... yes
+checking gmp.h usability... yes
+checking gmp.h presence... yes
+checking for gmp.h... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for CHECK... yes
+checking for GTK... no
+checking for GTK... yes
+checking for CAIRO... yes
+checking for QT4... yes
+checking for QT5... no
+checking for uic-qt4... uic-qt4
+checking for moc-qt4... moc-qt4
+checking for rcc-qt4... no
+checking for rcc... rcc
+checking for mkoctfile... mkoctfile
+checking for octave... octave
+checking if Octave is newer than 3.0... yes
+checking for mex... no
+checking for a Python interpreter with version >= 2.3... python
+checking for python... /usr/bin/python
+checking for python version... 2.7
+checking for python platform... linux2
+checking for python script directory... ${prefix}/lib/python2.7/dist-packages
+checking for python extension module directory... ${exec_prefix}/lib/python2.7/dist-packages
+checking for python2.7-config... /usr/bin/python2.7-config
+checking python include flags... -I/usr/include/python2.7 -I/usr/include/python2.7
+checking python module: ctypes... yes
+checking for doxygen... no
+configure: WARNING: Doxygen not found, documentation will not be generated
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating include/Makefile
+config.status: creating include/mps/Makefile
+config.status: creating include/mps/private/Makefile
+config.status: creating examples/Makefile
+config.status: creating examples/fortran/Makefile
+config.status: creating examples/octave/Makefile
+config.status: creating examples/matlab/Makefile
+config.status: creating examples/gtk/Makefile
+config.status: creating examples/python/Makefile
+config.status: creating examples/python/tests/Makefile
+config.status: creating examples/mandelbrot-solver/Makefile
+config.status: creating examples/mandelbrot-solver/mandelbrot-solver.1
+config.status: creating include/mps/mt.h
+config.status: creating src/Makefile
+config.status: creating src/mpsolve/Makefile
+config.status: creating src/mpsolve/mpsolve.1
+config.status: creating src/libmps/Makefile
+config.status: creating src/tests/Makefile
+config.status: creating src/xmpsolve/Makefile
+config.status: creating src/xmpsolve/xmpsolve.desktop
+config.status: creating src/xmpsolve/xmpsolve.1
+config.status: creating doc/Makefile
+config.status: creating doc/Doxyfile
+config.status: creating mime/Makefile
+config.status: creating config.h
+config.status: executing libtool commands
+config.status: executing depfiles commands
+
+
+MPSolve configuration:
+
+        Source location:	.
+	Pthread CFLAGS:		-pthread
+        C compiler:		gcc -std=gnu99
+	CFLAGS:			-D_REENTRANT -Wall -DMPS_USE_BUILTIN_COMPLEX  -DNICE_DEBUG -fcx-limited-range -fno-math-errno -fomit-frame-pointer -D_MPS_PRIVATE
+        LDFLAGS:                 
+	Additional CFLAGS:	-g -O2
+        Debug enabled:		yes
+        Check enabled:		yes
+	Octave module:		yes (generates examples/octave/mpsolve.tar.gz)
+	MATLAB (tm) module:	no
+	Graphical UI:		yes
+	Python module:          yes
+
+Type 'make' to compile MPSolve, and then make install
+to install the binaries, the library and the headers
+system-wide.
+
+
+make  all-recursive
+make[1]: Entering directory `/home/travis/build/robol/MPSolve'
+Making all in include
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/include'
+Making all in mps
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/include/mps'
+Making all in private
+make[4]: Entering directory `/home/travis/build/robol/MPSolve/include/mps/private'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/travis/build/robol/MPSolve/include/mps/private'
+make[4]: Entering directory `/home/travis/build/robol/MPSolve/include/mps'
+make[4]: Nothing to be done for `all-am'.
+make[4]: Leaving directory `/home/travis/build/robol/MPSolve/include/mps'
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/include/mps'
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/include'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/include'
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/include'
+Making all in src
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/src'
+Making all in libmps
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/src/libmps'
+  CC     chebyshev/chebyshev-evaluation.lo
+  CC     chebyshev/chebyshev-parser.lo
+  CC     chebyshev/chebyshev.lo
+  CC     common/aberth.lo
+  CC     common/approximation.lo
+  CC     common/cluster-analysis.lo
+  CC     common/cluster.lo
+  CC     common/context.lo
+  CC     common/convex.lo
+  CC     common/defaults.lo
+  CC     common/file-starting.lo
+  CC     common/improve.lo
+  CC     common/inclusion.lo
+  CC     common/inline-poly-parser.lo
+  CC     common/interface.lo
+  CC     common/jacobi-aberth.lo
+  CC     common/list-element.lo
+  CC     common/list.lo
+  CC     common/modify.lo
+  CXX    common/nroots-polynomial.lo
+  CC     common/parser.lo
+  CC     common/polynomial.lo
+  CXX    common/polynomialxx.lo
+  CC     common/recursive-starting.lo
+  CC     common/sort.lo
+  CC     common/starting-configuration.lo
+  CC     common/starting.lo
+  CC     common/strndup.lo
+  CC     common/test.lo
+  CC     common/tools.lo
+  CC     common/touch.lo
+  CC     common/user.lo
+  CC     common/utils.lo
+  CC     common/validation.lo
+  CXX    formal/formal-monomial.lo
+  CXX    formal/formal-polynomial.lo
+  CC     floating-point/gmptools.lo
+  CC     floating-point/link.lo
+  CC     floating-point/mpc.lo
+  CC     floating-point/mt.lo
+  CC     general/general-radius.lo
+  CC     general/general-starting.lo
+  CC     matrix/hessenberg-determinant.lo
+  CC     monomial/horner.lo
+  CC     monomial/monomial-matrix-poly.lo
+  CC     monomial/monomial-parser.lo
+  CC     monomial/monomial-poly.lo
+  CC     monomial/monomial-threading.lo
+  CC     monomial/newton.lo
+  CC     monomial/shift.lo
+  CC     secsolve/secular-ga.lo
+  CC     secsolve/secular-iteration.lo
+  CC     secsolve/secular-regeneration.lo
+  CC     secular/secular-equation.lo
+  CC     secular/secular-evaluation.lo
+  CC     secular/secular-newton.lo
+  CC     secular/secular-parser.lo
+  CC     secular/secular-starting.lo
+  CXX    system/abstract-input-stream.lo
+  CXX    system/file-input-stream.lo
+  CXX    system/memory-file-stream.lo
+  CC     system/data.lo
+  CC     system/debug.lo
+  CC     system/getline.lo
+  CC     system/getopts.lo
+  CC     system/input-buffer.lo
+  CC     system/input-output.lo
+  CC     system/threading.lo
+  CC     unisolve/main.lo
+  CC     unisolve/solve.lo
+  CXXLD  libmps.la
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/src/libmps'
+Making all in mpsolve
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/src/mpsolve'
+  CC     mpsolve-iteration-logger.o
+  CC     mpsolve-mpsolve.o
+  CCLD   mpsolve
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/src/mpsolve'
+Making all in tests
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/src/tests'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/src/tests'
+Making all in xmpsolve
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/src/xmpsolve'
+  GEN    polynomialparser_moc.cpp
+  GEN    polynomialsolver_moc.cpp
+  GEN    rootsmodel_moc.cpp
+  GEN    polsyntaxhighlighter_moc.cpp
+  GEN    mpsolveworker_moc.cpp
+  GEN    mainwindow_moc.cpp
+  GEN    polfileeditorwindow_moc.cpp
+  GEN    polfileeditor_moc.cpp
+  GEN    qrootsrenderer_moc.cpp
+  GEN    resources_qrc.cpp
+  GEN    ui_mainwindow.h
+  GEN    ui_polfileeditor.h
+  GEN    ui_polfileeditorwindow.h
+make  all-am
+make[4]: Entering directory `/home/travis/build/robol/MPSolve/src/xmpsolve'
+  CXX    xmpsolve-main.o
+  CXX    xmpsolve-polynomial.o
+  CXX    xmpsolve-monomial.o
+  CXX    xmpsolve-rootsrenderer.o
+  CXX    xmpsolve-root.o
+  CXX    xmpsolve-polynomialparser.o
+  CXX    xmpsolve-polynomialsolver.o
+  CXX    xmpsolve-rootsmodel.o
+  CXX    xmpsolve-polsyntaxhighlighter.o
+  CXX    xmpsolve-mpsolveworker.o
+  CXX    xmpsolve-mainwindow.o
+  CXX    xmpsolve-polfileeditorwindow.o
+  CXX    xmpsolve-polfileeditor.o
+  CXX    xmpsolve-qrootsrenderer.o
+  CXX    xmpsolve-polynomialparser_moc.o
+  CXX    xmpsolve-polynomialsolver_moc.o
+  CXX    xmpsolve-rootsmodel_moc.o
+  CXX    xmpsolve-polsyntaxhighlighter_moc.o
+  CXX    xmpsolve-mpsolveworker_moc.o
+  CXX    xmpsolve-mainwindow_moc.o
+  CXX    xmpsolve-polfileeditorwindow_moc.o
+  CXX    xmpsolve-polfileeditor_moc.o
+  CXX    xmpsolve-qrootsrenderer_moc.o
+  CXX    xmpsolve-resources_qrc.o
+  CXXLD  xmpsolve
+make[4]: Leaving directory `/home/travis/build/robol/MPSolve/src/xmpsolve'
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/src/xmpsolve'
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/src'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/src'
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/src'
+Making all in examples
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/examples'
+Making all in fortran
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/examples/fortran'
+  CC     libmps_fortran_la-mps_impl.lo
+  CCLD   libmps-fortran.la
+  FC     roots_of_unity.o
+  FCLD   roots_of_unity
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/examples/fortran'
+Making all in octave
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/examples/octave'
+  MKOCT    mps_roots.o
+  CXX    octave_support.o
+  GEN    mps_roots.oct
+  MKOCT    mps_polyeig_impl.o
+  GEN    mps_polyeig_impl.oct
+  MKOCT    mps_det.o
+  GEN    mps_det.oct
+  MKOCT    mps_secular.o
+  GEN    mps_secular.oct
+  MKOCT    mps_regenerate.o
+  GEN    mps_regenerate.oct
+  GEN    mpsolve.tar.gz
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/examples/octave'
+Making all in matlab
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/examples/matlab'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/examples/matlab'
+Making all in python
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/examples/python'
+Making all in tests
+make[4]: Entering directory `/home/travis/build/robol/MPSolve/examples/python/tests'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/travis/build/robol/MPSolve/examples/python/tests'
+make[4]: Entering directory `/home/travis/build/robol/MPSolve/examples/python'
+make[4]: Nothing to be done for `all-am'.
+make[4]: Leaving directory `/home/travis/build/robol/MPSolve/examples/python'
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/examples/python'
+Making all in gtk
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/examples/gtk'
+  CC     roots_of_unity-roots_of_unity.o
+  CCLD   roots_of_unity
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/examples/gtk'
+Making all in mandelbrot-solver
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/examples/mandelbrot-solver'
+  CC     mandelbrot_solver-mandelbrot-evaluation.o
+  CC     mandelbrot_solver-mandelbrot-poly.o
+  CC     mandelbrot_solver-mandelbrot-newton.o
+  CC     mandelbrot_solver-mandelbrot-solver.o
+  CC     mandelbrot_solver-mandelbrot-starting.o
+  CCLD   mandelbrot-solver
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/examples/mandelbrot-solver'
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/examples'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/examples'
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/examples'
+Making all in doc
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/doc'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/doc'
+Making all in mime
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/mime'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/mime'
+make[2]: Entering directory `/home/travis/build/robol/MPSolve'
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve'
+make[1]: Leaving directory `/home/travis/build/robol/MPSolve'
+Making check in include
+make[1]: Entering directory `/home/travis/build/robol/MPSolve/include'
+Making check in mps
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/include/mps'
+Making check in private
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/include/mps/private'
+make[3]: Nothing to be done for `check'.
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/include/mps/private'
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/include/mps'
+make[3]: Nothing to be done for `check-am'.
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/include/mps'
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/include/mps'
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/include'
+make[2]: Nothing to be done for `check-am'.
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/include'
+make[1]: Leaving directory `/home/travis/build/robol/MPSolve/include'
+Making check in src
+make[1]: Entering directory `/home/travis/build/robol/MPSolve/src'
+Making check in libmps
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/src/libmps'
+make  libmpsprivate.la 	
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/src/libmps'
+  CC     chebyshev/libmpsprivate_la-chebyshev-evaluation.lo
+  CC     chebyshev/libmpsprivate_la-chebyshev-parser.lo
+  CC     chebyshev/libmpsprivate_la-chebyshev.lo
+  CC     common/libmpsprivate_la-aberth.lo
+  CC     common/libmpsprivate_la-approximation.lo
+  CC     common/libmpsprivate_la-cluster-analysis.lo
+  CC     common/libmpsprivate_la-cluster.lo
+  CC     common/libmpsprivate_la-context.lo
+  CC     common/libmpsprivate_la-convex.lo
+  CC     common/libmpsprivate_la-defaults.lo
+  CC     common/libmpsprivate_la-file-starting.lo
+  CC     common/libmpsprivate_la-improve.lo
+  CC     common/libmpsprivate_la-inclusion.lo
+  CC     common/libmpsprivate_la-inline-poly-parser.lo
+  CC     common/libmpsprivate_la-interface.lo
+  CC     common/libmpsprivate_la-jacobi-aberth.lo
+  CC     common/libmpsprivate_la-list-element.lo
+  CC     common/libmpsprivate_la-list.lo
+  CC     common/libmpsprivate_la-modify.lo
+  CXX    common/libmpsprivate_la-nroots-polynomial.lo
+  CC     common/libmpsprivate_la-parser.lo
+  CC     common/libmpsprivate_la-polynomial.lo
+  CXX    common/libmpsprivate_la-polynomialxx.lo
+  CC     common/libmpsprivate_la-recursive-starting.lo
+  CC     common/libmpsprivate_la-sort.lo
+  CC     common/libmpsprivate_la-starting-configuration.lo
+  CC     common/libmpsprivate_la-starting.lo
+  CC     common/libmpsprivate_la-strndup.lo
+  CC     common/libmpsprivate_la-test.lo
+  CC     common/libmpsprivate_la-tools.lo
+  CC     common/libmpsprivate_la-touch.lo
+  CC     common/libmpsprivate_la-user.lo
+  CC     common/libmpsprivate_la-utils.lo
+  CC     common/libmpsprivate_la-validation.lo
+  CXX    formal/libmpsprivate_la-formal-monomial.lo
+  CXX    formal/libmpsprivate_la-formal-polynomial.lo
+  CC     floating-point/libmpsprivate_la-gmptools.lo
+  CC     floating-point/libmpsprivate_la-link.lo
+  CC     floating-point/libmpsprivate_la-mpc.lo
+  CC     floating-point/libmpsprivate_la-mt.lo
+  CC     general/libmpsprivate_la-general-radius.lo
+  CC     general/libmpsprivate_la-general-starting.lo
+  CC     matrix/libmpsprivate_la-hessenberg-determinant.lo
+  CC     monomial/libmpsprivate_la-horner.lo
+  CC     monomial/libmpsprivate_la-monomial-matrix-poly.lo
+  CC     monomial/libmpsprivate_la-monomial-parser.lo
+  CC     monomial/libmpsprivate_la-monomial-poly.lo
+  CC     monomial/libmpsprivate_la-monomial-threading.lo
+  CC     monomial/libmpsprivate_la-newton.lo
+  CC     monomial/libmpsprivate_la-shift.lo
+  CC     secsolve/libmpsprivate_la-secular-ga.lo
+  CC     secsolve/libmpsprivate_la-secular-iteration.lo
+  CC     secsolve/libmpsprivate_la-secular-regeneration.lo
+  CC     secular/libmpsprivate_la-secular-equation.lo
+  CC     secular/libmpsprivate_la-secular-evaluation.lo
+  CC     secular/libmpsprivate_la-secular-newton.lo
+  CC     secular/libmpsprivate_la-secular-parser.lo
+  CC     secular/libmpsprivate_la-secular-starting.lo
+  CXX    system/libmpsprivate_la-abstract-input-stream.lo
+  CXX    system/libmpsprivate_la-file-input-stream.lo
+  CXX    system/libmpsprivate_la-memory-file-stream.lo
+  CC     system/libmpsprivate_la-data.lo
+  CC     system/libmpsprivate_la-debug.lo
+  CC     system/libmpsprivate_la-getline.lo
+  CC     system/libmpsprivate_la-getopts.lo
+  CC     system/libmpsprivate_la-input-buffer.lo
+  CC     system/libmpsprivate_la-input-output.lo
+  CC     system/libmpsprivate_la-threading.lo
+  CC     unisolve/libmpsprivate_la-main.lo
+  CC     unisolve/libmpsprivate_la-solve.lo
+  CXXLD  libmpsprivate.la
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/src/libmps'
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/src/libmps'
+Making check in mpsolve
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/src/mpsolve'
+make[2]: Nothing to be done for `check'.
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/src/mpsolve'
+Making check in tests
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/src/tests'
+make  check_convex check_context check_mpc check_matrix check_dpe check_formal check_multithread check_cluster check_chebyshev check_parser check_utils check_monomial_poly check_list check_secsolve check_unisolve
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/src/tests'
+  CC     check_convex-check_convex.o
+  CC     check_convex-check_implementation.o
+  CXX    dummy.o
+  CXXLD  check_convex
+  CC     check_context-check_context.o
+  CC     check_context-check_implementation.o
+  CXXLD  check_context
+  CC     check_mpc-check_mpc.o
+  CC     check_mpc-check_implementation.o
+  CXXLD  check_mpc
+  CC     check_matrix-check_matrix.o
+  CC     check_matrix-check_implementation.o
+  CXXLD  check_matrix
+  CC     check_dpe-check_dpe.o
+  CC     check_dpe-check_implementation.o
+  CXXLD  check_dpe
+  CXX    check_formal-check_formal.o
+  CC     check_formal-check_implementation.o
+  CXX    check_formal-dummy.o
+  CXXLD  check_formal
+  CC     check_multithread-check_multithread.o
+  CC     check_multithread-check_implementation.o
+  CXXLD  check_multithread
+  CC     check_cluster-check_cluster.o
+  CC     check_cluster-check_implementation.o
+  CXXLD  check_cluster
+  CC     check_chebyshev-check_chebyshev.o
+  CC     check_chebyshev-check_implementation.o
+  CXXLD  check_chebyshev
+  CC     check_parser-check_parser.o
+  CC     check_parser-check_implementation.o
+  CXXLD  check_parser
+  CC     check_utils-check_utils.o
+  CC     check_utils-check_implementation.o
+  CXXLD  check_utils
+  CC     check_monomial_poly-check_monomial_poly.o
+  CC     check_monomial_poly-check_implementation.o
+  CXXLD  check_monomial_poly
+  CC     check_list-check_list.o
+  CC     check_list-check_implementation.o
+  CXXLD  check_list
+  CC     check_secsolve-check_secsolve.o
+  CC     check_secsolve-check_implementation.o
+  CXXLD  check_secsolve
+  CC     check_unisolve-check_unisolve.o
+  CC     check_unisolve-check_implementation.o
+  CXXLD  check_unisolve
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/src/tests'
+make  check-TESTS
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/src/tests'
+Running suite(s): Convex operations
+100%: Checks: 0, Failures: 0, Errors: 0
+PASS: check_convex
+Running suite(s): Context
+100%: Checks: 4, Failures: 0, Errors: 0
+PASS: check_context
+Running suite(s): Multiprecision arithmetic
+100%: Checks: 2, Failures: 0, Errors: 0
+PASS: check_mpc
+Running suite(s): Matrices
+0: (0.488199174224857e-15, -0.210453950069052e-15)
+1: (0.264588447718839e-15, -0.201418581532074e-16)
+100%: Checks: 6, Failures: 0, Errors: 0
+PASS: check_matrix
+Running suite(s): DPE
+100%: Checks: 3, Failures: 0, Errors: 0
+check_dpe.c:17:P:RDPE:test_rdpe_comparison:0: Passed
+check_dpe.c:31:P:RDPE:test_rdpe_sum_overflow:0: Passed
+check_dpe.c:63:P:RDPE:test_rdpe_mul_overflow:0: Passed
+PASS: check_dpe
+Running suite(s): Formal arithmetic
+2x + 1
+100%: Checks: 2, Failures: 0, Errors: 0
+PASS: check_formal
+ => Created a thread pool with 4 threads
+ => Asking the threads to print an integer (from 0 to 127)...
+  0  2  4  3  1  5  6  7  8  9 11 12 13 14 15 16 17 10 20 21 18 22 19 23 24 25 27 28 29 30 31 32 33 34 35 36 37 38 40 39 42 26 44 41 45 46 48 43 49 50 51 53 54 55 56 52 57 59 58 47 62 63 64 65 66 67 68 69 60 70 71 72 61 74 76 77 75 79 80 81 82 78 83 84 85 73 88 89 90 86 91 92 87 94 96 97 93 98 100 101 95 102 103 99 105 107 108 104 109 110 111 113 106 115 116 117 118 112 119 114 122 123 120 124 125 121 126 127
+ => All the threads have completed their work
+ => Doing it again (testing re-usability of the thread pool)
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 34 35 36 37 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 38 55 33 56 57 59 60 58 54 63 64 65 66 67 68 69 70 61 62 73 74 75 76 77 78 79 71 72 82 83 84 85 86 87 88 89 81 90 91 92 80 94 93 97 98 99 100 95 101 102 103 104 96 106 105 108 109 110 111 112 113 114 115 116 117 107 120 121 122 123 124 125 126 127 118 119
+ => Trying to stop all the threads...done
+PASS: check_multithread
+Running suite(s): Cluster analsysis
+100%: Checks: 2, Failures: 0, Errors: 0
+PASS: check_cluster
+Running suite(s): chebyshev
+[Chebyshev tests] Expected root 0: (0.99691733373312796385, 0)
+[Chebyshev tests] Residue for approximation   0: 1.294011e-11
+[Chebyshev tests] Inclusion radii: 2.588029e-10
+[Chebyshev tests] Expected root 1: (0.97236992039767655704, 0)
+[Chebyshev tests] Residue for approximation   1: 1.285919e-11
+[Chebyshev tests] Inclusion radii: 2.571848e-10
+[Chebyshev tests] Expected root 2: (0.92387953251128673848, 0)
+[Chebyshev tests] Residue for approximation   2: 2.089661e-10
+[Chebyshev tests] Inclusion radii: 4.179322e-09
+[Chebyshev tests] Expected root 3: (0.85264016435409217820, 0)
+[Chebyshev tests] Residue for approximation   3: 1.332222e-10
+[Chebyshev tests] Inclusion radii: 2.664445e-09
+[Chebyshev tests] Expected root 4: (0.76040596560003093085, 0)
+[Chebyshev tests] Residue for approximation   4: 1.233628e-11
+[Chebyshev tests] Inclusion radii: 2.467263e-10
+[Chebyshev tests] Expected root 5: (0.64944804833018354717, 0)
+[Chebyshev tests] Residue for approximation   5: 4.418120e-09
+[Chebyshev tests] Inclusion radii: 8.836241e-08
+[Chebyshev tests] Expected root 6: (0.52249856471594890994, 0)
+[Chebyshev tests] Residue for approximation   6: 3.118726e-11
+[Chebyshev tests] Inclusion radii: 6.237456e-10
+[Chebyshev tests] Expected root 7: (0.38268343236508983729, 0)
+[Chebyshev tests] Residue for approximation   7: 4.567947e-10
+[Chebyshev tests] Inclusion radii: 9.135894e-09
+[Chebyshev tests] Expected root 8: (0.23344536385590547445, 0)
+[Chebyshev tests] Residue for approximation   8: 2.984246e-11
+[Chebyshev tests] Inclusion radii: 5.968488e-10
+[Chebyshev tests] Expected root 9: (0.07845909572784499908, 0)
+[Chebyshev tests] Residue for approximation   9: 1.686893e-11
+[Chebyshev tests] Inclusion radii: 3.373794e-10
+[Chebyshev tests] Expected root 10: (-0.07845909572784487418, 0)
+[Chebyshev tests] Residue for approximation  10: 4.699363e-11
+[Chebyshev tests] Inclusion radii: 9.398726e-10
+[Chebyshev tests] Expected root 11: (-0.23344536385590511363, 0)
+[Chebyshev tests] Residue for approximation  11: 8.334071e-12
+[Chebyshev tests] Inclusion radii: 1.666850e-10
+[Chebyshev tests] Expected root 12: (-0.38268343236508972627, 0)
+[Chebyshev tests] Residue for approximation  12: 7.548832e-09
+[Chebyshev tests] Inclusion radii: 1.509766e-07
+[Chebyshev tests] Expected root 13: (-0.52249856471594879892, 0)
+[Chebyshev tests] Residue for approximation  13: 2.888372e-11
+[Chebyshev tests] Inclusion radii: 5.776757e-10
+[Chebyshev tests] Expected root 14: (-0.64944804833018354717, 0)
+[Chebyshev tests] Residue for approximation  14: 1.618132e-11
+[Chebyshev tests] Inclusion radii: 3.236255e-10
+[Chebyshev tests] Expected root 15: (-0.76040596560003093085, 0)
+[Chebyshev tests] Residue for approximation  15: 3.020404e-11
+[Chebyshev tests] Inclusion radii: 6.040816e-10
+[Chebyshev tests] Expected root 16: (-0.85264016435409217820, 0)
+[Chebyshev tests] Residue for approximation  16: 1.240592e-11
+[Chebyshev tests] Inclusion radii: 2.481197e-10
+[Chebyshev tests] Expected root 17: (-0.92387953251128673848, 0)
+[Chebyshev tests] Residue for approximation  17: 3.962450e-12
+[Chebyshev tests] Inclusion radii: 7.924999e-11
+[Chebyshev tests] Expected root 18: (-0.97236992039767655704, 0)
+[Chebyshev tests] Residue for approximation  18: 5.908733e-12
+[Chebyshev tests] Inclusion radii: 1.181756e-10
+[Chebyshev tests] Expected root 19: (-0.99691733373312796385, 0)
+[Chebyshev tests] Residue for approximation  19: 2.042760e-11
+[Chebyshev tests] Inclusion radii: 4.085529e-10
+[Chebyshev tests] Expected root 0: (0.99980724048206481847, 0)
+[Chebyshev tests] Residue for approximation   0: 2.366668e-14
+[Chebyshev tests] Inclusion radii: 1.896444e-12
+[Chebyshev tests] Expected root 1: (0.99826561018471593467, 0)
+[Chebyshev tests] Residue for approximation   1: 3.743092e-13
+[Chebyshev tests] Inclusion radii: 2.994232e-11
+[Chebyshev tests] Expected root 2: (0.99518472667219692873, 0)
+[Chebyshev tests] Residue for approximation   2: 7.567049e-14
+[Chebyshev tests] Inclusion radii: 6.052036e-12
+[Chebyshev tests] Expected root 3: (0.99056934044357725089, 0)
+[Chebyshev tests] Residue for approximation   3: 9.497483e-14
+[Chebyshev tests] Inclusion radii: 7.599065e-12
+[Chebyshev tests] Expected root 4: (0.98442656808989159600, 0)
+[Chebyshev tests] Residue for approximation   4: 9.463526e-14
+[Chebyshev tests] Inclusion radii: 7.575378e-12
+[Chebyshev tests] Expected root 5: (0.97676588132087238669, 0)
+[Chebyshev tests] Residue for approximation   5: 1.120389e-13
+[Chebyshev tests] Inclusion radii: 8.960404e-12
+[Chebyshev tests] Expected root 6: (0.96759909236025976043, 0)
+[Chebyshev tests] Residue for approximation   6: 1.145384e-13
+[Chebyshev tests] Inclusion radii: 9.166318e-12
+[Chebyshev tests] Expected root 7: (0.95694033573220882438, 0)
+[Chebyshev tests] Residue for approximation   7: 1.609509e-13
+[Chebyshev tests] Inclusion radii: 1.287376e-11
+[Chebyshev tests] Expected root 8: (0.94480604646687804671, 0)
+[Chebyshev tests] Residue for approximation   8: 1.782604e-12
+[Chebyshev tests] Inclusion radii: 1.426084e-10
+[Chebyshev tests] Expected root 9: (0.93121493475880356971, 0)
+[Chebyshev tests] Residue for approximation   9: 3.428792e-12
+[Chebyshev tests] Inclusion radii: 2.743050e-10
+[Chebyshev tests] Expected root 10: (0.91618795711713596486, 0)
+[Chebyshev tests] Residue for approximation  10: 1.485439e-13
+[Chebyshev tests] Inclusion radii: 1.188023e-11
+[Chebyshev tests] Expected root 11: (0.89974828405222151417, 0)
+[Chebyshev tests] Residue for approximation  11: 1.443803e-13
+[Chebyshev tests] Inclusion radii: 1.155536e-11
+[Chebyshev tests] Expected root 12: (0.88192126434835504956, 0)
+[Chebyshev tests] Residue for approximation  12: 1.319253e-13
+[Chebyshev tests] Inclusion radii: 1.055328e-11
+[Chebyshev tests] Expected root 13: (0.86273438597779184001, 0)
+[Chebyshev tests] Residue for approximation  13: 1.189749e-13
+[Chebyshev tests] Inclusion radii: 9.520215e-12
+[Chebyshev tests] Expected root 14: (0.84221723371628653965, 0)
+[Chebyshev tests] Residue for approximation  14: 1.779706e-11
+[Chebyshev tests] Inclusion radii: 1.423765e-09
+[Chebyshev tests] Expected root 15: (0.82040144352551358509, 0)
+[Chebyshev tests] Residue for approximation  15: 1.085437e-13
+[Chebyshev tests] Inclusion radii: 8.682739e-12
+[Chebyshev tests] Expected root 16: (0.79732065377270711082, 0)
+[Chebyshev tests] Residue for approximation  16: 1.136170e-13
+[Chebyshev tests] Inclusion radii: 9.092109e-12
+[Chebyshev tests] Expected root 17: (0.77301045336273699338, 0)
+[Chebyshev tests] Residue for approximation  17: 9.489687e-14
+[Chebyshev tests] Inclusion radii: 7.594796e-12
+[Chebyshev tests] Expected root 18: (0.74750832686259682802, 0)
+[Chebyshev tests] Residue for approximation  18: 2.477298e-13
+[Chebyshev tests] Inclusion radii: 1.981513e-11
+[Chebyshev tests] Expected root 19: (0.72085359670291881962, 0)
+[Chebyshev tests] Residue for approximation  19: 1.419454e-12
+[Chebyshev tests] Inclusion radii: 1.135586e-10
+[Chebyshev tests] Expected root 20: (0.69308736254563596546, 0)
+[Chebyshev tests] Residue for approximation  20: 7.663489e-14
+[Chebyshev tests] Inclusion radii: 6.125876e-12
+[Chebyshev tests] Expected root 21: (0.66425243791128174564, 0)
+[Chebyshev tests] Residue for approximation  21: 1.161056e-13
+[Chebyshev tests] Inclusion radii: 9.290071e-12
+[Chebyshev tests] Expected root 22: (0.63439328416364548779, 0)
+[Chebyshev tests] Residue for approximation  22: 7.451411e-14
+[Chebyshev tests] Inclusion radii: 5.962217e-12
+[Chebyshev tests] Expected root 23: (0.60355594195357142873, 0)
+[Chebyshev tests] Residue for approximation  23: 6.860865e-13
+[Chebyshev tests] Inclusion radii: 5.488746e-11
+[Chebyshev tests] Expected root 24: (0.57178796022761224638, 0)
+[Chebyshev tests] Residue for approximation  24: 6.097237e-14
+[Chebyshev tests] Inclusion radii: 4.879390e-12
+[Chebyshev tests] Expected root 25: (0.53913832291100038940, 0)
+[Chebyshev tests] Residue for approximation  25: 2.368809e-12
+[Chebyshev tests] Inclusion radii: 1.895107e-10
+[Chebyshev tests] Expected root 26: (0.50565737337798477569, 0)
+[Chebyshev tests] Residue for approximation  26: 5.823036e-14
+[Chebyshev tests] Inclusion radii: 4.652125e-12
+[Chebyshev tests] Expected root 27: (0.47139673682599780857, 0)
+[Chebyshev tests] Residue for approximation  27: 1.232815e-13
+[Chebyshev tests] Inclusion radii: 9.868096e-12
+[Chebyshev tests] Expected root 28: (0.43640924067334202485, 0)
+[Chebyshev tests] Residue for approximation  28: 5.027136e-14
+[Chebyshev tests] Inclusion radii: 4.023650e-12
+[Chebyshev tests] Expected root 29: (0.40074883310314091123, 0)
+[Chebyshev tests] Residue for approximation  29: 5.213378e-14
+[Chebyshev tests] Inclusion radii: 4.169353e-12
+[Chebyshev tests] Expected root 30: (0.36447049987914981184, 0)
+[Chebyshev tests] Residue for approximation  30: 4.493160e-14
+[Chebyshev tests] Inclusion radii: 3.587788e-12
+[Chebyshev tests] Expected root 31: (0.32763017956169365741, 0)
+[Chebyshev tests] Residue for approximation  31: 5.175927e-13
+[Chebyshev tests] Inclusion radii: 4.140662e-11
+[Chebyshev tests] Expected root 32: (0.29028467725446233105, 0)
+[Chebyshev tests] Residue for approximation  32: 5.047137e-14
+[Chebyshev tests] Inclusion radii: 4.039925e-12
+[Chebyshev tests] Expected root 33: (0.25249157701515789753, 0)
+[Chebyshev tests] Residue for approximation  33: 4.619604e-14
+[Chebyshev tests] Inclusion radii: 3.692564e-12
+[Chebyshev tests] Expected root 34: (0.21430915306505068929, 0)
+[Chebyshev tests] Residue for approximation  34: 4.480575e-14
+[Chebyshev tests] Inclusion radii: 3.588250e-12
+[Chebyshev tests] Expected root 35: (0.17579627993435467670, 0)
+[Chebyshev tests] Residue for approximation  35: 5.541189e-14
+[Chebyshev tests] Inclusion radii: 4.444376e-12
+[Chebyshev tests] Expected root 36: (0.13701234168196821384, 0)
+[Chebyshev tests] Residue for approximation  36: 4.757508e-14
+[Chebyshev tests] Inclusion radii: 3.794139e-12
+[Chebyshev tests] Expected root 37: (0.09801714032956077016, 0)
+[Chebyshev tests] Residue for approximation  37: 4.591946e-14
+[Chebyshev tests] Inclusion radii: 3.684914e-12
+[Chebyshev tests] Expected root 38: (0.05887080365118898401, 0)
+[Chebyshev tests] Residue for approximation  38: 5.090637e-14
+[Chebyshev tests] Inclusion radii: 4.075849e-12
+[Chebyshev tests] Expected root 39: (0.01963369246062825202, 0)
+[Chebyshev tests] Residue for approximation  39: 4.343861e-14
+[Chebyshev tests] Inclusion radii: 3.471932e-12
+[Chebyshev tests] Expected root 40: (-0.01963369246062813059, 0)
+[Chebyshev tests] Residue for approximation  40: 5.105239e-14
+[Chebyshev tests] Inclusion radii: 4.074213e-12
+[Chebyshev tests] Expected root 41: (-0.05887080365118908115, 0)
+[Chebyshev tests] Residue for approximation  41: 4.939411e-14
+[Chebyshev tests] Inclusion radii: 3.949186e-12
+[Chebyshev tests] Expected root 42: (-0.09801714032956064526, 0)
+[Chebyshev tests] Residue for approximation  42: 4.557737e-14
+[Chebyshev tests] Inclusion radii: 3.648050e-12
+[Chebyshev tests] Expected root 43: (-0.13701234168196785301, 0)
+[Chebyshev tests] Residue for approximation  43: 4.896946e-14
+[Chebyshev tests] Inclusion radii: 3.922566e-12
+[Chebyshev tests] Expected root 44: (-0.17579627993435453792, 0)
+[Chebyshev tests] Residue for approximation  44: 4.424465e-14
+[Chebyshev tests] Inclusion radii: 3.539991e-12
+[Chebyshev tests] Expected root 45: (-0.21430915306505057827, 0)
+[Chebyshev tests] Residue for approximation  45: 4.065122e-14
+[Chebyshev tests] Inclusion radii: 3.250834e-12
+[Chebyshev tests] Expected root 46: (-0.25249157701515800856, 0)
+[Chebyshev tests] Residue for approximation  46: 3.537313e-14
+[Chebyshev tests] Inclusion radii: 2.829438e-12
+[Chebyshev tests] Expected root 47: (-0.29028467725446216452, 0)
+[Chebyshev tests] Residue for approximation  47: 2.946202e-14
+[Chebyshev tests] Inclusion radii: 2.352678e-12
+[Chebyshev tests] Expected root 48: (-0.32763017956169332434, 0)
+[Chebyshev tests] Residue for approximation  48: 2.957082e-14
+[Chebyshev tests] Inclusion radii: 2.372850e-12
+[Chebyshev tests] Expected root 49: (-0.36447049987914970082, 0)
+[Chebyshev tests] Residue for approximation  49: 4.954139e-13
+[Chebyshev tests] Inclusion radii: 3.963173e-11
+[Chebyshev tests] Expected root 50: (-0.40074883310314080020, 0)
+[Chebyshev tests] Residue for approximation  50: 3.458395e-14
+[Chebyshev tests] Inclusion radii: 2.774861e-12
+[Chebyshev tests] Expected root 51: (-0.43640924067334230241, 0)
+[Chebyshev tests] Residue for approximation  51: 2.759937e-14
+[Chebyshev tests] Inclusion radii: 2.221095e-12
+[Chebyshev tests] Expected root 52: (-0.47139673682599769755, 0)
+[Chebyshev tests] Residue for approximation  52: 4.978975e-14
+[Chebyshev tests] Inclusion radii: 3.985174e-12
+[Chebyshev tests] Expected root 53: (-0.50565737337798444262, 0)
+[Chebyshev tests] Residue for approximation  53: 1.249589e-12
+[Chebyshev tests] Inclusion radii: 9.996061e-11
+[Chebyshev tests] Expected root 54: (-0.53913832291100027838, 0)
+[Chebyshev tests] Residue for approximation  54: 3.131430e-14
+[Chebyshev tests] Inclusion radii: 2.502698e-12
+[Chebyshev tests] Expected root 55: (-0.57178796022761213536, 0)
+[Chebyshev tests] Residue for approximation  55: 2.030225e-14
+[Chebyshev tests] Inclusion radii: 1.619273e-12
+[Chebyshev tests] Expected root 56: (-0.60355594195357142873, 0)
+[Chebyshev tests] Residue for approximation  56: 4.501821e-14
+[Chebyshev tests] Inclusion radii: 3.601399e-12
+[Chebyshev tests] Expected root 57: (-0.63439328416364537677, 0)
+[Chebyshev tests] Residue for approximation  57: 4.379245e-14
+[Chebyshev tests] Inclusion radii: 3.495465e-12
+[Chebyshev tests] Expected root 58: (-0.66425243791128141257, 0)
+[Chebyshev tests] Residue for approximation  58: 2.493386e-12
+[Chebyshev tests] Inclusion radii: 1.994868e-10
+[Chebyshev tests] Expected root 59: (-0.69308736254563574342, 0)
+[Chebyshev tests] Residue for approximation  59: 7.369610e-14
+[Chebyshev tests] Inclusion radii: 5.887931e-12
+[Chebyshev tests] Expected root 60: (-0.72085359670291881962, 0)
+[Chebyshev tests] Residue for approximation  60: 9.652831e-14
+[Chebyshev tests] Inclusion radii: 7.721622e-12
+[Chebyshev tests] Expected root 61: (-0.74750832686259693904, 0)
+[Chebyshev tests] Residue for approximation  61: 1.217784e-13
+[Chebyshev tests] Inclusion radii: 9.752781e-12
+[Chebyshev tests] Expected root 62: (-0.77301045336273699338, 0)
+[Chebyshev tests] Residue for approximation  62: 8.308758e-13
+[Chebyshev tests] Inclusion radii: 6.646815e-11
+[Chebyshev tests] Expected root 63: (-0.79732065377270699980, 0)
+[Chebyshev tests] Residue for approximation  63: 1.263093e-13
+[Chebyshev tests] Inclusion radii: 1.009840e-11
+[Chebyshev tests] Expected root 64: (-0.82040144352551358509, 0)
+[Chebyshev tests] Residue for approximation  64: 1.805908e-13
+[Chebyshev tests] Inclusion radii: 1.444903e-11
+[Chebyshev tests] Expected root 65: (-0.84221723371628642862, 0)
+[Chebyshev tests] Residue for approximation  65: 2.040679e-13
+[Chebyshev tests] Inclusion radii: 1.631967e-11
+[Chebyshev tests] Expected root 66: (-0.86273438597779184001, 0)
+[Chebyshev tests] Residue for approximation  66: 2.188750e-13
+[Chebyshev tests] Inclusion radii: 1.750969e-11
+[Chebyshev tests] Expected root 67: (-0.88192126434835493853, 0)
+[Chebyshev tests] Residue for approximation  67: 2.355010e-13
+[Chebyshev tests] Inclusion radii: 1.883595e-11
+[Chebyshev tests] Expected root 68: (-0.89974828405222129213, 0)
+[Chebyshev tests] Residue for approximation  68: 2.800896e-13
+[Chebyshev tests] Inclusion radii: 2.241662e-11
+[Chebyshev tests] Expected root 69: (-0.91618795711713585384, 0)
+[Chebyshev tests] Residue for approximation  69: 4.743707e-13
+[Chebyshev tests] Inclusion radii: 3.794592e-11
+[Chebyshev tests] Expected root 70: (-0.93121493475880356971, 0)
+[Chebyshev tests] Residue for approximation  70: 3.137908e-13
+[Chebyshev tests] Inclusion radii: 2.510346e-11
+[Chebyshev tests] Expected root 71: (-0.94480604646687804671, 0)
+[Chebyshev tests] Residue for approximation  71: 3.986392e-13
+[Chebyshev tests] Inclusion radii: 3.189356e-11
+[Chebyshev tests] Expected root 72: (-0.95694033573220882438, 0)
+[Chebyshev tests] Residue for approximation  72: 3.254697e-13
+[Chebyshev tests] Inclusion radii: 2.604082e-11
+[Chebyshev tests] Expected root 73: (-0.96759909236025976043, 0)
+[Chebyshev tests] Residue for approximation  73: 3.490932e-13
+[Chebyshev tests] Inclusion radii: 2.792638e-11
+[Chebyshev tests] Expected root 74: (-0.97676588132087238669, 0)
+[Chebyshev tests] Residue for approximation  74: 3.907316e-13
+[Chebyshev tests] Inclusion radii: 3.126228e-11
+[Chebyshev tests] Expected root 75: (-0.98442656808989159600, 0)
+[Chebyshev tests] Residue for approximation  75: 4.097907e-13
+[Chebyshev tests] Inclusion radii: 3.278096e-11
+[Chebyshev tests] Expected root 76: (-0.99056934044357725089, 0)
+[Chebyshev tests] Residue for approximation  76: 3.754078e-11
+[Chebyshev tests] Inclusion radii: 3.003264e-09
+[Chebyshev tests] Expected root 77: (-0.99518472667219681771, 0)
+[Chebyshev tests] Residue for approximation  77: 2.850537e-13
+[Chebyshev tests] Inclusion radii: 2.280002e-11
+[Chebyshev tests] Expected root 78: (-0.99826561018471582365, 0)
+[Chebyshev tests] Residue for approximation  78: 3.856107e-12
+[Chebyshev tests] Inclusion radii: 3.084906e-10
+[Chebyshev tests] Expected root 79: (-0.99980724048206481847, 0)
+[Chebyshev tests] Residue for approximation  79: 9.747379e-14
+[Chebyshev tests] Inclusion radii: 7.795924e-12
+100%: Checks: 2, Failures: 0, Errors: 0
+PASS: check_chebyshev
+Running suite(s): Parsers
+
+
+TEST:inline_simple1 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^4
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 4: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 4
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 4
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 1 into 1
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: -1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 4
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 4
+
+
+TEST:inline_simple2 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 100/100x^4 into 100/100
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^4
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 4: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 4
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 4
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 14/14 into 14/14
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: -1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 4
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 4
+
+
+TEST:inline_simple3 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 1.00x^4 into 100/100
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^4
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 4: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 4
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 4
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 1.23 into 123/100
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: -123/100 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 4
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 4
+
+
+TEST:inline_simple4 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 1.00x^4 into 100/100
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^4
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 4: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 4
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 4
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 1.23e2 into 123/100
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: -123 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 4
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 4
+
+
+TEST:inline_simple5 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 1.04x^4 into 104/100
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^4
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 4: 26/25 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 4
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 4
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 1.23e-2 into 123/100
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: -123/10000 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 4
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 4
+
+
+TEST:inline_simple6 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^2
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 2: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 2
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 1: -1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 1
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 2
+
+
+TEST:inline_simple7 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^2
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 2: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 2
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 6/7 into 6/7
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: -6/7 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 2
+
+
+TEST:inline_simple8 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 2342/12x^2 into 2342/12
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^2
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 2: 1171/6 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 2
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 6/7 into 6/7
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: -6/7 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 1: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 1
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 2
+
+
+TEST:inline_simple9 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 6/7 into 6/7
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: -6/7 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 0
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^2
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 2: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 2
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 2
+
+
+TEST:inline_simple10 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^2+7+x
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 2: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 2
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 7+x into 7
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = +x
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: 7 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 1: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 1
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 2
+
+
+TEST:inline_simple11 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^70+2e4x^10+6/7
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 70: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 70
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 70
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 2e4x^10+6/7 into 2
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^10+6/7
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 10: 20000 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 70
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 10
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 6/7 into 6/7
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: 6/7 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 70
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 70
+
+
+TEST:inline_cancellation1 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 6/7 into 6/7
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: -6/7 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 0
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^2
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 2: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 2
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 12/14 into 12/14
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: 0 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 2
+
+
+TEST:inline_total_cancellation Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 56/8 into 56/8
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: 7 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 0
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^4
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 4: -1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 4
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 4
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^2
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 2: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 4
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 2
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^4
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 4: 0 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 4
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 2x^2 into 2
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^2
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 2: -1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 2
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 28/4 into 28/4
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: 0 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 2
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^2
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 2: 0 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = -1
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 2
+
+
+TEST:inline_linear1 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x-6
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 1: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 1
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 6 into 6
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: -6 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 1
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 1
+
+
+TEST:malformed_input1 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 1.0/6x^4 into (null)
+TEST:malformed_input1 :: Error obtained parsing 1.0/6x^4 - 2: Cannot parse token: 1.0/6x^4
+
+
+TEST:malformed_input2 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 1e4/12.3x^4 into (null)
+TEST:malformed_input1 :: Error obtained parsing 1e4/12.3x^4 - 2: Cannot parse token: 1e4/12.3x^4
+
+
+TEST:wellformed_input1 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 6/4x^9 into 6/4
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^9
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 9: 3/2 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 9
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 9
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 2e4 into 2
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: -20000 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 9
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 9
+
+
+TEST:test_complex1 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^4
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 4: 1 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 4
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 4
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:538 [32;1mmps_parse_inline_poly_from_stream()[;0m Complex coefficient = (2e3,6/7)x^9
+common/inline-poly-parser.c:286 [32;1mparse_complex_coefficient()[;0m Extracted real part: 2e3
+common/inline-poly-parser.c:287 [32;1mparse_complex_coefficient()[;0m Extracted imaginary part: 6/7
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 2e3 into 2
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 6/7 into 6/7
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^9
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 9: -2000 + -6/7i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 9
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 9
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 5 into 5
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: 5 + 0i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 9
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 9
+
+
+TEST:test_complex2 Starting test 
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:538 [32;1mmps_parse_inline_poly_from_stream()[;0m Complex coefficient = (1.2,-12/67)x^42
+common/inline-poly-parser.c:286 [32;1mparse_complex_coefficient()[;0m Extracted real part: 1.2
+common/inline-poly-parser.c:287 [32;1mparse_complex_coefficient()[;0m Extracted imaginary part: -12/67
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 1.2 into 12/10
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed -12/67 into 12/67
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^42
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 42: 6/5 + -12/67i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 42
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 42
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to -1
+common/inline-poly-parser.c:538 [32;1mmps_parse_inline_poly_from_stream()[;0m Complex coefficient = (2e-3,1)x^9
+common/inline-poly-parser.c:286 [32;1mparse_complex_coefficient()[;0m Extracted real part: 2e-3
+common/inline-poly-parser.c:287 [32;1mparse_complex_coefficient()[;0m Extracted imaginary part: 1
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 2e-3 into 2
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 1 into 1
+common/inline-poly-parser.c:308 [32;1mparse_exponent()[;0m Exponent = x^9
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 9: -1/500 + -1i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 42
+common/inline-poly-parser.c:599 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 9
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:497 [32;1mmps_parse_inline_poly_from_stream()[;0m Switching sign to 1
+common/inline-poly-parser.c:538 [32;1mmps_parse_inline_poly_from_stream()[;0m Complex coefficient = (5,6/9)
+common/inline-poly-parser.c:286 [32;1mparse_complex_coefficient()[;0m Extracted real part: 5
+common/inline-poly-parser.c:287 [32;1mparse_complex_coefficient()[;0m Extracted imaginary part: 6/9
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 5 into 5
+common/inline-poly-parser.c:201 [32;1mparse_real_coefficient()[;0m Transformed 6/9 into 6/9
+common/inline-poly-parser.c:410 [32;1mupdate_poly_coefficients()[;0m Updated coefficient of degree 0: 5 + 2/3i 
+common/inline-poly-parser.c:441 [32;1mupdate_poly_coefficients()[;0m The polynomial degree is now = 42
+common/inline-poly-parser.c:576 [32;1mmps_parse_inline_poly_from_stream()[;0m Parsed coefficient of degree 0
+common/inline-poly-parser.c:622 [32;1mmps_parse_inline_poly_from_stream()[;0m Polynomial degree = 42
+
+
+TEST:multiline_pol_file1 Starting test 
+common/parser.c:142 [32;1mmps_parse_option_line()[;0m Parsed option: Degree=20
+common/parser.c:142 [32;1mmps_parse_option_line()[;0m Parsed option: Integer
+common/parser.c:142 [32;1mmps_parse_option_line()[;0m Parsed option: Real
+common/parser.c:142 [32;1mmps_parse_option_line()[;0m Parsed option: Monomial
+common/parser.c:142 [32;1mmps_parse_option_line()[;0m Parsed option: Sparse
+common/parser.c:269 [32;1mmps_parse_abstract_stream()[;0m Finished parsing options
+common/parser.c:397 [32;1mmps_parse_abstract_stream()[;0m Degree: 20
+common/parser.c:419 [32;1mmps_parse_abstract_stream()[;0m Parsing mps_monomial_poly from stream
+100%: Checks: 20, Failures: 0, Errors: 0
+PASS: check_parser
+Running suite(s): Utils
+TEST_STRIP: mps_utils_strip_string(" !as230 ") = "!as230"
+TEST_STRIP: mps_utils_strip_string("as88 ") = "as88"
+TEST_STRIP: mps_utils_strip_string("    as88 ") = "as88"
+TEST_STRIP: mps_utils_strip_string("Test") = "Test"
+TEST_EQUIVALENT_RATIONAL_CONVERSION: Converted 1.23 to 123/100
+TEST_EQUIVALENT_RATIONAL_CONVERSION: Converted 1.23e2 to 12300/100
+TEST_EQUIVALENT_RATIONAL_CONVERSION: Converted 1.23e-1 to 123/1000
+TEST_EQUIVALENT_RATIONAL_CONVERSION: Converted -8 to -8
+100%: Checks: 5, Failures: 0, Errors: 0
+PASS: check_utils
+Running suite(s): Monomial Poly
+100%: Checks: 3, Failures: 0, Errors: 0
+PASS: check_monomial_poly
+Running suite(s): Containers
+100%: Checks: 3, Failures: 0, Errors: 0
+PASS: check_list
+Running suite(s): secsolve
+Checking [1mtest100.pol                   [0m [[34;1mchecking[0m]Checking [1mtest100.pol                   [0m [[32;1m  done  [0m]
+Checking [1mtest100.pol                   [0m [[34;1mchecking[0m]Checking [1mtest100.pol                   [0m [[32;1m  done  [0m]
+Checking [1mtest100.pol                   [0m [[34;1mchecking[0m]Checking [1mtest100.pol                   [0m [[32;1m  done  [0m]
+Checking [1mtest100.pol                   [0m [[34;1mchecking[0m]Checking [1mtest100.pol                   [0m [[32;1m  done  [0m]
+Checking [1minteger.pol                   [0m [[34;1mchecking[0m]Checking [1minteger.pol                   [0m [[32;1m  done  [0m]
+Checking [1minteger.pol                   [0m [[34;1mchecking[0m]Checking [1minteger.pol                   [0m [[32;1m  done  [0m]
+Checking [1msimple.pol                    [0m [[34;1mchecking[0m]Checking [1msimple.pol                    [0m [[32;1m  done  [0m]
+Checking [1msimple.pol                    [0m [[34;1mchecking[0m]Checking [1msimple.pol                    [0m [[32;1m  done  [0m]
+Checking [1msimple.pol                    [0m [[34;1mchecking[0m]Checking [1msimple.pol                    [0m [[32;1m  done  [0m]
+Checking [1msimple.pol                    [0m [[34;1mchecking[0m]Checking [1msimple.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk20.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk20.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk20.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk20.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk40.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk40.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk40.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk40.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk80.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk80.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk80.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk80.pol                    [0m [[32;1m  done  [0m]
+Checking [1mnroots50.pol                  [0m [[34;1mchecking[0m]Checking [1mnroots50.pol                  [0m [[32;1m  done  [0m]
+Checking [1mnroots50.pol                  [0m [[34;1mchecking[0m]Checking [1mnroots50.pol                  [0m [[32;1m  done  [0m]
+Checking [1mkam1_1.pol                    [0m [[34;1mchecking[0m]Checking [1mkam1_1.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam1_1.pol                    [0m [[34;1mchecking[0m]Checking [1mkam1_1.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam1_2.pol                    [0m [[34;1mchecking[0m]Checking [1mkam1_2.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam1_2.pol                    [0m [[34;1mchecking[0m]Checking [1mkam1_2.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam1_3.pol                    [0m [[34;1mchecking[0m]Checking [1mkam1_3.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam1_3.pol                    [0m [[34;1mchecking[0m]Checking [1mkam1_3.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam2_1.pol                    [0m [[34;1mchecking[0m]Checking [1mkam2_1.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam2_1.pol                    [0m [[34;1mchecking[0m]Checking [1mkam2_1.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam2_2.pol                    [0m [[34;1mchecking[0m]Checking [1mkam2_2.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam2_2.pol                    [0m [[34;1mchecking[0m]Checking [1mkam2_2.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam2_3.pol                    [0m [[34;1mchecking[0m]Checking [1mkam2_3.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam2_3.pol                    [0m [[34;1mchecking[0m]Checking [1mkam2_3.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam3_1.pol                    [0m [[34;1mchecking[0m]Checking [1mkam3_1.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam3_1.pol                    [0m [[34;1mchecking[0m]Checking [1mkam3_1.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam3_2.pol                    [0m [[34;1mchecking[0m]Checking [1mkam3_2.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam3_2.pol                    [0m [[34;1mchecking[0m]Checking [1mkam3_2.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam3_3.pol                    [0m [[34;1mchecking[0m]Checking [1mkam3_3.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam3_3.pol                    [0m [[34;1mchecking[0m]Checking [1mkam3_3.pol                    [0m [[32;1m  done  [0m]
+Checking [1mexp50.pol                     [0m [[34;1mchecking[0m]Checking [1mexp50.pol                     [0m [[32;1m  done  [0m]
+Checking [1mexp50.pol                     [0m [[34;1mchecking[0m]Checking [1mexp50.pol                     [0m [[32;1m  done  [0m]
+Checking [1mexp100.pol                    [0m [[34;1mchecking[0m]Checking [1mexp100.pol                    [0m [[32;1m  done  [0m]
+Checking [1mexp100.pol                    [0m [[34;1mchecking[0m]Checking [1mexp100.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmand63.pol                    [0m [[34;1mchecking[0m]Checking [1mmand63.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmand63.pol                    [0m [[34;1mchecking[0m]Checking [1mmand63.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmand127.pol                   [0m [[34;1mchecking[0m]Checking [1mmand127.pol                   [0m [[32;1m  done  [0m]
+Checking [1mmand127.pol                   [0m [[34;1mchecking[0m]Checking [1mmand127.pol                   [0m [[32;1m  done  [0m]
+Checking [1mmig1_100.pol                  [0m [[34;1mchecking[0m]Checking [1mmig1_100.pol                  [0m [[32;1m  done  [0m]
+Checking [1mmig1_100.pol                  [0m [[34;1mchecking[0m]Checking [1mmig1_100.pol                  [0m [[32;1m  done  [0m]
+Checking [1mmig1_200.pol                  [0m [[34;1mchecking[0m]Checking [1mmig1_200.pol                  [0m [[32;1m  done  [0m]
+Checking [1mmig1_200.pol                  [0m [[34;1mchecking[0m]Checking [1mmig1_200.pol                  [0m [[32;1m  done  [0m]
+Checking [1mwilk20.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk20.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk20.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk20.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk40.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk40.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk40.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk40.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk80.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk80.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk80.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk80.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmult1.pol                     [0m [[34;1mchecking[0m]Checking [1mmult1.pol                     [0m [[32;1m  done  [0m]
+Checking [1mmult1.pol                     [0m [[34;1mchecking[0m]Checking [1mmult1.pol                     [0m [[32;1m  done  [0m]
+Checking [1mmult1.pol                     [0m [[34;1mchecking[0m]Checking [1mmult1.pol                     [0m [[32;1m  done  [0m]
+Checking [1mmult1.pol                     [0m [[34;1mchecking[0m]Checking [1mmult1.pol                     [0m [[32;1m  done  [0m]
+Checking [1mtoep1_128.pol                 [0m [[34;1mchecking[0m]Checking [1mtoep1_128.pol                 [0m [[32;1m  done  [0m]
+Checking [1mtoep1_128.pol                 [0m [[34;1mchecking[0m]Checking [1mtoep1_128.pol                 [0m [[32;1m  done  [0m]
+Checking [1mtrv_m.pol                     [0m [[34;1mchecking[0m]Checking [1mtrv_m.pol                     [0m [[32;1m  done  [0m]
+Checking [1mtrv_m.pol                     [0m [[34;1mchecking[0m]Checking [1mtrv_m.pol                     [0m [[32;1m  done  [0m]
+Checking [1mkir1_10.pol                   [0m [[34;1mchecking[0m]Checking [1mkir1_10.pol                   [0m [[32;1m  done  [0m]
+Checking [1mkir1_10.pol                   [0m [[34;1mchecking[0m]Checking [1mkir1_10.pol                   [0m [[32;1m  done  [0m]
+Checking [1mkir1_10.pol                   [0m [[34;1mchecking[0m]Checking [1mkir1_10.pol                   [0m [[32;1m  done  [0m]
+Checking [1mkir1_10.pol                   [0m [[34;1mchecking[0m]Checking [1mkir1_10.pol                   [0m [[32;1m  done  [0m]
+Checking [1mkir1_20.pol                   [0m [[34;1mchecking[0m]Checking [1mkir1_20.pol                   [0m [[32;1m  done  [0m]
+Checking [1mkir1_20.pol                   [0m [[34;1mchecking[0m]Checking [1mkir1_20.pol                   [0m [[32;1m  done  [0m]
+Checking [1mkir1_40.pol                   [0m [[34;1mchecking[0m]Checking [1mkir1_40.pol                   [0m [[32;1m  done  [0m]
+Checking [1mkir1_40.pol                   [0m [[34;1mchecking[0m]Checking [1mkir1_40.pol                   [0m [[32;1m  done  [0m]
+Checking [1mspiral10.pol                  [0m [[34;1mchecking[0m]Checking [1mspiral10.pol                  [0m [[32;1m  done  [0m]
+Checking [1mspiral10.pol                  [0m [[34;1mchecking[0m]Checking [1mspiral10.pol                  [0m [[32;1m  done  [0m]
+Checking [1mspiral20.pol                  [0m [[34;1mchecking[0m]Checking [1mspiral20.pol                  [0m [[32;1m  done  [0m]
+Checking [1mspiral20.pol                  [0m [[34;1mchecking[0m]Checking [1mspiral20.pol                  [0m [[32;1m  done  [0m]
+Checking [1mspiral10.pol                  [0m [[34;1mchecking[0m]Checking [1mspiral10.pol                  [0m [[32;1m  done  [0m]
+Checking [1mspiral10.pol                  [0m [[34;1mchecking[0m]Checking [1mspiral10.pol                  [0m [[32;1m  done  [0m]
+Checking [1mmig1_200.pol                  [0m [[34;1mchecking[0m]Checking [1mmig1_200.pol                  [0m [[32;1m  done  [0m]
+Checking [1mmig1_200.pol                  [0m [[34;1mchecking[0m]Checking [1mmig1_200.pol                  [0m [[32;1m  done  [0m]
+Checking [1mmig1_500_1.pol                [0m [[34;1mchecking[0m]Checking [1mmig1_500_1.pol                [0m [[32;1m  done  [0m]
+Checking [1mmig1_500_1.pol                [0m [[34;1mchecking[0m]Checking [1mmig1_500_1.pol                [0m [[32;1m  done  [0m]
+100%: Checks: 32, Failures: 0, Errors: 0
+PASS: check_secsolve
+Running suite(s): unisolve
+Checking [1mexp100.pol                    [0m [[34;1mchecking[0m]Checking [1mexp100.pol                    [0m [[32;1m  done  [0m]
+Checking [1mexp100.pol                    [0m [[34;1mchecking[0m]Checking [1mexp100.pol                    [0m [[32;1m  done  [0m]
+Checking [1mexp50.pol                     [0m [[34;1mchecking[0m]Checking [1mexp50.pol                     [0m [[32;1m  done  [0m]
+Checking [1mexp50.pol                     [0m [[34;1mchecking[0m]Checking [1mexp50.pol                     [0m [[32;1m  done  [0m]
+Checking [1mkam1_1.pol                    [0m [[34;1mchecking[0m]Checking [1mkam1_1.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam1_1.pol                    [0m [[34;1mchecking[0m]Checking [1mkam1_1.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam1_2.pol                    [0m [[34;1mchecking[0m]Checking [1mkam1_2.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam1_2.pol                    [0m [[34;1mchecking[0m]Checking [1mkam1_2.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam1_3.pol                    [0m [[34;1mchecking[0m]Checking [1mkam1_3.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam1_3.pol                    [0m [[34;1mchecking[0m]Checking [1mkam1_3.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam2_1.pol                    [0m [[34;1mchecking[0m]Checking [1mkam2_1.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam2_1.pol                    [0m [[34;1mchecking[0m]Checking [1mkam2_1.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam2_2.pol                    [0m [[34;1mchecking[0m]Checking [1mkam2_2.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam2_2.pol                    [0m [[34;1mchecking[0m]Checking [1mkam2_2.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam2_3.pol                    [0m [[34;1mchecking[0m]Checking [1mkam2_3.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam2_3.pol                    [0m [[34;1mchecking[0m]Checking [1mkam2_3.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam3_1.pol                    [0m [[34;1mchecking[0m]Checking [1mkam3_1.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam3_1.pol                    [0m [[34;1mchecking[0m]Checking [1mkam3_1.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam3_2.pol                    [0m [[34;1mchecking[0m]Checking [1mkam3_2.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam3_2.pol                    [0m [[34;1mchecking[0m]Checking [1mkam3_2.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam3_3.pol                    [0m [[34;1mchecking[0m]Checking [1mkam3_3.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkam3_3.pol                    [0m [[34;1mchecking[0m]Checking [1mkam3_3.pol                    [0m [[32;1m  done  [0m]
+Checking [1mlar1_200.pol                  [0m [[34;1mchecking[0m]Checking [1mlar1_200.pol                  [0m [[32;1m  done  [0m]
+Checking [1mlar1_200.pol                  [0m [[34;1mchecking[0m]Checking [1mlar1_200.pol                  [0m [[32;1m  done  [0m]
+Checking [1mlar1.pol                      [0m [[34;1mchecking[0m]Checking [1mlar1.pol                      [0m [[32;1m  done  [0m]
+Checking [1mlar1.pol                      [0m [[34;1mchecking[0m]Checking [1mlar1.pol                      [0m [[32;1m  done  [0m]
+Checking [1mlar2.pol                      [0m [[34;1mchecking[0m]Checking [1mlar2.pol                      [0m [[32;1m  done  [0m]
+Checking [1mlar2.pol                      [0m [[34;1mchecking[0m]Checking [1mlar2.pol                      [0m [[32;1m  done  [0m]
+Checking [1mlar3.pol                      [0m [[34;1mchecking[0m]Checking [1mlar3.pol                      [0m [[32;1m  done  [0m]
+Checking [1mlar3.pol                      [0m [[34;1mchecking[0m]Checking [1mlar3.pol                      [0m [[32;1m  done  [0m]
+Checking [1mlsr_24.pol                    [0m [[34;1mchecking[0m]Checking [1mlsr_24.pol                    [0m [[32;1m  done  [0m]
+Checking [1mlsr_24.pol                    [0m [[34;1mchecking[0m]Checking [1mlsr_24.pol                    [0m [[32;1m  done  [0m]
+Checking [1mkir1_10.pol                   [0m [[34;1mchecking[0m]Checking [1mkir1_10.pol                   [0m [[32;1m  done  [0m]
+Checking [1mkir1_10.pol                   [0m [[34;1mchecking[0m]Checking [1mkir1_10.pol                   [0m [[32;1m  done  [0m]
+Checking [1mmand127.pol                   [0m [[34;1mchecking[0m]Checking [1mmand127.pol                   [0m [[32;1m  done  [0m]
+Checking [1mmand127.pol                   [0m [[34;1mchecking[0m]Checking [1mmand127.pol                   [0m [[32;1m  done  [0m]
+Checking [1mmand63.pol                    [0m [[34;1mchecking[0m]Checking [1mmand63.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmand63.pol                    [0m [[34;1mchecking[0m]Checking [1mmand63.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmand63.pol                    [0m [[34;1mchecking[0m]Checking [1mmand63.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmand63.pol                    [0m [[34;1mchecking[0m]Checking [1mmand63.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmand63.pol                    [0m [[34;1mchecking[0m]Checking [1mmand63.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmand63.pol                    [0m [[34;1mchecking[0m]Checking [1mmand63.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmig1_100.pol                  [0m [[34;1mchecking[0m]Checking [1mmig1_100.pol                  [0m [[32;1m  done  [0m]
+Checking [1mmig1_100.pol                  [0m [[34;1mchecking[0m]Checking [1mmig1_100.pol                  [0m [[32;1m  done  [0m]
+Checking [1mmig1_200.pol                  [0m [[34;1mchecking[0m]Checking [1mmig1_200.pol                  [0m [[32;1m  done  [0m]
+Checking [1mmig1_200.pol                  [0m [[34;1mchecking[0m]Checking [1mmig1_200.pol                  [0m [[32;1m  done  [0m]
+Checking [1mnroots50.pol                  [0m [[34;1mchecking[0m]Checking [1mnroots50.pol                  [0m [[32;1m  done  [0m]
+Checking [1mnroots50.pol                  [0m [[34;1mchecking[0m]Checking [1mnroots50.pol                  [0m [[32;1m  done  [0m]
+Checking [1mtest.pol                      [0m [[34;1mchecking[0m]Checking [1mtest.pol                      [0m [[32;1m  done  [0m]
+Checking [1mtest.pol                      [0m [[34;1mchecking[0m]Checking [1mtest.pol                      [0m [[32;1m  done  [0m]
+Checking [1mtrv_m.pol                     [0m [[34;1mchecking[0m]Checking [1mtrv_m.pol                     [0m [[32;1m  done  [0m]
+Checking [1mtrv_m.pol                     [0m [[34;1mchecking[0m]Checking [1mtrv_m.pol                     [0m [[32;1m  done  [0m]
+Checking [1mumand31.pol                   [0m [[34;1mchecking[0m]Checking [1mumand31.pol                   [0m [[32;1m  done  [0m]
+Checking [1mumand31.pol                   [0m [[34;1mchecking[0m]Checking [1mumand31.pol                   [0m [[32;1m  done  [0m]
+Checking [1mwilk20.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk20.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk20.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk20.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk40.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk40.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk40.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk40.pol                    [0m [[32;1m  done  [0m]
+Checking [1mtoep1_128.pol                 [0m [[34;1mchecking[0m]Checking [1mtoep1_128.pol                 [0m [[32;1m  done  [0m]
+Checking [1mtoep1_128.pol                 [0m [[34;1mchecking[0m]Checking [1mtoep1_128.pol                 [0m [[32;1m  done  [0m]
+Checking [1mexp100.pol                    [0m [[34;1mchecking[0m]Checking [1mexp100.pol                    [0m [[32;1m  done  [0m]
+Checking [1mexp100.pol                    [0m [[34;1mchecking[0m]Checking [1mexp100.pol                    [0m [[32;1m  done  [0m]
+Checking [1mexp50.pol                     [0m [[34;1mchecking[0m]Checking [1mexp50.pol                     [0m [[32;1m  done  [0m]
+Checking [1mexp50.pol                     [0m [[34;1mchecking[0m]Checking [1mexp50.pol                     [0m [[32;1m  done  [0m]
+Checking [1mkir1_10.pol                   [0m [[34;1mchecking[0m]Checking [1mkir1_10.pol                   [0m [[32;1m  done  [0m]
+Checking [1mkir1_10.pol                   [0m [[34;1mchecking[0m]Checking [1mkir1_10.pol                   [0m [[32;1m  done  [0m]
+Checking [1mmand127.pol                   [0m [[34;1mchecking[0m]Checking [1mmand127.pol                   [0m [[32;1m  done  [0m]
+Checking [1mmand127.pol                   [0m [[34;1mchecking[0m]Checking [1mmand127.pol                   [0m [[32;1m  done  [0m]
+Checking [1mmand63.pol                    [0m [[34;1mchecking[0m]Checking [1mmand63.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmand63.pol                    [0m [[34;1mchecking[0m]Checking [1mmand63.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmand63.pol                    [0m [[34;1mchecking[0m]Checking [1mmand63.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmand63.pol                    [0m [[34;1mchecking[0m]Checking [1mmand63.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmand63.pol                    [0m [[34;1mchecking[0m]Checking [1mmand63.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmand63.pol                    [0m [[34;1mchecking[0m]Checking [1mmand63.pol                    [0m [[32;1m  done  [0m]
+Checking [1mmig1_100.pol                  [0m [[34;1mchecking[0m]Checking [1mmig1_100.pol                  [0m [[32;1m  done  [0m]
+Checking [1mmig1_100.pol                  [0m [[34;1mchecking[0m]Checking [1mmig1_100.pol                  [0m [[32;1m  done  [0m]
+Checking [1mmig1_200.pol                  [0m [[34;1mchecking[0m]Checking [1mmig1_200.pol                  [0m [[32;1m  done  [0m]
+Checking [1mmig1_200.pol                  [0m [[34;1mchecking[0m]Checking [1mmig1_200.pol                  [0m [[32;1m  done  [0m]
+Checking [1mnroots50.pol                  [0m [[34;1mchecking[0m]Checking [1mnroots50.pol                  [0m [[32;1m  done  [0m]
+Checking [1mnroots50.pol                  [0m [[34;1mchecking[0m]Checking [1mnroots50.pol                  [0m [[32;1m  done  [0m]
+Checking [1mtest.pol                      [0m [[34;1mchecking[0m]Checking [1mtest.pol                      [0m [[32;1m  done  [0m]
+Checking [1mtest.pol                      [0m [[34;1mchecking[0m]Checking [1mtest.pol                      [0m [[32;1m  done  [0m]
+Checking [1mtrv_m.pol                     [0m [[34;1mchecking[0m]Checking [1mtrv_m.pol                     [0m [[32;1m  done  [0m]
+Checking [1mtrv_m.pol                     [0m [[34;1mchecking[0m]Checking [1mtrv_m.pol                     [0m [[32;1m  done  [0m]
+Checking [1mumand31.pol                   [0m [[34;1mchecking[0m]Checking [1mumand31.pol                   [0m [[32;1m  done  [0m]
+Checking [1mumand31.pol                   [0m [[34;1mchecking[0m]Checking [1mumand31.pol                   [0m [[32;1m  done  [0m]
+Checking [1mwilk20.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk20.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk20.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk20.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk40.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk40.pol                    [0m [[32;1m  done  [0m]
+Checking [1mwilk40.pol                    [0m [[34;1mchecking[0m]Checking [1mwilk40.pol                    [0m [[32;1m  done  [0m]
+Checking [1mtoep1_128.pol                 [0m [[34;1mchecking[0m]Checking [1mtoep1_128.pol                 [0m [[32;1m  done  [0m]
+Checking [1mtoep1_128.pol                 [0m [[34;1mchecking[0m]Checking [1mtoep1_128.pol                 [0m [[32;1m  done  [0m]
+100%: Checks: 46, Failures: 0, Errors: 0
+PASS: check_unisolve
+===================
+All 15 tests passed
+===================
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/src/tests'
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/src/tests'
+Making check in xmpsolve
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/src/xmpsolve'
+make  check-am
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/src/xmpsolve'
+make[3]: Nothing to be done for `check-am'.
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/src/xmpsolve'
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/src/xmpsolve'
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/src'
+make[2]: Nothing to be done for `check-am'.
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/src'
+make[1]: Leaving directory `/home/travis/build/robol/MPSolve/src'
+Making check in examples
+make[1]: Entering directory `/home/travis/build/robol/MPSolve/examples'
+Making check in fortran
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/examples/fortran'
+make[2]: Nothing to be done for `check'.
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/examples/fortran'
+Making check in octave
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/examples/octave'
+make[2]: Nothing to be done for `check'.
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/examples/octave'
+Making check in matlab
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/examples/matlab'
+make[2]: Nothing to be done for `check'.
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/examples/matlab'
+Making check in python
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/examples/python'
+Making check in tests
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/examples/python/tests'
+make  check-TESTS
+make[4]: Entering directory `/home/travis/build/robol/MPSolve/examples/python/tests'
+x^100 - 1 roots: 
+ - 1.247715e+00 + 3.921101e-02i
+ - 1.242790e+00 + 1.174783e-01i
+ - 1.232962e+00 + 1.952819e-01i
+ - 1.218267e+00 + 2.723149e-01i
+ - 1.198764e+00 + 3.482731e-01i
+ - 1.174530e+00 + 4.228569e-01i
+ - 1.145661e+00 + 4.957718e-01i
+ - 1.112271e+00 + 5.667302e-01i
+ - 1.074491e+00 + 6.354519e-01i
+ - 1.032470e+00 + 7.016659e-01i
+ - 9.863746e-01 + 7.651106e-01i
+ - 9.363866e-01 + 8.255358e-01i
+ - 8.827030e-01 + 8.827030e-01i
+ - 8.255358e-01 + 9.363866e-01i
+ - 7.651106e-01 + 9.863746e-01i
+ - 7.016659e-01 + 1.032470e+00i
+ - 6.354519e-01 + 1.074491e+00i
+ - 5.667302e-01 + 1.112271e+00i
+ - 4.957718e-01 + 1.145661e+00i
+ - 4.228569e-01 + 1.174530e+00i
+ - 3.482731e-01 + 1.198764e+00i
+ - 2.723149e-01 + 1.218267e+00i
+ - 1.952819e-01 + 1.232962e+00i
+ - 1.174783e-01 + 1.242790e+00i
+ - 3.921101e-02 + 1.247715e+00i
+ - -3.921101e-02 + 1.247715e+00i
+ - -1.174783e-01 + 1.242790e+00i
+ - -1.952819e-01 + 1.232962e+00i
+ - -2.723149e-01 + 1.218267e+00i
+ - -3.482731e-01 + 1.198764e+00i
+ - -4.228569e-01 + 1.174530e+00i
+ - -4.957718e-01 + 1.145661e+00i
+ - -5.667302e-01 + 1.112271e+00i
+ - -6.354519e-01 + 1.074491e+00i
+ - -7.016659e-01 + 1.032470e+00i
+ - -7.651106e-01 + 9.863746e-01i
+ - -8.255358e-01 + 9.363866e-01i
+ - -8.827030e-01 + 8.827030e-01i
+ - -9.363866e-01 + 8.255358e-01i
+ - -9.863746e-01 + 7.651106e-01i
+ - -1.032470e+00 + 7.016659e-01i
+ - -1.074491e+00 + 6.354519e-01i
+ - -1.112271e+00 + 5.667302e-01i
+ - -1.145661e+00 + 4.957718e-01i
+ - -1.174530e+00 + 4.228569e-01i
+ - -1.198764e+00 + 3.482731e-01i
+ - -1.218267e+00 + 2.723149e-01i
+ - -1.232962e+00 + 1.952819e-01i
+ - -1.242790e+00 + 1.174783e-01i
+ - -1.247715e+00 + 3.921101e-02i
+ - -1.247715e+00 + -3.921101e-02i
+ - -1.242790e+00 + -1.174783e-01i
+ - -1.232962e+00 + -1.952819e-01i
+ - -1.218267e+00 + -2.723149e-01i
+ - -1.198764e+00 + -3.482731e-01i
+ - -1.174530e+00 + -4.228569e-01i
+ - -1.145661e+00 + -4.957718e-01i
+ - -1.112271e+00 + -5.667302e-01i
+ - -1.074491e+00 + -6.354519e-01i
+ - -1.032470e+00 + -7.016659e-01i
+ - -9.863746e-01 + -7.651106e-01i
+ - -9.363866e-01 + -8.255358e-01i
+ - -8.827030e-01 + -8.827030e-01i
+ - -8.255358e-01 + -9.363866e-01i
+ - -7.651106e-01 + -9.863746e-01i
+ - -7.016659e-01 + -1.032470e+00i
+ - -6.354519e-01 + -1.074491e+00i
+ - -5.667302e-01 + -1.112271e+00i
+ - -4.957718e-01 + -1.145661e+00i
+ - -4.228569e-01 + -1.174530e+00i
+ - -3.482731e-01 + -1.198764e+00i
+ - -2.723149e-01 + -1.218267e+00i
+ - -1.952819e-01 + -1.232962e+00i
+ - -1.174783e-01 + -1.242790e+00i
+ - -3.921101e-02 + -1.247715e+00i
+ - 3.921101e-02 + -1.247715e+00i
+ - 1.174783e-01 + -1.242790e+00i
+ - 1.952819e-01 + -1.232962e+00i
+ - 2.723149e-01 + -1.218267e+00i
+ - 3.482731e-01 + -1.198764e+00i
+ - 4.228569e-01 + -1.174530e+00i
+ - 4.957718e-01 + -1.145661e+00i
+ - 5.667302e-01 + -1.112271e+00i
+ - 6.354519e-01 + -1.074491e+00i
+ - 7.016659e-01 + -1.032470e+00i
+ - 7.651106e-01 + -9.863746e-01i
+ - 8.255358e-01 + -9.363866e-01i
+ - 8.827030e-01 + -8.827030e-01i
+ - 9.363866e-01 + -8.255358e-01i
+ - 9.863746e-01 + -7.651106e-01i
+ - 1.032470e+00 + -7.016659e-01i
+ - 1.074491e+00 + -6.354519e-01i
+ - 1.112271e+00 + -5.667302e-01i
+ - 1.145661e+00 + -4.957718e-01i
+ - 1.174530e+00 + -4.228569e-01i
+ - 1.198764e+00 + -3.482731e-01i
+ - 1.218267e+00 + -2.723149e-01i
+ - 1.232962e+00 + -1.952819e-01i
+ - 1.242790e+00 + -1.174783e-01i
+ - 1.247715e+00 + -3.921101e-02i
+
+9.851093e-01 + 4.266862e-18i
+9.557930e-01 + -3.139283e-19i
+9.354440e-01 + -1.462734e-16i
+9.114033e-01 + 2.853347e-18i
+8.837656e-01 + 2.885680e-18i
+8.526402e-01 + 2.908303e-18i
+8.181497e-01 + 2.336685e-18i
+7.804304e-01 + 9.707766e-21i
+7.396311e-01 + -1.384560e-17i
+6.959128e-01 + 2.523706e-17i
+9.792228e-01 + -1.042102e-18i
+6.004202e-01 + 4.441960e-20i
+5.490228e-01 + -4.554443e-19i
+4.954587e-01 + 1.093399e-21i
+4.399392e-01 + 5.016048e-19i
+3.826834e-01 + -1.063824e-18i
+9.939610e-01 + 5.974998e-19i
+3.239174e-01 + 3.574591e-20i
+2.638730e-01 + 4.924910e-20i
+1.409012e-01 + 6.812011e-21i
+2.027873e-01 + 6.763769e-20i
+6.494480e-01 + 1.448328e-20i
+4.710645e-02 + -2.591019e-19i
+-1.570732e-02 + -8.439497e-19i
+-9.998766e-01 + 2.861719e-19i
+-7.845910e-02 + -3.209315e-20i
+-1.409012e-01 + 3.633937e-19i
+9.988899e-01 + -8.860359e-19i
+-2.027873e-01 + -7.133845e-20i
+-2.638730e-01 + -3.295327e-19i
+-3.239174e-01 + -1.642492e-19i
+-3.826834e-01 + -8.669432e-19i
+-4.399392e-01 + -7.877125e-18i
+-9.988899e-01 + -4.115888e-18i
+-4.954587e-01 + -2.168326e-17i
+-5.490228e-01 + 2.796299e-17i
+-6.004202e-01 + -9.783937e-19i
+-6.494480e-01 + -1.000119e-18i
+-6.959128e-01 + -9.251869e-19i
+-7.396311e-01 + 1.087480e-19i
+-7.804304e-01 + 2.385205e-18i
+-8.181497e-01 + 3.358541e-18i
+-8.526402e-01 + -4.236665e-19i
+-9.939610e-01 + 3.459198e-18i
+-9.460854e-01 + -3.388144e-18i
+-8.837656e-01 + 3.830491e-19i
+-9.114033e-01 + -1.192697e-18i
+-9.354440e-01 + -7.882209e-19i
+-9.645574e-01 + 1.913386e-17i
+-9.792228e-01 + -4.378712e-19i
+-9.900237e-01 + -5.485366e-19i
+-9.723699e-01 + 3.326800e-18i
+-9.238795e-01 + -2.026552e-18i
+-8.980276e-01 + -6.663458e-19i
+-8.686315e-01 + 6.305262e-19i
+-8.358074e-01 + 1.172879e-19i
+-7.996847e-01 + -1.765726e-18i
+-7.604060e-01 + -1.534170e-18i
+-9.557930e-01 + 3.065050e-19i
+-6.252427e-01 + 3.644508e-19i
+-7.181263e-01 + -6.024859e-17i
+-6.730125e-01 + 1.819809e-17i
+-9.851093e-01 + 3.061866e-17i
+-5.750053e-01 + -1.009786e-18i
+-5.224986e-01 + -1.349189e-18i
+-4.679298e-01 + -2.396622e-18i
+-4.115144e-01 + -1.317667e-18i
+-3.534748e-01 + -1.592404e-18i
+-2.940403e-01 + -2.966762e-18i
+-2.334454e-01 + -4.552720e-17i
+-1.719291e-01 + 1.125891e-17i
+-1.097343e-01 + -3.569798e-18i
+-4.710645e-02 + -5.813973e-17i
+1.719291e-01 + -4.675736e-18i
+1.570732e-02 + 6.461866e-20i
+7.845910e-02 + 1.542181e-17i
+1.097343e-01 + -8.725424e-19i
+-9.969173e-01 + -2.441773e-18i
+2.334454e-01 + -7.756121e-19i
+3.534748e-01 + -2.514228e-20i
+2.940403e-01 + 2.594038e-19i
+4.115144e-01 + 1.854322e-21i
+9.998766e-01 + -2.077574e-19i
+5.224986e-01 + -1.521887e-18i
+4.679298e-01 + 2.752924e-19i
+9.969173e-01 + 4.055085e-19i
+5.750053e-01 + 5.899756e-21i
+6.252427e-01 + -9.576187e-20i
+6.730125e-01 + 6.489687e-20i
+7.181263e-01 + 1.512033e-18i
+7.604060e-01 + 1.746775e-17i
+7.996847e-01 + 8.444402e-19i
+8.358074e-01 + 2.488753e-18i
+9.460854e-01 + 2.001330e-18i
+9.900237e-01 + -1.077252e-18i
+8.686315e-01 + 3.137006e-18i
+8.980276e-01 + 4.511499e-19i
+9.238795e-01 + -2.126299e-20i
+9.645574e-01 + -3.044421e-19i
+9.723699e-01 + -1.506527e-16i
+PASS: simple_polynomial.py
+Polynomial solved by secsolve: [(181.01933597321946+181.01933597321946j), (-181.01933597321946+181.01933597321946j), (-181.01933597321946-181.01933597321946j), (181.01933597321946-181.01933597321946j)]
+Polynomial solved by unisolve: [(181.01933597321946+181.01933597321946j), (-181.01933597321946+181.01933597321946j), (-181.01933597321946-181.01933597321946j), (181.01933597321946-181.01933597321946j)]
+PASS: algorithms.py
+Roots of x^8 - 1 = 1.000000e+00 + 4.038968e-28i  7.071068e-01 + 7.071068e-01i  0.000000e+00 + 1.000000e+00i  -7.071068e-01 + 7.071068e-01i  -1.000000e+00 + 0.000000e+00i  -7.071068e-01 + -7.071068e-01i  8.077936e-28 + -1.000000e+00i  7.071068e-01 + -7.071068e-01i
+PASS: rational.py
+==================
+All 3 tests passed
+==================
+make[4]: Leaving directory `/home/travis/build/robol/MPSolve/examples/python/tests'
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/examples/python/tests'
+make[3]: Entering directory `/home/travis/build/robol/MPSolve/examples/python'
+make[3]: Nothing to be done for `check-am'.
+make[3]: Leaving directory `/home/travis/build/robol/MPSolve/examples/python'
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/examples/python'
+Making check in gtk
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/examples/gtk'
+make[2]: Nothing to be done for `check'.
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/examples/gtk'
+Making check in mandelbrot-solver
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/examples/mandelbrot-solver'
+make[2]: Nothing to be done for `check'.
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/examples/mandelbrot-solver'
+make[2]: Entering directory `/home/travis/build/robol/MPSolve/examples'
+make[2]: Nothing to be done for `check-am'.
+make[2]: Leaving directory `/home/travis/build/robol/MPSolve/examples'
+make[1]: Leaving directory `/home/travis/build/robol/MPSolve/examples'
+Making check in doc
+make[1]: Entering directory `/home/travis/build/robol/MPSolve/doc'
+make[1]: Nothing to be done for `check'.
+make[1]: Leaving directory `/home/travis/build/robol/MPSolve/doc'
+Making check in mime
+make[1]: Entering directory `/home/travis/build/robol/MPSolve/mime'
+make[1]: Nothing to be done for `check'.
+make[1]: Leaving directory `/home/travis/build/robol/MPSolve/mime'
+make[1]: Entering directory `/home/travis/build/robol/MPSolve'
+make[1]: Leaving directory `/home/travis/build/robol/MPSolve'
+travis_time:end:1b3caeff:start=1426618325729905634,finish=1426618526316574493,duration=200586668859[0K
+[32;1mThe command "./autogen.sh && ./configure && make && make check" exited with 0.[0m
+
+Done. Your build exited with 0.
