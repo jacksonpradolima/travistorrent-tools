@@ -6,7 +6,7 @@ require_relative 'languages/java_log_file_analyzer_dispatcher.rb'
 require_relative 'languages/ruby_log_file_analyzer.rb'
 require_relative 'languages/go_log_file_analyzer.rb'
 require_relative 'languages/python_log_file_analyzer.rb'
-require_relative 'languages/c_log_file_analyzer.rb'
+require_relative 'languages/c_log_file_analyzer_dispatcher.rb'
 
 # Provides general language-independent analyzer for Travis logfiles. Dynamically mixes-in the most specific language
 # analyzer from the languages packages. If no specific analyzer is found, it prrovides basic statistics about any build
@@ -125,6 +125,10 @@ class LogFileAnalyzer
 
     unless (@folds[@OUT_OF_FOLD].content.last =~/^Done. Build script exited with: (\d*)./).nil?
       @status = $1.to_i === 0 ? 'ok' : 'broken'
+    end
+
+    unless (@folds[@OUT_OF_FOLD].content.last =~/^Your build has been stopped./).nil?
+      @status = $1.to_i === 0 ? 'ok' : 'stopped'
     end
   end
 
