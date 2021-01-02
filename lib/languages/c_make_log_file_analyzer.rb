@@ -1,7 +1,7 @@
 # A Mixin for the analysis of C build files. 
 # The tests are executed by the command 'make  check-TESTS' and finish when 'Testsuite summary for' information appear
 
-module CMakeSummaryLogFileAnalyzer
+module CMakeLogFileAnalyzer
   attr_reader :tests_failed, :tests_failed_num, :test_duration,  :tests_runed, :tests_runed_duration
 
   def init_deep    

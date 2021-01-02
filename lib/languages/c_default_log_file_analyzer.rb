@@ -1,16 +1,14 @@
 # A Mixin for the analysis of C build files. 
 # The tests are executed by the command 'make  check-TESTS' and finish when 'Testsuite summary for' information appear
 
-module CDefaultSummaryLogFileAnalyzer
-    attr_reader :tests_failed, :test_duration
+module CDefaultLogFileAnalyzer
+    attr_reader :tests_failed, :tests_runed, :test_duration
 
   def init_deep    
     @tests_failed_lines = Array.new
     @tests_failed = Array.new
     @tests_failed_num = Array.new
     @tests_runed = Array.new
-    @tests_runed_num = Array.new
-    @tests_runed_duration = Array.new
     @analyzer = 'cdefault'
   end
 
