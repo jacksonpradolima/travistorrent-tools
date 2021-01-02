@@ -68,7 +68,7 @@ class LogFileAnalyzer
     # Dynamically add mixins
     case lang
       when 'c'
-        self.extend(CLogFileAnalyzer)
+        self.extend(CLogFileAnalyzerDispatcher)
       when 'ruby'
         self.extend(RubyLogFileAnalyzer)
       when 'java'

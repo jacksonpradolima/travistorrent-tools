@@ -6,7 +6,7 @@ load 'lib/languages/c_default_log_file_analyzer.rb'
 # the log contents. This has minimal overhead compared to directly calling the correct sub analyzer through lazy
 # initializing the loaded file, and is far better than trying every existing sub-analyzer and seeing which one worked
 
-module JavaLogFileAnalyzerDispatcher
+module CLogFileAnalyzerDispatcher
 
   def init
     if @logFile.scan(/(make  check-TESTS)/m).size >= 1
