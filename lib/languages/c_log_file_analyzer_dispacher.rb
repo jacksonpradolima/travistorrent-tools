@@ -18,6 +18,7 @@ module CLogFileAnalyzerDispatcher
       else
         # on the other hand, we do not know when the tests finished
         self.extend CMakeLogFileAnalyzer
+      end
     else
       self.extend CDefaultLogFileAnalyzer
     end
