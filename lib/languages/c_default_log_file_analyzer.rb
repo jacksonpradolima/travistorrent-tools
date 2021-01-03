@@ -9,6 +9,8 @@ module CDefaultLogFileAnalyzer
     @tests_failed = Array.new
     @tests_failed_num = Array.new
     @tests_runed = Array.new
+    @tests_runed_num = Array.new
+    @tests_runed_duration = Array.new
     @analyzer = 'cdefault'
   end
 
@@ -39,31 +41,39 @@ module CDefaultLogFileAnalyzer
     @test_status = ""
     @test_lines.each do |line|
       if !(line =~ /(\d*)\/(\d*) Test(\s+)#(\d*):(\s+)(\w+)(\s+)([.]{2,})(\s+)(\w+)(\s+)(.*) sec/).nil?
-        init_tests
-        @tests_run = true
-        add_framework 'cdefault'
-
         # Current test case
         @current_test = $6
-        # Test Case Status
-        @test_status = $10
 
-        # Test Run
-        @num_tests_run += 1
-        @tests_runed << @current_test
-        
-        # Tests duration
-        @test_duration += $12.to_f
-        
-        if @test_status =~ '/Skipped/'.nil?
-          @num_tests_skipped += 1
-        end
+        # Ignore invalid test process (for instance, running a sample of examples from other language)
+        if !@current_test.end_with?(".py", ".java")
+          init_tests
+          @tests_run = true
+          add_framework 'cdefault'
 
-        # If the test failed add to the failed test set
-        if @test_status =~ '/Passed/'.nil?
-          @num_tests_failed += 1
-          @tests_failed << @current_test
-        end
+          # Test Case Status
+          @test_status = $10
+
+          # Test Run
+          @tests_runed << @current_test
+          @num_tests_run += 1
+          @tests_runed_num << 1
+
+          # Tests duration
+          @duration = $12
+          @test_duration += @duration.to_f
+          @tests_runed_duration << @duration
+
+          if @test_status.include?('Skipped')
+            @num_tests_skipped += 1
+          end
+
+          # If the test not passed, it failed, so we add to the failed test set
+          if !@test_status.include?('Passed')
+            @tests_failed << @current_test
+            @num_tests_failed += 1
+            @tests_failed_num << 1
+          end
+        end # valid test
       end
     end # end lines
 

@@ -7,6 +7,10 @@ module CMakeSummaryLogFileAnalyzer
   def init_deep    
     @tests_failed_lines = Array.new
     @tests_failed = Array.new
+    @tests_failed_num = Array.new
+    @tests_runed = Array.new
+    @tests_runed_num = Array.new
+    @tests_runed_duration = Array.new
     @analyzer = 'cmakesummary'
   end
 
@@ -33,13 +37,9 @@ module CMakeSummaryLogFileAnalyzer
   end
 
   def extractTestName(line)
-    @current_test = ""
-
     status_available = ['XPASS', 'PASS', 'XFAIL', 'FAIL', 'SKIP', 'ERROR']
 
-    status_available do |status|
-      break line.split(status)[1].split(":")[1].strip if line.include?(status)
-    end
+    status_available.each{ |st_ava| break line.split(st_ava)[1].split(":")[1].strip if line.include?(st_ava) }
   end
 
   def analyze_tests
@@ -47,25 +47,33 @@ module CMakeSummaryLogFileAnalyzer
     @test_lines.each do |line|
       # If the line contains a valid test case status
       if !(line =~ /PASS/m).nil? || !(line =~ /XPASS/m).nil? || !(line =~ /SKIP/m).nil? || !(line =~ /ERROR/m).nil? || !(line =~ /FAIL/m).nil? || !(line =~ /XFAIL/m).nil?
-        init_tests
-        @tests_run = true
-        add_framework 'cmakesummary'
-
-        # Current test case
+        # Test Name
         @current_test = extractTestName(line)
 
-        # Test Run
-        @num_tests_run += 1
-        @tests_runed << @current_test
-        @test_duration += 0 # We do not have this information in the log
-        
-        if !(line =~ /SKIP/m).nil?
-          @num_tests_skipped += 1
-        elsif  !(line =~ /FAIL/m).nil? || !(line =~ /XFAIL/m).nil?
-          # If the test failed add to the failed test set
-          @num_tests_failed += 1
-          @tests_failed << @current_test
-        end
+        # Ignore invalid test process (for instance, running a sample of examples from other language)
+        if !@current_test.end_with?(".py", ".java")
+          init_tests
+          @tests_run = true
+          add_framework 'cmakesummary'
+
+          # Test Run
+          @tests_runed << @current_test
+          @num_tests_run += 1
+          @tests_runed_num << 1
+
+          # Tests duration (We do not have this information in the log)
+          @test_duration += 0 #
+          @tests_runed_duration << 0
+
+          if !(line =~ /SKIP/m).nil?
+            @num_tests_skipped += 1
+          elsif  !(line =~ /FAIL/m).nil? || !(line =~ /XFAIL/m).nil?
+            # If the test failed add to the failed test set
+            @tests_failed << @current_test
+            @num_tests_failed += 1
+            @tests_failed_num << 1
+          end
+        end # valid test
       end
     end # end lines
 

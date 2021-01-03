@@ -42,36 +42,37 @@ module CMakeLogFileAnalyzer
     @current_test = ""
     @test_lines.each do |line|
        # Get the Test Name
-      if (line =~ %r"Running suite(s):") == 0
+      if line.to_s.include?("Running suite(s):")
         @current_test = line.split("Running suite(s):")[1].strip
       end
       
       if !(line =~ /(\d*)%: Checks: (\d*), Failures: (\d*), Errors: (\d*)/).nil?
-        init_tests
-        @tests_run = true
-        add_framework 'cmake'
+        # Ignore invalid test process (for instance, running a sample of examples from other language)
+        if !@current_test.end_with?(".py", ".java")
+          init_tests
+          @tests_run = true
+          add_framework 'cmake'
 
-         # Test name
-        @tests_runed << @current_test
+          # Test Run
+          @tests_runed << @current_test
+          @num_run = $2.to_i
+          @num_tests_run += @num_run
+          @tests_runed_num << @num_run
 
-        # Test Run
-        @num_run = $2.to_i 
-        @num_tests_run += @num_run
-        @tests_runed_num << @num_run
+           # Tests failed
+          @num_failed = $3.to_i + $4.to_i
+          @num_tests_failed += @num_failed
 
-         # Tests failed
-        @num_failed = $3.to_i + $4.to_i
-        @num_tests_failed += @num_failed
+          # Tests duration (We do not have this information in the log)
+          @test_duration += 0 #
+          @tests_runed_duration << 0
 
-        # Tests duration (We do not have this information in the log)
-        @test_duration += 0 #
-        @tests_runed_duration << 0
-        
-        # If the test failed add to the failed test set
-        if @num_failed > 0
-          @tests_failed << @current_test
-          @tests_failed_num << @num_failed
-        end
+          # If the test failed add to the failed test set
+          if @num_failed > 0
+            @tests_failed << @current_test
+            @tests_failed_num << @num_failed
+          end
+        end # valid test
       end
     end # end lines
 
