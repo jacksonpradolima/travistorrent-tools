@@ -23,7 +23,6 @@ require "logger"
 
 load 'lib/csv_helper.rb'
 
-
 class TravisLogMiner
 
   @slug
@@ -86,7 +85,7 @@ class TravisLogMiner
       log = '' # necessary to enable GC of previously stored value, otherwise: memory leak
     rescue
       @logger.error("Retrying, but Could not get log #{logname}")
-      download_job(job, wait_in_s*2)
+      download_job(job, wait_in_s * 2)
     end
   end
 
@@ -120,7 +119,7 @@ class TravisLogMiner
           started_at = Time.parse(build.started_at.to_s).strftime('%F')
           # @logger.info("Comparing #{started_at} > #{@date_threshold}: " + (started_at >= @date_threshold ? "true" : "false"))
           return {} if started_at > @date_threshold
-	  started_at = build.started_at.to_s
+          started_at = build.started_at.to_s
         end
 
         if !build.finished_at.nil?
@@ -136,6 +135,21 @@ class TravisLogMiner
 
       # Get the log based on the build and the associate commit
       job_logs(build, build.commit.sha) if @buildlogs
+
+      # Get the jobs data info
+      jobs_data = []
+      build.jobs.each do |job|
+        job_info = {
+          :id => job.id,
+          :os => job.config["os"],
+          :arch => job.config["arch"],
+          :compiler => job.config["compiler"],
+          :dist => job.config["dist"],
+          :osx_image => job.config["osx_image"],
+          :env => job.config["env"]
+        }
+        jobs_data << job_info
+      end
 
       build_data = {
         :repository_id => build.repository_id,
@@ -154,13 +168,16 @@ class TravisLogMiner
         :finished_at => ended_at,
 
         # [doc] The unique Travis IDs of the jobs
-        :jobs => build.job_ids
+        :jobs => build.job_ids,
+
+        # [doc] The information about each jobs
+        :jobs_data => jobs_data
       }
 
       return build_data
     rescue Exception => e
       @logger.error("Retrying, but Error getting Travis build #{build['id']}: #{e.message}")
-      return get_build(build, wait_in_s*2)
+      return get_build(build, wait_in_s * 2)
     end
   end
 
@@ -180,7 +197,7 @@ class TravisLogMiner
       highest_build = repository.last_build_number.to_i
       @logger.info("[START] Harvesting Travis build logs for #{@slug} (#{highest_build} builds)")
 
-      repository.each_build(after_number: repository.last_build_number.to_i)  do |build|
+      repository.each_build(after_number: repository.last_build_number.to_i) do |build|
         all_builds << get_build(build)
       end
 
@@ -205,7 +222,7 @@ class TravisLogMiner
       csv_file = File.join(@parent_dir, 'repo-data-travis.csv')
       File.open(csv_file, 'w') do |f|
         f.puts all_builds.first.keys.map { |x| x.to_s }.join(',')
-        all_builds.sort { |a, b| b[:build_id]<=>a[:build_id] }.each { |x| f.puts x.values.join(',') }
+        all_builds.sort { |a, b| b[:build_id] <=> a[:build_id] }.each { |x| f.puts x.values.join(',') }
       end
 
       @logger.info("[FINISH] Harvesting Travis build logs for #{@slug} (#{highest_build} builds)")
